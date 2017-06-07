@@ -1,0 +1,15 @@
+
+Plan how to use data
+	- Spaces is when people didn't get assigned to a club when leaving
+	- Unattached is when a player joins a club from not being in one
+	- Free's (Just count)
+	- Undisclosed (count)
+Get Data into local Mongo via CSV
+Start to hack about
+
+Draw out the whole lot, from Mongo import to HTML to hosting to 
+
+Watch the Vids on Chrome tools in study group, during breakfast and lunch, can know them off in no time
+Also MVC and Python
+Need a ROUGH plan dude, use lunchtime and breakfast for work - just background stuff like JS and dev tool etc
+The task Yoni set!

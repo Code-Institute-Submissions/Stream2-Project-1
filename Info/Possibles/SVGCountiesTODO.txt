@@ -1,0 +1,4 @@
+Get map to show!
+Lose Scotland and Ireland
+Then will need to use ID to show colour? Or some metric (maybe just show area being looked at?)
+Then onclick change the crossfilter filters

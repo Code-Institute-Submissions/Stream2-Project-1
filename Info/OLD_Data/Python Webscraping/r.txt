@@ -1,0 +1,3262 @@
+
+
+
+
+
+
+  
+
+var _it_page_revision_id = '201303211700'; 
+
+
+
+
+  Breaking News | Irish & International Headlines | The Irish Times 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+
+    var adLazyloaded = [];
+    var Bottom1, OutOfPage, RightSidebarTop, Top;
+        if ("undefined" === typeof kvusertype) {
+        var kvusertype = '0';
+    }
+    if ("undefined" === typeof kvarticlecount) {
+        var kvarticlecount = '';
+    }
+    var kvreferral = document.referrer;
+    (function (getCookie) {
+        var cookie = getCookie('IT_PW_AUTH');
+        if (null != cookie && "" != cookie) {
+            kvusertype = '1';
+        }
+        var pw_meter_news = getCookie('apw_aac_news');
+        var it_pw_auth = getCookie('IT_PW_AUTH');
+        if (pw_meter_news && pw_meter_news != ""
+                && (!(it_pw_auth || it_pw_auth == ""))
+        ) {
+            var parts = pw_meter_news.split(".");
+            kvarticlecount = parseInt( parts[2], 10 );
+        }
+    } (function (name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }));
+
+
+    googletag.cmd.push(function() {
+        Top = googletag.defineSlot('/4844766/The_Irish_Times/HomePage/HomePage_Top', [[970, 250], [970, 90], [728, 90], [320, 100], [320, 50], [300, 100], [300, 75], [300, 50]], 'div-gpt-ad-Top').defineSizeMapping([[[1024,200],[[970, 250],[970, 90],[728, 90]]],[[980,200],[[970, 90], [728, 90]]],[[728,200],[[728, 90]]],[[0,0],[[320, 100],[320, 50],[300, 100],[300, 75],[300, 50]]]]).addService(googletag.pubads());
+        OutOfPage = googletag.defineOutOfPageSlot('/4844766/The_Irish_Times/HomePage/HomePage_OutOfPage',  'div-gpt-ad-OutOfPage').defineSizeMapping([[[1200,200],[[1, 1]]],[[0,0],[]]]).addService(googletag.pubads());
+        RightSidebarTop = googletag.defineSlot('/4844766/The_Irish_Times/HomePage/HomePage_RightSidebarTop', [[300, 600], [300, 250]], 'div-gpt-ad-RightSidebarTop').addService(googletag.pubads());
+                Bottom1 = googletag.defineSlot('/4844766/The_Irish_Times/HomePage/HomePage_Bottom1', [300, 250], 'div-gpt-ad-Bottom1').addService(googletag.pubads());
+        adLazyloaded.push(Bottom1);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setTargeting('kvsubsection', ['home_home']).setTargeting('level3', []).setTargeting('kvreferral', [kvreferral]).setTargeting('kvpeople', []).setTargeting('kvcategory', []).setTargeting('kvtopic', []).setTargeting('kvarticlecount', [kvarticlecount]).setTargeting('kvloc', []).setTargeting('kvpagetype', ['index']).setTargeting('kvusertype', [kvusertype]).setTargeting('kvcompany', []).setTargeting('kvcontentid', ['2.789']);
+        googletag.pubads().enableVideoAds();
+        googletag.pubads().disableInitialLoad();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === Top) {
+                if(undefined !== event.size && event.size && event.size[1] > 90){
+                    jq('html').addClass('ad-over');
+                }
+            }
+        });
+        googletag.enableServices();
+    });
+	
+	/* AM-68
+	this event listener needs to be set up to read the size in the header ad slot, and if 970x250 call the moveAd() function
+	googletag.events.SlotRenderEndedEvent()
+	https://developers.google.com/doubleclick-gpt/reference#googletageventsslotrenderendedevent
+	*/
+	/* to set the page skin */
+	function setBackground(data) { 
+		jq('html').addClass('gutter');
+	  
+		var backgroundDiv = document.body; 
+		backgroundDiv.style.backgroundImage ="url('" + data.background_url + "')"; 
+		
+		var backgroundLayer = document.getElementById("skin-dfp"); 
+		backgroundLayer.setAttribute('href', data.click_tracker);
+		backgroundLayer.setAttribute('target', '_blank'); 
+		
+		var impresion_DFP = document.createElement( 'img' );  
+		impresion_DFP.setAttribute('src', decodeURIComponent(data.impressionTracker));  
+		impresion_DFP.setAttribute('id', 'ImpressionTracker');  
+		impresion_DFP.className = 'invisible';
+		backgroundDiv.appendChild(impresion_DFP);  
+		
+		var impresion_thirdParty = document.createElement( 'img' );  
+		impresion_thirdParty.setAttribute('src', data.thirdPartyImpressionTracker);  
+		impresion_thirdParty.setAttribute('id', 'ThirdPartyImpressionTracker');  
+		impresion_thirdParty.className = 'invisible';
+		backgroundDiv.appendChild(impresion_thirdParty);
+	} 
+	
+
+var _sf_startpt=(new Date()).getTime()
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var _ittwitterhandle = 'IrishTimes';
+    
+
+
+
+
+
+  var _comscore = _comscore || [];
+  _comscore.push({c1: "2", c2: "8946263", c3: "", c4: "http://www.irishtimes.com/", c5: "" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+
+
+
+
+
+<!--
+        var _gaq = _gaq || [];
+        _gaq.push(
+            ['_setAccount', 'UA-850873-2'],
+            ['_setDomainName', '.irishtimes.com'],
+            ['_setCustomVar', 1, 'Page_Type',  'index', 3],
+                            ['_setCustomVar', 2, 'Section', 'home', 3],
+                ['_setCustomVar', 3, 'Subsection', 'home_home', 3],
+                    				['_setLocalGifPath', '//stats.irishtimes.com/__utm.gif'],
+		['_setLocalRemoteServerMode'],
+        		['_trackPageview', '/'],
+		['_setAllowLinker', true]
+        );
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        -->
+<!--
+	var _sf_async_config = _sf_async_config || {};
+	/** CONFIGURATION START **/
+	_sf_async_config.uid = 31036;
+	_sf_async_config.domain = 'irishtimes.com';
+			_sf_async_config.title = "Irish Times";
+
+	  	_sf_async_config.useCanonical = true;
+  
+	/** CONFIGURATION END **/
+		(function(){
+			function loadChartbeat() {
+			  window._sf_endpt=(new Date()).getTime();
+			  var e = document.createElement('script');
+			  e.setAttribute('language', 'javascript');
+			  e.setAttribute('type', 'text/javascript');
+			  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+	  document.body.appendChild(e);
+	}
+	var oldonload = window.onload;
+	window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+-->
+
+
+
+
+
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-OutOfPage'); googletag.pubads().refresh([OutOfPage]); });
+    
+
+
+
+
+	dataLayer = [{'Page_Type':'index', 'Topic':''}];
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9Q373');
+
+
+
+
+
+jq(document).ready( function($) {
+	var pw_meter_news = $.cookie('apw_aac_news');
+    //var pw_meter_news = $.cookie('pw_meter_news');
+    var it_pw_auth = $.cookie('IT_PW_AUTH');
+    if (typeof pw_meter_news != 'undefined' && pw_meter_news && pw_meter_news != ""
+        && (!(it_pw_auth || it_pw_auth == ""))
+    ) {
+        var parts = pw_meter_news.split(".");
+
+        var used_quota = parseInt( parts[2], 10 );
+        //var max_quota = parseInt( parts[3], 10 );
+    	var apw_quota = 10;
+        if(!_apw.settings.anonymous_ac.pids || !_apw.settings.anonymous_ac.pids.news){
+          apw_quota = _apw.settings.anonymous_ac.fallback.quota;
+        }else{
+          console.log(apw_quota = _apw.settings.anonymous_ac.pids);
+          apw_quota = _apw.settings.anonymous_ac.pids.news.quota;
+        }
+        var max_quota = parseInt( apw_quota, 10 );
+        var free_quota = max_quota - used_quota;
+
+        if (free_quota == 2
+            && jq(document.body).hasClass('isArticle')
+            && jq(document.body).hasClass('isMetered')
+            && location.href.indexOf('mode=sample') == -1) {
+
+            //show the toast
+            jq.notify({
+                //message: "You have read " + used_quota + " of " + max_quota + " free articles this week.",
+                message: "You have "+ free_quota + " free articles left this week.",
+                //message: "You have 2 free articles left this week.",
+                prompt: "Try unlimited access for just \u20ac1. <span>Find out more</span>"
+            }, {
+                globalPosition: 'bottom left',
+                //  autoHide: false
+                autoHideDelay: 8000
+            });
+
+            //fire a custom event
+            if ( dataLayer && Array.isArray(dataLayer) ) {
+                dataLayer.push({
+                    'category': 'Non Interaction Events',
+                    'action': 'Toast Message Triggered',
+                    'label': 'Find out more: Toast message - article '+used_quota+' of '+max_quota
+                }, {'event': 'data-layer-event'});
+
+            }
+
+
+        }
+
+        jq("#metermsg-storefront").click(function() {
+            if ( dataLayer && Array.isArray(dataLayer) ) {
+                dataLayer.push({
+                    'category': '/digital-subscriptions',
+                    'action': 'Go to StoreFront',
+                    'label': 'Find out more: Toast message - article ' + used_quota + ' of ' + max_quota
+                }, {'event': 'data-layer-event'});
+            }
+        });
+    }
+
+});
+
+jq.notify.addStyle('bootstrap', {
+    html:
+    "<div>" +
+    "<a href='/digital-subscriptions' class='toast-msg goto-storefront' id='metermsg-storefront'>" +
+    "<div class='notify-msg' data-notify-text='message'/>" +
+    "<div class='notify-prompt' data-notify-html='prompt'>" +
+    "</div>" +
+    "</a>" +
+    "</div>"
+});
+
+
+
+
+
+
+
+    .notifyjs-bootstrap-base{font-family:"DINWeb-Medium",Arial,Helvetica,sans-serif; font-size:15px; box-shadow:5px 5px 15px 0 rgba(0, 0, 0, 0.3); background-color:rgba(246,246,246, .9); padding:8px; border:1px solid #C6C6C6; border-top:3px solid #006666; text-align:center;}
+    .notifyjs-bootstrap-base .notify-msg{color:#006666; font-size:110%; margin:5px 8px;}
+    .notifyjs-bootstrap-base .notify-prompt{color:#515151;}
+
+    .notifyjs-bootstrap-base .notify-prompt span{background-color:#fad165; border-radius:4px; color:#333; display: inline-block; font-family: "DINWeb-Bold",Arial,Helvetica,sans-serif;
+    font-size: 14px; line-height:15px; padding:9px 9px 5px; text-transform: uppercase; border: 1px solid #bb9c4b;}
+
+    .lt-ie9 .notifyjs-bootstrap-base{ background-color:rgb(246,246,246);}
+
+    @media only screen and (max-width: 768px) {
+
+    .notifyjs-bootstrap-base{}
+    .notifyjs-bootstrap-base .notify-msg{font-size:100%;}
+    .notifyjs-bootstrap-base .notify-prompt{}
+    .notifyjs-bootstrap-base .notify-prompt span{display:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+ Newsletters Crossword Notices
+
+
+
+
+
+
+
+My Account
+
+
+
+
+
+Subscribe
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+        googletag.cmd.push(function() {
+			googletag.display('div-gpt-ad-Top');
+						googletag.pubads().refresh([Top]);
+			        });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wed, May 31, 2017
+  The Irish Times  
+
+
+
+
+  
+  
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Irish Times
+News
+Sport
+Business
+Opinion
+Life & Style
+Culture
+More
+Video
+Podcasts
+Executive Jobs
+
+
+
+Search
+
+
+
+
+Subscribe
+
+
+
+My Account
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News 
+Ireland 
+World 
+Politics 
+Crime & Law 
+Social Affairs 
+Health 
+Education 
+Brexit 
+
+
+All News 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ireland
+
+Irish News
+
+
+
+World
+
+UK
+UK election
+Europe
+US
+Africa
+Middle East
+Asia-Pacific
+
+
+
+Politics
+
+Oireachtas
+FG leadership race
+Poll
+Assembly Election
+Election 2016
+
+
+
+Crime & Law
+
+
+Social Affairs
+
+Religion & Beliefs
+
+
+
+Health
+
+
+Education
+
+Student Hub
+
+
+
+Brexit
+
+
+Courts
+
+
+
+
+Irish Times Data
+
+
+Environment
+
+
+
+
+Science
+
+
+Consumer
+
+
+Offbeat
+
+
+In Depth
+
+
+
+
+Specials
+
+UK election
+Terror attacks
+Trump presidency
+
+
+
+Podcasts
+
+Inside Politics
+World View
+
+
+
+Subscriptions
+
+ePaper
+Newspaper Archive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+By using this website, you consent to our use of cookies. For more information on cookies see our Cookie Policy.
+				X
+
+
+
+
+
+
+
+
+
+
+jq(document).ready(function() { 
+	jq("#breadcrumb .breadcrumb_item a").click(function(e) {		
+		_gaq.push(['_trackEvent', 'Breadcrumb', (e.currentTarget.href), (jq(this).parents( '.breadcrumb_text' ).length == 1 ? ' Dropdown' : 'Top Level')]);
+	}); 
+
+}); 
+
+
+
+
+
+
+
+
+
+
+            						 Kinahan-Hutch feud: Man shot dead in Dublin  car park
+							
+
+ 
+
+
+											Getaway  car found on fire at  nearby Clonliffe Avenue
+									
+
+
+‘This has to stop, it’s horrible’ 
+
+
+
+ 
+	      	Gordon D'Arcy
+	      
+
+
+      		What the  Lions need to take from their early games
+	      
+
+
+
+
+
+
+
+ 
+  
+			The name Muhammad has seen biggest rise in  popularity in 2016
+	
+
+
+
+ 
+
+
+
+Irish News
+16:57
+
+
+
+
+                                                                                Most popular baby names chosen last year revealed , Jack and Emily top charts  
+                                    
+
+
+ 
+			Trump to withdraw from Paris climate agreement, reports say
+	
+
+
+
+ 
+
+
+
+Environment
+15:54
+
+
+
+
+                                                                                President ready to pull out of landmark deal to cut global carbon emissions, says US media   
+                                    
+
+ 
+
+
+ 
+  
+			Garda in discussions with Revenue about whether Templemore is tax compliant
+	
+
+
+
+ 
+
+
+
+Crime & Law
+16:34
+
+
+
+
+                                                                                Head of internal audit unit says  no garda benefited personally from financial irregularities   
+                                    
+
+
+HR chief ‘appalled’ at Commissioner’s refusal  
+
+ 
+			Joan Burton could easily have have left Jobstown protest on foot, court told
+	
+
+
+
+ 
+
+
+
+High Court
+16:11
+
+
+
+
+                                                                                Accused told gardaí the  cars were detained by  protesters,   not the people in them   
+                                    
+
+ 
+
+
+ 
+  
+			A wine cellar, a €22K bath and a dressing room from Gleneagles... all for €4.5m
+	
+
+
+
+ 
+
+
+
+New to Market
+06:05
+
+
+
+
+                                                                                Two merged Georgian homes on Blackrock's Sydney Ave come with opulent interiors, 8,000sq ft of space and two attics on over half an acre of private gardens
+                                    
+
+
+ 
+			After Manchester, enhanced security will be the new normal at live music events 
+	
+
+
+
+ 
+
+
+
+Music
+07:00
+
+
+
+
+                                                                                In the wake of  the Manchester attack,  focus will turn to  security outside  venues    
+                                    
+
+ 
+
+
+ 
+  
+			France is entranced by Macron. Can he build on a faultless start?
+	
+
+
+
+ 
+
+
+
+Europe
+16:04
+
+
+
+
+                                                                                New president has sent the country’s morale soaring – but he must turn words into action   
+                                    
+
+
+Paul Ricoeur: The philosopher behind Macron 
+
+ 
+			Martin Wolf: Trump dismantling democratic world the US made
+	
+
+
+
+ 
+
+
+
+Economy
+15:48
+
+
+
+
+                                                                                 President at war with reality is further undermining moribund and divided West   
+                                    
+
+ 
+
+
+ 
+
+
+
+Impact of cyber threats on business set to increase
+
+
+
+ 
+
+
+Sponsored
+
+
+
+           “The recent WannaCry attack could be a watershed in cybersecurity awareness,” says Magnet Networks head of product
+        
+
+
+ Sponsored by
+Magnet Networks 
+
+
+ 
+			UK election: Corbyn  decides to join leaders’ TV debate tonight
+	
+
+
+
+ 
+
+
+
+UK
+15:13
+
+
+
+
+                                                                                Labour leader’s decision underlines own confidence and  Theresa May’s absence    
+                                    
+
+ 
+
+
+ 
+  
+			AIB chief plays down UK election jitters as he courts IPO investors 
+	
+
+
+
+ 
+
+
+
+Financial Services
+11:33
+
+
+
+
+                                                                                Bank ‘within touching distance’ of being able to repay €20.8b bailout, chief executive says   
+                                    
+
+
+AIB: from boom to bust and back again 
+Noonan triggers AIB share sale  
+Conor Pope: why should I care?
+Cliff Taylor: AIB IPO must proceed 
+
+ 
+			Seven men who allegedly abused child will not face prosecution
+	
+
+
+
+ 
+
+
+
+District Court
+01:00
+
+
+
+
+                                                                                Garda interview of child alleging sexual abuse was ‘abusive’ and ‘relentless’   
+                                    
+
+
+Calls to Childline out of hours 
+Child taken from filthy home 
+Failing our most vulnerable 
+Taoiseach ‘upset’ by child protection failings 
+ 
+
+
+ 
+  
+			New cameras in Port Tunnel to catch speeding motorists
+	
+
+
+
+ 
+
+
+
+Irish News
+13:47
+
+
+
+
+                                                                                Road safety activists criticise delays in getting €550,000 project up and running   
+                                    
+
+
+ 
+			Former company director fined over  carpet price-fixing scam
+	
+
+
+
+ 
+
+
+
+Criminal Court
+15:35
+
+
+
+
+                                                                                Brendan Smith also handed three-month suspended sentence for attempting to impede prosecution   
+                                    
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+	jq(document).ready(function() {
+	  jq.timeago.settings.cutoff = 604800000;
+	  jq.timeago.settings.strings.suffixAgo = ""; 
+	  jq.timeago.settings.strings.seconds = "Just now";
+	  jq.timeago.settings.strings.minute = "%d min";
+	  jq.timeago.settings.strings.minutes = "%d mins";
+	  jq.timeago.settings.strings.hour = "%d hour";
+	  jq.timeago.settings.strings.hours = "%d hours";
+	  jq.timeago.settings.strings.day = "Yesterday";
+	  jq.timeago.settings.strings.days = "%d days ago";
+	  jq.timeago.settings.strings.wordSeparator = " ";
+	  
+	  jq.when( jq("abbr.timeago").timeago("init") ).then(function( ) {
+		  //run when initialised	 
+		  //console.log("running") 
+	  });
+	  
+	});
+	
+
+	    	jq(document).ready(function()
+			{
+			    jq.ajax({
+				  url: '/editorial-page-teasers/2.1838/span-12-column-splitter-8-4-7.2411545/latest-news-7.2411552?ot=example.AjaxPageLayout.ot',
+				  timeout: 10000,
+				  success: function(data) {
+					  jq('#ajax-placeholder-23795945').html(data);
+					  jq("abbr.timeago").timeago();
+					/*Analytics*/
+					jq('.latestin .story a').click(function(e) {		
+                        dataLayer.push({
+                            'event': 'data-layer-event',
+                            'category': 'Latest',
+                            'action': 'Latest in News',
+                            'label': ' Clicked: '+(jq(this).attr('href'))+' from ' + window.location.pathname + ' From: '+whichPosition( jq(this) )
+                        });
+					});		
+				  }
+				});
+				
+				var refreshId = setInterval( function() 
+			    {
+			    	
+					var timestamp = new Date().getTime();
+					jq.ajax({
+						  url: '/editorial-page-teasers/2.1838/span-12-column-splitter-8-4-7.2411545/latest-news-7.2411552?ot=example.AjaxPageLayout.ot&ts='+timestamp,
+						  timeout: 10000,
+						  
+						  complete: function(data, statusMsg){
+							if(statusMsg == 'success'){
+								var responseText = jq.trim( data.responseText );
+								var inpageText = jq.trim( jq('#ajax-placeholder-23795945').text() );
+								
+								if(responseText != inpageText){
+									jq('.spinner').show();
+									jq('#ajax-placeholder-23795945' ).animate({
+										opacity: 0
+										}, 400, 'linear', function() {
+											jq('#ajax-placeholder-23795945').html(responseText);
+											jq('#ajax-placeholder-23795945' ).animate({
+											opacity: 1
+											}, 400, 'linear', function() {
+												jq('.spinner').hide();
+												removeSplitterGaps();
+												jq("abbr.timeago").timeago();
+												/*Analytics*/
+												jq('.latestin .story a').click(function(e) {		
+                                                    dataLayer.push({
+                                                        'event': 'data-layer-event',
+                                                        'category': 'Latest',
+                                                        'action': 'Latest in News',
+                                                        'label': ' Clicked: '+(jq(this).attr('href'))+' from ' + window.location.pathname + ' From: '+whichPosition( jq(this) )
+                                                    });
+												});	
+										});						
+									});
+								}
+							}else{
+								return;
+							}
+						  }						  
+						});	
+	
+			    }, 120000);
+			});
+	    
+
+
+
+
+	        				Latest News
+				      
+
+
+
+
+							Bill banning onshore fracking passed by Dáil
+						
+16:59
+
+
+
+							Breastfeeding assistance system scoops prize for start-up
+						
+16:58
+
+
+
+							The name Muhammad has seen biggest rise in  popularity in 2016
+						
+16:57
+
+
+
+							Sean Mulryan joins Knock Airport board
+						
+16:52
+
+
+
+							More than 1,000 children seek Childline’s help each day
+						
+16:48
+
+
+
+
+
+        googletag.cmd.push(function() {
+			googletag.display('div-gpt-ad-RightSidebarTop');
+						googletag.pubads().refresh([RightSidebarTop]);
+			        });
+    
+
+
+
+Most Read
+
+
+1
+
+Kinahan-Hutch feud: Man shot dead in Dublin underground car park  
+
+
+
+2
+
+The name Muhammad has seen biggest rise in  popularity in 2016
+
+
+
+3
+
+Garda HR chief ‘appalled’ at Commissioner’s refusal to release letter
+
+
+
+4
+
+Martin Wolf: Trump dismantling democratic world the US made
+
+
+
+5
+
+France is entranced by Macron. Can he build on a faultless start?
+
+
+
+6
+
+Pat Lam: I wouldn’t be leaving if it wasn’t for IRFU release clause
+
+
+
+7
+
+A wine cellar, a €22K bath and a dressing room from Gleneagles... all for €4.5m
+
+
+
+8
+
+Doctor sought phone pictures of patient from intern, inquest hears
+
+
+
+9
+
+Joan Burton could easily have have left Jobstown protest on foot, court told
+
+
+
+10
+
+Gordon D'Arcy: What Lions need to take from early games
+
+
+
+
+Never miss a story. SUBSCRIBE
+
+
+
+
+
+
+
+
+ 
+
+
+
+Best Buys
+Over the coming weeks we'll reveal the best cars for every budget.
+
+
+ 
+
+
+
+
+
+
+				Video
+			 
+
+
+
+
+Video Choice
+Most Viewed
+
+
+
+
+
+
+
+
+
+ 1:20
+Man shot dead in underground car park 
+
+
+
+
+ 1:44
+Lions receive traditional Maori welcome in New Zealand 
+
+
+
+
+ 1:49
+At least 80 killed in powerful car bomb explosion in Kabul
+
+
+
+
+ 0:37
+Portland stabbing suspect shouts 'free speech or die' in court
+
+
+
+
+ 1:38
+Dun Laoghaire Harbour is 200 years old
+
+
+
+
+
+
+
+
+
+
+  1:00
+
+                                May and Corbyn differ on Brexit negotiations during TV interviews
+                            
+            
+
+
+
+
+  0:34
+
+                                Driver reversing on motorway causes multiple accidents in China
+                            
+            
+
+
+
+
+  0:32
+
+                                Theresa May called a 'Glum Bucket' by journalist 
+                            
+            
+
+
+
+
+  1:30
+
+                                Donald Trump lavishes praise on his wife Melania
+                            
+            
+
+
+
+
+  0:48
+
+                                Tiger Woods says alcohol not a factor in drink-driving arrest
+                            
+            
+
+
+
+
+
+
+
+
+jq('.twotabs a[data-toggle="tab"]').on('shown', function(e) {
+    reduceGap();
+});
+
+
+
+
+
+
+ 
+
+
+
+CAO Change of Mind
+What should you study at college? You have a month left to decide...
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Gordon D'Arcy
+Lions have no issue about showing their hand too early 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Darragh Ó Sé
+Doping threat: I stopped getting flu jabs because of drug tests 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Stuart Jackson
+Irish property crash prompted me to sell and move Stateside 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+What's on
+Bank Holiday guide: Bloom to Forbidden Fruit and more 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Business
+				 
+
+
+
+
+
+
+ 
+			AIB chief plays down UK election jitters as he courts IPO investors 
+	
+
+
+
+Financial Services
+
+
+
+Bank ‘within touching distance’ of being able to repay €20.8b bailout, chief executive says   
+
+
+
+
+
+
+ 
+			Cliff Taylor: AIB IPO must go ahead regardless of cash usage
+	
+
+
+
+
+
+ 
+			Ryan Tubridy and mother paid €485,350 by his media company
+	
+
+
+
+
+			Martin Wolf: Trump dismantling democratic world the US made
+	
+			Average family farm income down 9% to €24,060 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+				Sport
+				 
+
+
+
+
+
+
+ 
+			Summer of soccer: when Shamrock Rovers conquered America
+	
+
+
+
+Soccer
+
+
+
+In 1967, the US hosted its first and only soccer season, and Irish players met the stars
+
+
+
+
+
+
+ 
+			Out of Bounds: Stunning views at Portstewart deserve Irish Open exposure
+	
+
+
+
+
+
+ 
+			Pat Lam: I wouldn’t be leaving if it wasn’t for IRFU release clause
+	
+
+
+
+
+			Ireland U-20’s World Cup campaign off to disastrous start
+	
+			Gerry Thornley: Lions embrace Maori welcome with Calon Lân 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+Columnists
+
+
+
+
+
+
+
+Jim Carroll
+
+
+
+ 
+
+
+After Manchester, enhanced security will be the new normal at live music events 
+
+
+
+Fiona Walsh
+
+
+
+ 
+
+
+British Airways adopts brace position over IT failures 
+
+
+
+Michael Harding
+
+
+
+ 
+
+
+The beauty of Kerry couldn’t erase the memory of angry dad  in the Topaz station 
+
+
+
+Cliff Taylor
+
+
+
+ 
+
+
+Cliff Taylor: AIB IPO must go ahead regardless of cash usage
+
+
+
+
+
+
+
+
+
+				Life & Style
+				 
+
+
+
+
+
+
+ 
+			Chef  raises more than £200,000 on Kickstarter to open new bistro
+	
+
+
+
+
+
+Marie Claire Digby
+
+
+
+
+
+Gary Usher will open his fourth crowdfunded restaurant in September     
+
+
+
+
+
+
+ 
+			Irish property crash prompted me to sell up and move Stateside
+	
+
+
+
+
+
+ 
+			Is pampas grass really a signal to swingers? 
+	
+
+
+
+
+			Walks for the Weekend: St Declan’s Path, Ardmore
+	
+			Our thirst for Sauvignon Blanc appears to go from strength to strength
+	
+
+
+
+
+
+
+
+
+
+
+
+
+				Culture
+				 
+
+
+
+
+
+
+ 
+
+			House of Cards: An ‘FU’ to Thatcher gave birth to Frank Underwood
+	
+
+
+
+
+
+Denis Staunton
+
+
+
+
+
+When Michael Dobbs, creator of the show, was scapegoated by Thatcher, a seed was sown   
+
+
+
+
+
+
+ 
+			Bank Holiday guide: from Bloom to Forbidden Fruit and more
+	
+
+
+
+
+
+ 
+			Early music – and  earlier start times  – for RTÉ NSO’s new season
+	
+
+
+
+
+			Maeve Brennan is feted in her  adopted homeland
+	
+			Girls in fiction: not just a fairy princess
+	
+
+
+
+
+
+
+
+
+
+
+
+
+            Opinion
+           
+
+
+
+
+
+
+ 
+Trump is more Netflix drama than reality TV 
+
+
+
+
+
+ 
+Health plan deserves better fate than the back of the drawer
+
+
+
+
+
+
+
+
+
+
+
+
+                Brexit
+               
+
+
+
+Ruling on asylum-seeker work to have big impact on Brexit talks
+
+
+
+
+
+
+
+
+Department of Justice warns of threat to the Common Travel Area with UK
+
+
+
+
+Sinn Féin: Britain must not be punished for leaving the EU
+
+
+Party’s Brexit policy calls for trade deal to be put in place before UK leaves EU   
+
+
+
+
+Brexit: Central Bank reports ‘major increase’ in talks with UK firms
+
+
+Regulator says it is talking to ‘scores’ of firms about moving to Dublin after Britain leaves   
+
+
+
+
+
+
+
+
+
+
+
+
+                Subscriber Only
+               
+
+
+
+Miriam Lord: Opposition easy on Enda preparing to get off bus
+
+
+
+
+
+
+
+New FG leader will probably charge on to  political pitch like a  sub on All-Ireland day   
+
+
+
+
+The Sisters of Charity do the charitable thing
+
+
+Inside Politics: Can anything stop Leo Varadkar becoming king of the jungle?   
+
+
+
+
+Gerry Thornley: Judge Munster after third season
+
+
+Team must bring A-game to key tests but Rassie Erasmus’s side is clearly on right track   
+
+
+
+
+
+
+
+
+
+
+
+
+				Irish Times Video
+				 
+
+
+
+
+
+
+
+
+ 3:38 
+
+
+			When Harry met Simon: 'I think I can win' 
+	
+
+
+Minister for Housing Simon Coveney tells Harry McGee that he is the underdog in the Fine Gael leadership contest, but he is still confident he can win. Video: Enda O'Dowd
+
+
+
+
+
+
+
+ 2:04 
+
+			'I found myself in a situation I never expected to be in'
+	
+
+
+
+
+
+
+ 3:06 
+
+			From silage prints to sportswear, NCAD fashion unveiled 
+	
+
+
+
+
+			Wartime Spitfire remains unearthed from Monaghan field
+	
+			Decades after war ended, bombs still maim and kill in Laos
+	
+
+
+
+
+
+
+
+
+
+
+
+
+				Abroad
+				 
+
+
+
+
+
+
+ 
+			Irish property crash prompted me to sell up and move Stateside
+	
+
+
+
+
+Stuart Jackson
+
+
+
+
+Career shift – and house price hit – takes academic from Navan to New York via Nashville   
+
+
+
+
+
+
+ 
+			Book Club podcast: EM Reapy on Red Dirt
+	
+
+
+
+
+
+ 
+			Irish in Britain: Who will/would you vote for in the election?
+	
+
+
+
+
+			A brief guide to Vancouver aka Hollywood North
+	
+			Religious leaders stand united after Manchester attack
+	
+
+
+
+
+
+
+
+
+
+
+Sponsored
+
+
+
+
+
+
+
+
+ 
+
+Body&Soul; offers wellbeing experiences to festival-goers 
+
+
+The abundance of wellness and holistic activities on offer at this year's Body&Soul; complements the traditional festival experience
+
+
+
+
+
+
+
+
+
+ 
+Life through a lens: Samsung S8 brings photography to next level 
+
+
+We took to the streets of Dublin with the Samsung S8 and put its camera and photo editing software to the test
+
+
+
+
+
+
+
+
+
+
+
+ 
+A crash course in making money through Airbnb
+
+
+Airsorted is the world’s largest Airbnb management company and has developed deep roots in Dublin since arriving in early 2016
+
+
+
+
+
+
+
+
+
+ 
+The Story of Home: a potter’s life 
+
+
+In the final instalment of the Story of Home we meet ceramicists Rosemarie Durr and Andrew Ludick
+
+
+
+
+
+
+
+
+
+        googletag.cmd.push(function() {
+			googletag.display('div-gpt-ad-Bottom1');
+			        });
+    
+
+
+
+
+
+
+<!--
+google_ad_client = "pub-5684614859760536";
+google_ad_channel = '1180656452';
+google_language = 'en';
+google_ad_slot = "2088487591";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+
+
+
+
+
+
+
+
+
+
+
+Connect with The Irish Times
+
+
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+
+Follow @IrishTimes
+
+
+
+
+
+				Podcasts
+			 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Galleries
+               
+
+
+
+
+
+
+
+ 
+
+												Images of the Day
+                                            
+
+
+
+
+ 
+
+												Irish Light book project for the Samaritans
+                                            
+
+
+
+
+
+
+
+
+
+
+
+Most Discussed
+
+
+
+
+var run_it;
+
+function checkLoaded() {
+  if( jq('.vf-community-widget .vf-list .vf-article-heading').length == 5 ){    
+  clearInterval(run_it);
+  removeSplitterGaps(); 
+  }
+}
+
+(function (v, s) {
+  v.type = 'text/javascript';
+  v.async = !0;
+  v.src = location.protocol !== 'https:' ? '//cdn.viafoura.net/vf.js' : '//api.viafoura.com/app/js/vf.js';
+
+  var scripts = document.getElementsByTagName('script');
+  var foundscript = 0;
+  for (var i = scripts.length; i--;) {
+    if (scripts[i].src.indexOf( v.src ) != -1) {
+      foundscript = 1;
+      break;
+    }
+  }
+
+  if (!foundscript) {
+    s.parentNode.insertBefore(v, s);
+  }
+    
+  window.vfAsyncInit = function() {  
+    window.viafoura.ready(function () {
+      run_it = setInterval('checkLoaded()', 1000);
+    });
+  }
+  
+}(document.createElement('script'), document.getElementsByTagName('script')[0]));
+
+
+jq( document ).on( "click", "#vf-md .vf-articles .vf-article-body > a", function(e) { 
+  var paths = location.pathname.split('/');
+  var topLevelCategory = paths[1];
+  topLevelCategory = topLevelCategory.replace(/-/g, ' ');
+  topLevelCategory = topLevelCategory.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  dataLayer.push({
+	'event': 'data-layer-event',
+    'category': 'Trending Articles Element',
+    'action' : 'Most Discussed in ' + topLevelCategory,
+    'label' : ' Clicked: '+(jq(this).attr('href'))+' from ' + window.location.pathname + ' From: '+whichPosition( jq(this) )
+  });
+});
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ExamTimes
+The essential guide to Leaving Cert and Junior Cycle exam success
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+The Student Hub
+Calling all students! Click here to claim your free Irish Times digital subscription!
+
+
+ 
+
+
+
+
+#newsdigest-widget { margin: 0px auto 20px; width: 300px; font-family: Arial, Helvetica, sans-serif; }
+#newsdigest-widget .section-title {margin-bottom:3px !important;}
+#newsdigest-widget p {margin:0 0 5px 0; padding:0;font-size:14px; font-weight:bold;}
+
+#newsdigest-widget input[type='radio'] {vertical-align:baseline; margin-right:5px;}
+#newsdigest-widget input[type='text'],#newsdigest-widget input[type='email'] {
+  width:132px;
+  padding:4px;
+  outline: none;
+  border:solid 1px #ccc;
+  cursor: text!important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white;
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+#newsdigest-widget input[type='text']:hover,#newsdigest-widget input[type='email']:hover {
+  border:solid 1px #999;
+  -moz-box-shadow:inset 0 0 10px #ccc;
+  -webkit-box-shadow: inset 0 0 10px #ccc;
+  box-shadow:inset 0 0 5px #ddd;
+}
+
+#newsdigest-widget input[type='text']:focus,#newsdigest-widget input[type='email']:focus {
+  border:solid 1px #80cbff;
+  -moz-box-shadow:inset 0 0 10px #000;
+  -webkit-box-shadow: inset 0 0 10px #000;
+  box-shadow:inset 0 0 5px #ddd;
+}
+.hideInfo {display:none;}
+#newsdigest-widget #subscribe {margin:20px 0 0 0;width:140px; padding:5px 0;}
+#newsdigest-widget label {color:#000; margin:0 0 3px 0;}
+
+#newsdigest-widget .digestSelection {margin:0 0 10px 0;padding:0 0 10px 0;text-align:left;list-style:none; border-bottom:solid 1px #e5e5e5;float:left;}
+#newsdigest-widget .digestSelection li {float:left; width:100px;}
+#newsdigest-widget .personalInfo {margin:0;padding:0 0 10px 0;text-align:left;list-style:none; float:left;}
+#newsdigest-widget .inputWrapper { width: 150px;float:left; }
+.alert {border:none;background:none;padding:0; font-family:Arial,Helvetica, sans-serif; color:#000;font-size:14px;}
+.inputContainer .error {display:inline; color:#cc0000 !important; font-weight:bold; font-size:12px; text-transform:uppercase; padding:0 0 0 5px;}
+.successOverlay {height:200px; }
+#newsdigest-widget { border:solid 1px #ccc; padding:0 4px; width:290px !Important;}
+#newsdigest-widget .digestSelection li { width:95px !Important;}
+#newsdigest-widget .inputWrapper { width:145px !Important;}
+#newsdigest-widget input[type='text'], #newsdigest-widget input[type='email'] {width:128px !Important;}
+
+
+
+jq(document).ready( function() {  
+
+  var visitorid;
+
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf('__utma') == 0) {
+      visitorid = c.substring('__utma'.length,c.length);
+      visitorid = visitorid.split(".")[1];
+      break
+    }
+  }
+
+  if (visitorid != '') {
+    jq('#googleid').val( visitorid );
+  } 
+
+  jq("#newsdigest-form").validate({
+    debug:true,
+    rules: {
+      name: "required",
+      surname: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Required"
+      },
+      surname: {
+        required: "Required"
+      },
+      email : {
+        required: "Required",
+        email: "Not valid"
+      }
+    },
+    submitHandler: function(form) {
+      jq.ajax({
+        type: "POST",
+        url: jq('#newsdigest-form').attr('action'),
+        data: jq("#newsdigest-form").serialize(), 
+        success: function (data, status) {
+          var digestSelection = jq('input[name=digestSelection]:checked', '#newsdigest-form'  ).val();
+          _gaq.push([ '_trackEvent', 'Digest Signup', 'digestSelection', digestSelection ]);
+          dataLayer.push({'digest-signup': 'News Digest Signup'},{'event': 'digest-signup-event'});
+        },
+        complete: function (data, status) {    
+          if (data.status != 200) {
+            alerttype="alert-error";
+            message = data.responseText;
+          } else {
+            response = jq.parseJSON(data.responseText);
+            if (response.result == 'OK') {
+              alerttype="success";
+              jq("#newsdigest-form").hide();
+              message="<p>Thank you for signing up.</p>";
+              message+="<p>You will start to receive Daily Digests from <strong>newsdigest@comms.irishtimes.com</strong>.</p>";
+              message+="<p>Please add this email address to your address book.</p>";
+            } else {
+              alerttype = "alert-error";
+              message = response.result;
+            }
+          }
+          jq('#alert').addClass("successOverlay");  
+          jq('#alert').html('<div id="alertdiv" class="alert '+alerttype+'"><span>'+message+'</span></div>');
+        },             
+      });
+      return false;
+    }
+  }); 
+});
+
+
+News - direct to your inbox
+
+
+Which Daily Digest would you like?
+
+Morning
+Lunchtime
+Both
+
+
+
+Google ID
+
+
+
+
+
+Name
+
+
+
+
+
+Surname
+
+
+
+
+
+Email
+
+
+
+
+Sign Up
+
+
+
+
+
+
+	#commercialFeature_23796323_7_2997642.internal-advertisement {
+						
+
+			background-image: url(/polopoly_fs/1.2356609.1442566038!/image/image.jpg);
+			background-repeat: no-repeat;
+			background-position: left top;
+			background-color: transparent;
+			}
+	
+
+
+Great reads
+From crosswords to great wines and the best bits from The Irish Times - Buy an Irish Times Book today 
+
+
+
+.widget-wrapper{border:solid 1px #C6C6C6; border-top:none; border-bottom-width:2px; clear:both;}
+.widgets{margin-top:-6px;}
+.widget-wrapper .sidebar_tabs a{margin-left:0!important; color:#666;}
+.widget-wrapper .sidebar_tabs > .active > a, .widget-wrapper .sidebar_tabs > .active > a:hover{color:#333;}
+
+#rewarding-times-widget { border:solid 1px #ccc; margin:0 0 20px 0;}
+#rewarding-times-form { margin: 0px auto; width: 300px; font-family: Arial, Helvetica, sans-serif; }
+#rewarding-times-form .section-title  {margin-bottom:3px !important;}
+#rewarding-times-form p {margin:0 0 5px 0; padding:0;font-size:14px;line-height:16px;}
+
+#rewarding-times-form input[type='radio'] {vertical-align:baseline; margin-right:5px;}
+#rewarding-times-form input[type='text'], #business-today-form input[type='email'] {width:132px; padding:4px; outline: none; border:solid 1px #ccc; cursor: text!important; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white; -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 white; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease;}
+
+#rewarding-times-form input[type='text']:hover,#business-today-form input[type='email']:hover { border:solid 1px #999; -moz-box-shadow:inset 0 0 10px #ccc;  -webkit-box-shadow: inset 0 0 10px #ccc;  box-shadow:inset 0 0 5px #ddd;}
+
+#rewarding-times-form input[type='text']:focus,#business-today-form input[type='email']:focus { border:solid 1px #80cbff;   -moz-box-shadow:inset 0 0 10px #000; -webkit-box-shadow: inset 0 0 10px #000; box-shadow:inset 0 0 5px #ddd;}
+
+.hideInfo {display:none;}
+#rewarding-times-form #subscribe {margin:20px 0 0 0;width:140px; padding:5px 0;}
+#rewarding-times-form label {color:#000; margin:0 0 3px 0;}
+
+#rewarding-times-form .digestSelection {margin:0 0 10px 0;padding:0 0 10px 0;text-align:left;list-style:none; border-bottom:solid 1px #e5e5e5;float:left;}
+
+#rewarding-times-form .digestSelection li {float:left; width:100px;}
+#rewarding-times-form .personalInfo {margin:0;padding:0 0 10px 0;text-align:left;list-style:none; float:left;}
+#rewarding-times-form .inputWrapper { width: 150px;float:left; }
+
+.alert {border:none;background:none;padding:0; font-family:Arial,Helvetica, sans-serif; color:#000;font-size:14px;}
+.inputContainer .error {display:inline; color:#cc0000 !important; font-weight:bold; font-size:12px; text-transform:uppercase; padding:0 0 0 5px;}
+.successOverlay {height: 145px;}
+
+.successOverlay p.thanks, .successOverlay p.thanks2 {color: #515151; line-height:1.3em; margin:0 0 15px !important; padding: 0 15px !important;}
+.successOverlay p.thanks {font-size:16px !important;}
+.successOverlay p.thanks2 {font-size:13px !important;}
+
+#rewarding-times-form {padding:80px 4px 0 4px; width:290px !important; background:url('//www.irishtimes.com/polopoly_fs/1.2266795.1435587203!/image/image.png') no-repeat top left;}
+
+#rewarding-times-form .digestSelection li  { width:95px !important;}
+
+#rewarding-times-form .inputWrapper  { width:145px !important;}
+
+
+#rewarding-times-form input[type='text'], #business-today-form input[type='email']{width:128px !important;}
+
+#rewarding-times-form .btn, #rewarding-times-form .btn-primary {
+	background-color: #333333; background-image: -moz-linear-gradient(top,#000000,#333333); background-image: -ms-linear-gradient(top,#000000,#333333);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#000000),to(#333333)); background-image: -webkit-linear-gradient(top,#000000,#333333);
+	background-image: -o-linear-gradient(top,#000000,#333333); background-image: linear-gradient(top,#000000,#333333); background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#333333',GradientType=0); 
+	border-color: #333333 #000000 #000000 !important; 
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+#rewarding-times-form .btn .btn:hover {text-decoration: none; background-color: #000000; *background-color: #000000; /* Buttons in IE7 don't get borders, so darken on hover */}
+
+
+#rewarding-times-form .inputWrapperFull {width:290px; float:left;}
+#rewarding-times-form .inputWrapperFull  label {font-size:12px; display: block; padding-left: 15px; text-indent: -15px; }
+#rewarding-times-form  .inputWrapperFull input {font-size:12px; width: 13px; height: 13px; padding: 0; margin:0;vertical-align: bottom; position: relative; top: -2px; *overflow: hidden; }
+
+
+
+
+
+
+jq(document).ready( function() {  
+
+  var visitorid;
+
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf('__utma') == 0) {
+      visitorid = c.substring('__utma'.length,c.length);
+      visitorid = visitorid.split(".")[1];
+      break
+    }
+  }
+
+  if (visitorid != '') {
+    jq('#googleid').val( visitorid );
+  } 
+
+  jq("#rewarding-times-form").validate({
+    debug:true,
+    rules: {
+      name: "required",
+      surname: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Required"
+      },
+      surname: {
+        required: "Required"
+      },
+      email : {
+        required: "Required",
+        email: "Not valid"
+      }
+    },
+    submitHandler: function(form) {
+      jq.ajax({
+        type: "POST",
+        url: jq('#rewarding-times-form').attr('action'),
+        data: jq("#rewarding-times-form").serialize(), 
+        success: function (data, status) {
+          _gaq.push([ '_trackEvent', 'Rewarding Times', 'Rewarding Times Signup' ]);
+        },
+        complete: function (data, status) {    
+          if (data.status != 200) {
+            alerttype="alert-error";
+            message = data.responseText;
+          } else {
+            response = jq.parseJSON(data.responseText);
+            if (response.result == 'OK') {
+              alerttype="success";
+              jq("#rewarding-times-form fieldset").hide();
+              message="<p class=\"thanks2\">You are now signed up to receive <strong>Rewarding Times</strong> emails. We look forward to sending you exclusive travel, entertainment and lifestyle offers from partners of <strong>The Irish Times</strong>.</p>";
+              message+="<p class=\"thanks2\">Thank you for signing up.</p>";
+              message+="<p class=\"thanks2\">The <strong>Rewarding Times </strong>team</p>";
+              message+='<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1018865686/?value=1&amp;label=A0vvCKLnugcQltDq5QM&amp;guid=ON&amp;script=0"/>';
+            } else {
+              alerttype = "alert-error";
+              message = response.result;
+            }
+          }
+          jq('#alert').addClass("successOverlay");  
+          jq('#alert').html('<div id="alertdiv" class="alert '+alerttype+'"><span>'+message+'</span></div>');
+        },             
+      });
+      return false;
+    }
+  });
+});
+
+
+
+
+
+
+Sign up to Rewarding Times weekly newsletter for premium offers, brought to you by partners of The Irish Times
+
+
+Google ID
+		
+
+
+
+
+
+
+Name
+		
+
+
+
+
+
+
+Surname
+		
+
+
+
+
+
+
+Email
+		
+
+
+
+
+
+Sign Up
+
+
+
+
+		I would also like to receive occasional update emails from The Irish Times
+
+
+
+
+
+
+	#commercialFeature_23796325_7_2465934.internal-advertisement {
+						
+
+			background-image: url(/polopoly_fs/1.1495231.1376579681!/image/image.jpg);
+			background-repeat: no-repeat;
+			background-position: left top;
+			background-color: transparent;
+			}
+	
+
+
+Weather
+Check the five-day forecast in your area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subscribe
+About Us
+Policy & Terms
+
+
+
+Subscribe
+
+
+
+Subscription Bundles 
+Gift Subscriptions 
+Home Delivery 
+
+
+
+
+Irish Times Products & Services
+
+
+
+
+ePaper 
+eBooks 
+Crosswords 
+Newspaper Archive 
+
+
+
+
+
+
+Email Alerts & Newsletters 
+Article Archive 
+Executive Jobs
+Page Sales
+Photo Sales
+
+
+
+
+
+
+About Us
+
+
+Advertise 
+Contact Us 
+The Irish Times Trust 
+Careers 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Our Partners
+Rewarding Times
+MyHome.ie
+Irish Racing
+Entertainment.ie
+Top 1000
+MyAntiques.ie
+The Gloss
+Irish Times Training
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terms & Conditions 
+Privacy Policy 
+Cookie Information 
+Community Standards 
+Copyright 
+FAQs 
+
+
+
+© 2015 THE IRISH TIMES
+
+
+
+
+
+
+
+
+
+	var _glb_mydate = new Date();
+	jq(function() { 
+		jq('.thisyear').html( _glb_mydate.getFullYear()  );
+	});
+
+
+
+
+
+
+
+For the best site experience please enable JavaScript in your browser settings
+
+
+/* Any CSS that needs to be patched put here with date and jira ref.
+   Add a comment to the corresponding jira to remember to remove it when the fix is propoerly deployed
+*/
+
+/* 10/03/17 Repeated heading for inline ads - Remove when DFP goes live */
+.ad-inline-article .heading{display:none;}
+
+
+/* Gradient on Package story h2 12-10-2016 To be deployed to live */
+.news-package .story .h2{
+  	padding: 50px 10px 10px 10px;
+    background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 51%, rgba(0,0,0,0.9) 100%);
+    background: -o-llinear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 51%, rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 51%, rgba(0,0,0,0.9) 100%)
+}
+  
+
+/* 01/11/16 - stop follow buttons from moving on hover */
+#torso .bt-container .at-follow-tbx-element .at-follow-btn:focus, #torso .bt-container .at-follow-tbx-element .at-follow-btn:hover{
+-webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    outline-offset: 0;
+}
+
+  
+/*  10/11/2016 - Premium Content Feature Box Fix (Hotizontal one and Vertical One on Mobile) */
+  
+  @media only screen and (max-width: 767px){.span2 .soa.feature_box .feature_text:before {top: 70px;}}
+  .soa.feature_box.horizontal .feature_text:before{top:60px;}
+            
+    
+
+
+
+jq(document).ready(function() {
+  function showTab(){
+  
+    var minWidth = 1100;
+    var shouldShow = jq('body.isArticle.anonymous')[0] != undefined;
+    var hasTakeover = jq('body').css('background-image');
+  	var tab = '<div class="floating_tab slideFromLeft"><a class="gtm-event" data-evt-category="/digital-subscriptions" data-evt-action="Go to StoreFront" data-evt-label="Subscribe Now: Floating Tab" href="/digital-subscriptions"><b>Subscribe Now</b></a></div>';
+    
+    if( (windowWidth >= minWidth) && (shouldShow == true) && (hasTakeover == 'none')  ){ 
+		jq( "body" ).append( tab );
+    }
+  }
+  setTimeout(showTab, 3000);
+});
+
+
+.floating_tab{position:fixed; left:0; top:auto;  bottom:30%; -webkit-backface-visibility: hidden;
+ -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; 
+ -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s;
+ -webkit-box-shadow: 5px 0px 20px 0px rgba(81, 81, 81, 0.7); -moz-box-shadow:    5px 0px 20px 0px rgba(81, 81, 81, 0.7); box-shadow: 5px 0px 20px 0px rgba(81, 81, 81, 0.7);}
+
+.floating_tab a{display:block; height:144px; width:40px; box-sizing:border-box; padding:10px;     letter-spacing: -0.04em; /* background-color:#066; color:#FFF;*/  background-color:#fad165; color:#333;  
+ font-family:"DINWeb-Bold",Arial,Helvetica,sans-serif; text-transform:uppercase; font-weight:bold; white-space: nowrap;}
+
+.floating_tab a b{
+  display: inline-block; margin:auto;  position:absolute; top: 0; bottom: 0;
+ -webkit-transform: rotate(-90deg)  translate(-50%, 50%); -moz-transform: rotate(-90deg)  translate(-50%, 50%); -ms-transform: rotate(-90deg)  translate(-50%, 50%); -o-transform: rotate(-90deg)  translate(-50%, 50%); 
+ -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%;  transform-origin: 0 50%;   height: 30px;}
+
+
+@-webkit-keyframes slideFromLeft {
+	0% {opacity:0; -webkit-transform:translateX(-850px); transform:translateX(-850px)}
+	100% {-webkit-transform:translateX(0); transform:translateX(0)}
+}
+  
+@keyframes slideFromLeft {
+	0% {opacity:0; -webkit-transform:translateX(-850px); -ms-transform:translateX(-850px); transform:translateX(-850px)}
+	100% {-webkit-transform:translateX(0); -ms-transform:translateX(0); transform:translateX(0)}
+}
+
+    .slideFromLeft { -webkit-animation-name: slideFromLeft; animation-name: slideFromLeft }
+
+@media only screen and (max-width: 1101px) { .floating_tab{display:none !important;} }    
+ 
+
+::i-block-chrome,article{z-index:inherit;}/*old safari*/
+
+
+/*old IE*/
+.lt-ie9 .floating_tab{display:none !important;}
+.lt-ie8 .floating_tab{display:none !important;}
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+Forgot Password?
+
+
+Don't have an account?
+Subscribe
+
+
+
+
+
+ 
+
+
+
+
+Subscriber Only Articles
+
+
+
+The ePaper
+
+
+
+Subscriber Rewards
+
+
+
+
+Subscriber Tour
+
+
+
+Breaking news app
+
+
+
+IT Sunday
+
+
+
+
+My Account
+
+
+
+
+eBooks
+
+
+
+
+Email Newsletters
+
+
+
+
+Crossword Club
+
+
+
+
+Newspaper Archive
+
+
+
+
+Sign Out
+
+
+
+
+
+
+SUBSCRIBE
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+Wed 31/5/2017
+
+
+
+
+
+
+
+
+News  
+
+Ireland 
+World 
+Politics 
+Crime & Law 
+Social Affairs 
+Health 
+Education 
+Brexit 
+
+
+Sport  
+
+Lions Tour 
+Rugby 
+Soccer 
+Gaelic Games 
+Golf 
+Racing 
+Other Sports 
+Women in Sport 
+Comment 
+
+
+Business  
+
+The Economy 
+Your Money 
+Companies 
+Technology 
+Work 
+Commercial Property 
+Comment 
+
+
+Opinion  
+
+Editorials 
+Letters 
+Columnists 
+An Irishman's Diary 
+Opinion & Analysis 
+Martyn Turner 
+
+
+Life & Style  
+
+Food & Drink 
+Homes & Property 
+Health & Family 
+People 
+Travel 
+Motors 
+Fashion 
+Abroad 
+
+
+Culture  
+
+Books 
+Film 
+Music 
+Stage 
+Art & Design 
+TV, Radio, Web 
+Treibh 
+
+
+More  
+
+You are what you read 
+eBooks 
+Offers 
+Jobs 
+Family Notices 
+Competitions 
+
+
+
+Video 
+Podcasts  
+
+Inside Politics 
+World View 
+Second Captains 
+Business 
+Róisín Meets 
+Off Topic 
+The Women's Podcast 
+
+
+Executive Jobs 
+
+
+
+Crosswords
+Newsletters
+Notices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Forgot Password?
+
+
+Sign In
+
+
+Invalid email or password.
+
+
+Not an Irish Times subscriber? Subscribe
+
+
+
+
+
+
+
+
+
+
+Subscriber Only Articles
+Specially selected and available only to our subscribers
+
+
+
+
+Subscriber Rewards
+Exclusive offers, discounts and invitations
+
+
+
+
+Subscriber Tour
+Explore the features of your subscription
+
+
+
+
+Crossword Club
+Digital Simplex and Crosaire crosswords
+
+
+
+
+Newspaper Archive
+150 years of Irish Times journalism
+
+
+
+
+My Account
+Manage your account
+
+
+
+
+IT Sunday
+Your weekly email exclusively curated for subscribers
+
+
+
+
+eBooks
+Carefully curated selections of Irish Times writing
+
+
+
+
+Email Newsletters
+Sign up to get the stories you want delivered to your inbox
+
+
+
+
+The ePaper
+An exact digital replica of the printed paper
+
+
+
+
+Breaking news app
+Our Apple and Android apps to read on the go
+
+
+
+Sign Out
+
+
+
+
+
+
+ 
+
+
+
+    var refreshed = false;
+
+    var adAlmostVisibleScrollValue = 300;
+
+    var listener = function() {
+        if (window.scrollY >= adAlmostVisibleScrollValue && !refreshed) {
+            googletag.cmd.push(function() {
+                adLazyloaded.forEach(function(element){
+                    googletag.pubads().refresh([element]);
+				});
+            });
+            refreshed = true;
+
+            window.removeEventListener('scroll', listener);
+        }
+    }
+    window.addEventListener('scroll', listener);
+			
+
+
+

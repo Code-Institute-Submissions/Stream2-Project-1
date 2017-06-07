@@ -1,0 +1,442 @@
+Season,Player_Name,League_Moving_From,Club_Moving_From,League_Moving_To,Club_Moving_To,Fee,Date
+2015-2016,Rhoys Wiggins,Championship,Sheffield Wednesday,Premier,Bournemouth,200000,01/02/16
+2015-2016,Adalberto Penaranda,NoneEPLChamp,Udinese,Premier,Watford,Undisclosed,01/02/16
+2015-2016,James Maddison,NoneEPLChamp,Coventry City,Premier,Norwich City,3000000,01/02/16
+2015-2016,Julien De Sart,NoneEPLChamp,Standard Liege,Championship,Middlesbrough,Undisclosed,01/02/16
+2015-2016,Jordan Rhodes,Championship,Blackburn Rovers,Championship,Middlesbrough,9000000,01/02/16
+2015-2016,Abdoulaye Doucoure,NoneEPLChamp,Stade Rennais,Premier,Watford,8000000,01/02/16
+2015-2016,Milos Veljkovic,Premier,Tottenham Hotspur,NoneEPLChamp,Werder Bremen,500000,01/02/16
+2015-2016,Gianelli Imbula,NoneEPLChamp,Porto,Premier,Stoke City,18300000,01/02/16
+2015-2016,Oumar Niasse,NoneEPLChamp,Lokomotiv Moscow,Premier,Everton,13500000,01/02/16
+2015-2016,Mario Suarez,NoneEPLChamp,Fiorentina,Premier,Watford,4000000,30/01/16
+2015-2016,Matt Miazga,NoneEPLChamp,New York Red Bulls,Premier,Chelsea,3500000,30/01/16
+2015-2016,Wahbi Khazri,NoneEPLChamp,Bordeaux,Premier,Sunderland,9000000,30/01/16
+2015-2016,Romuald Boco,NoneEPLChamp,Portsmouth,NoneEPLChamp,Accrington Stanley,Free,30/01/16
+2015-2016,Daniel Iversen,NoneEPLChamp,Esbjerg fB,Premier,Leicester City,200000,29/01/16
+2015-2016,Mike Williamson,Premier,Newcastle United,Championship,Wolverhampton Wanderers,Nominal Fee,29/01/16
+2015-2016,Alberto Paloschi,NoneEPLChamp,Chievo Verona,Premier,Swansea City,7800000,29/01/16
+2015-2016,Deniss Rakels,NoneEPLChamp,Cracovia,Championship,Reading,500000,28/01/16
+2015-2016,Scott Golbourne,Championship,Wolverhampton Wanderers,NoneEPLChamp,Bristol Rovers,300000,28/01/16
+2015-2016,Henrik Rorvik Bjordal,NoneEPLChamp,Aalesund,Championship,Brighton & Hove Albion,Undisclosed,27/01/16
+2015-2016,Lamine Kone,NoneEPLChamp,Lorient,Premier,Sunderland,5000000,27/01/16
+2015-2016,Andros Townsend,Premier,Tottenham Hotspur,Premier,Newcastle United,12000000,27/01/16
+2015-2016,Shane Lowry,Championship,Birmingham City,NoneEPLChamp,Perth Glory,Free,27/01/16
+2015-2016,Ramires,Premier,Chelsea,NoneEPLChamp,Jiangsu Suning,25000000,27/01/16
+2015-2016,Diego Fabbrini,Premier,Watford,Championship,Birmingham City,1500000,27/01/16
+2015-2016,Shane Ferguson,Premier,Newcastle United,NoneEPLChamp,Millwall,Undisclosed,26/01/16
+2015-2016,Marcus Olsson,Championship,Blackburn Rovers,Championship,Derby County,1000000,26/01/16
+2015-2016,Orlando Sa,Championship,Reading,NoneEPLChamp,Maccabi Tel Aviv,Undisclosed,26/01/16
+2015-2016,Adam Taggart,Championship,Fulham,NoneEPLChamp,Perth Glory,Undisclosed,26/01/16
+2015-2016,Emmanuel Adebayor,NoneEPLChamp,Unattached,Premier,Crystal Palace,Free,26/01/16
+2015-2016,Anthony Gerrard,NoneEPLChamp,Shrewsbury Town,NoneEPLChamp,Oldham Athletic,Free,26/01/16
+2015-2016,Paul Robinson,NoneEPLChamp,Unattached,Championship,Burnley,Free,26/01/16
+2015-2016,Jake Taylor,Championship,Reading,NoneEPLChamp,Exeter City,Free,25/01/16
+2015-2016,Toumani Diagouraga,Championship,Brentford,Championship,Leeds United,600000,25/01/16
+2015-2016,Jake Taylor,Championship,Reading,NoneEPLChamp,Exeter City,Free,25/01/16
+2015-2016,Aaron Williams,NoneEPLChamp,Nuneaton Town,NoneEPLChamp,Peterborough United,Undisclosed,23/01/16
+2015-2016,Callum Chettle,NoneEPLChamp,Nuneaton Town,NoneEPLChamp,Peterborough United,Undisclosed,23/01/16
+2015-2016,Steve Harper,NoneEPLChamp,Unattached,Premier,Sunderland,Free,22/01/16
+2015-2016,Gary Hooper,Premier,Norwich City,Championship,Sheffield Wednesday,3000000,22/01/16
+2015-2016,Shaquile Coulthirst,Premier,Tottenham Hotspur,NoneEPLChamp,Peterborough United,Undisclosed,22/01/16
+2015-2016,Luke Wilkinson,NoneEPLChamp,Ipwich Town,NoneEPLChamp,Luton Town,Undisclosed,22/01/16
+2015-2016,Daniel Amartey,NoneEPLChamp,Copenhagen,Premier,Leicester City,5000000,22/01/16
+2015-2016,Kevin Foley,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,22/01/16
+2015-2016,Mauro Zarate,Premier,West Ham United,NoneEPLChamp,Fiorentina,3000000,22/01/16
+2015-2016,Luciano Becchio,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,21/01/16
+2015-2016,Adil Nabi,Premier,West Bromwich Albion,NoneEPLChamp,Peterborough United,Undisclosed,21/01/16
+2015-2016,Sam Byram,Championship,Leeds United,Premier,West Ham United,3700000,20/01/16
+2015-2016,Yann Kermorgant,Premier,Bournemouth,Championship,Reading,500000,20/01/16
+2015-2016,Karim Matmour,NoneEPLChamp,Unattached,Championship,Huddersfield Town,Free,20/01/16
+2015-2016,Luke Thomas,NoneEPLChamp,Cheltenham Town,Championship,Derby County,100000,20/01/16
+2015-2016,Lewis Walker,NoneEPLChamp,Ilkeston,Championship,Derby County,Undisclosed,20/01/16
+2015-2016,Elliott Ward,Premier,Bournemouth,Championship,Blackburn Rovers,Undisclosed,20/01/16
+2015-2016,Costel Pantilimon,Premier,Sunderland,Premier,Watford,Free,19/01/16
+2015-2016,George Evans,Premier,Manchester City,Championship,Reading,Free,19/01/16
+2015-2016,Conor Washington,NoneEPLChamp,Peterborough United,Championship,QPR,2500000,19/01/16
+2015-2016,Steven Naismith,Premier,Everton,Premier,Norwich City,8500000,19/01/16
+2015-2016,Jorge Teixeira,NoneEPLChamp,Standard Liege,Championship,Charlton Athletic,Undisclosed,19/01/16
+2015-2016,Luke Maxwell,NoneEPLChamp,Kidderminster Harriers,Championship,Birmingham City,75000,19/01/16
+2015-2016,Jeffrey Monakana,Championship,Brighton & Hove Albion,NoneEPLChamp,Voluntari,Free,19/01/16
+2015-2016,Nordin Amrabat,NoneEPLChamp,Malaga,Premier,Watford,6000000,18/01/16
+2015-2016,Liam Grimshaw,Premier,Manchester United,Championship,Preston North End,Undisclosed,18/01/16
+2015-2016,Timm Klose,NoneEPLChamp,Wolfsburg,Premier,Norwich City,8500000,18/01/16
+2015-2016,Charlie Austin,Championship,QPR,Premier,Southampton,4000000,16/01/16
+2015-2016,Matty Dixon,Championship,Hull City,NoneEPLChamp,York City,Free,15/01/16
+2015-2016,Ben Godfrey,NoneEPLChamp,York City,Premier,Norwich City,150000,15/01/16
+2015-2016,Anthony Caceres,NoneEPLChamp,Central Coast Mariners,Premier,Manchester City,100000,15/01/16
+2015-2016,Simeon Jackson,NoneEPLChamp,Unattached,Championship,Blackburn Rovers,Free,15/01/16
+2015-2016,Alie Sesay,Premier,Leicester City,NoneEPLChamp,Barnet,Undisclosed,15/01/16
+2015-2016,Hubert Adamczyk,NoneEPLChamp,Cracovia,Premier,Chelsea,Free,14/01/16
+2015-2016,Will Aimson,Championship,Hull City,NoneEPLChamp,Blackpool,Undisclosed,14/01/16
+2015-2016,Mohamed Elneny,NoneEPLChamp,Basel,Premier,Arsenal,5000000,14/01/16
+2015-2016,Shilow Tracey,NoneEPLChamp,Ebbsfleet United,Premier,Tottenham Hotspur,Undisclosed,13/01/16
+2015-2016,Jonathan Parr,Championship,Ipswich Town,NoneEPLChamp,Stromsgodset,Free,13/01/16
+2015-2016,Jack Hunt,Premier,Crystal Palace,Championship,Sheffield Wednesday,2000000,13/01/16
+2015-2016,Will Randall,NoneEPLChamp,Swindon Town,Championship,Wolverhampton Wanderers,Undisclosed,12/01/16
+2015-2016,Jonjo Shelvey,Premier,Swansea City,Premier,Newcastle United,12000000,12/01/16
+2015-2016,Joe Davis,Premier,Leicester City,NoneEPLChamp,Fleetwood Town,Undisclosed,11/01/16
+2015-2016,Jack McKay,NoneEPLChamp,Doncaster Rovers,Championship,Leeds United,Undisclosed,11/01/16
+2015-2016,Paul McKay,NoneEPLChamp,Doncaster Rovers,Championship,Leeds United,Undisclosed,11/01/16
+2015-2016,Henri Saivet,NoneEPLChamp,Bordeaux,Premier,Newcastle United,4500000,11/01/16
+2015-2016,Lewis Grabban,Premier,Norwich City,Premier,Bournemouth,7000000,11/01/16
+2015-2016,Benik Afobe,Championship,Wolverhampton Wanderers,Premier,Bournemouth,10000000,10/01/16
+2015-2016,Yanic Wildschut,Championship,Middlesbrough,NoneEPLChamp,Wigan Athletic,1000000,09/01/16
+2015-2016,Ivo Pinto,NoneEPLChamp,Dinamo Zagreb,Premier,Norwich City,2200000,08/01/16
+2015-2016,Jan Kirchhoff,NoneEPLChamp,Bayern Munich,Premier,Sunderland,1000000,07/01/16
+2015-2016,Joe Cole,Premier,Aston Villa,NoneEPLChamp,Coventry City,Free,07/01/16
+2015-2016,Anthony Knockaert,NoneEPLChamp,Standard Liage,Championship,Brighton & Hove Albion,2500000,07/01/16
+2015-2016,Shani Tarashaj,NoneEPLChamp,Grasshoppers,Premier,Everton,3000000,07/01/16
+2015-2016,Nick Blackman,Championship,Reading,Championship,Derby County,2500000,06/01/16
+2015-2016,Marko Grujic,NoneEPLChamp,Red Star Belgrade,Premier,Liverpool,5100000,06/01/16
+2015-2016,Conor Townsend,Championship,Hull City,NoneEPLChamp,Scunthorpe United,Free,06/01/16
+2015-2016,Simon Dawkins,Championship,Derby County,NoneEPLChamp,San Jose Earthquakes,Undisclosed,06/01/16
+2015-2016,Michael Harriman,Championship,QPR,NoneEPLChamp,Wycombe Wanderers,Undisclosed,06/01/16
+2015-2016,Kenny McEvoy,Premier,Tottenham Hotspur,NoneEPLChamp,York City,Free,05/01/16
+2015-2016,Elliott Bennett,Premier,Norwich City,Championship,Blackburn Rovers,Undisclosed,05/01/16
+2015-2016,Abdoul Camara,NoneEPLChamp,Angers,Championship,Derby County,1250000,04/01/16
+2015-2016,Demarai Gray,Championship,Birmingham City,Premier,Leicester City,3700000,04/01/16
+2015-2016,Roger Johnson,NoneEPLChamp,Unattached,Championship,Charlton Athletic,Free,04/01/16
+2015-2016,Matthew Foulds,NoneEPLChamp,Bury,Premier,Everton,400000,02/01/16
+2015-2016,Murray Wallace,Championship,Huddersfield Town,NoneEPLChamp,Scunthorpe United,Undisclosed,02/01/16
+2015-2016,Matt Jarvis,Premier,West Ham United,Premier,Norwich City,2500000,24/12/15
+2015-2016,Michal Zyro,NoneEPLChamp,Legia Warsaw,Championship,Wolverhampton Wanderers,350000,24/12/15
+2015-2016,Luke Varney,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,18/12/15
+2015-2016,Ulises Davila,Premier,Chelsea,NoneEPLChamp,Santos Laguna,Free,05/12/15
+2015-2016,Richie Towell,NoneEPLChamp,Dundalk,NoneEPLChamp,Brigton & Hove Albion,Free,30/11/15
+2015-2016,Simon Lenigham,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,27/11/15
+2015-2016,Luke Brattan,NoneEPLChamp,Unattached,Premier,Manchester City,Free,26/10/15
+2015-2016,Marco Amelia,NoneEPLChamp,Unattached,Premier,Chelsea,Free,09/10/15
+2015-2016,Joleon Lescott,Premier,West Bromwich Albion,Premier,Aston Villa,2000000,01/09/15
+2015-2016,Matija Sarkic,NoneEPLChamp, Anderlecht,Premier,Aston Villa,Undisclosed,01/09/15
+2015-2016,Papy Djilobodji,NoneEPLChamp, Nantes,Premier,Chelsea,4000000,01/09/15
+2015-2016,Michael Hector,Championship,Reading,Premier,Chelsea,5400000,01/09/15
+2015-2016,Jacob Butterfield,Championship,Huddersfield Town,Championship,Derby County,5000000,01/09/15
+2015-2016,Ramiro Funes Mori,NoneEPLChamp, River Plate,Premier,Everton,9500000,01/09/15
+2015-2016,Richard Stearman,Championship,Wolverhampton Wanderers,Championship,Fulham,2000000,01/09/15
+2015-2016,Jordan Botaka,NoneEPLChamp, Excelsior,Championship,Leeds United,1000000,01/09/15
+2015-2016,Anthony Martial,NoneEPLChamp,AS Monaco,Premier,Manchester United,35000000,01/09/15
+2015-2016,Carlos de Pena,NoneEPLChamp,Nacional,Championship,Middlesbrough,2750000,01/09/15
+2015-2016,Virgil van Dijk,NoneEPLChamp, Celtic,Premier,Southampton,11500000,01/09/15
+2015-2016,Luke O'Neill,Championship,Burnley,NoneEPLChamp,Southend United,Free,01/09/15
+2015-2016,Obbi Oulare,NoneEPLChamp, Club Brugge,Premier,Watford,6000000,01/09/15
+2015-2016,Nikica Jelavic,Championship,Hull City,Premier,West Ham United,3000000,01/09/15
+2015-2016,Nathan Byrne,NoneEPLChamp,Swindon Town,Championship,Wolverhampton Wanderers,1000000,01/09/15
+2015-2016,Jelle Vossen,Championship,Burnley,NoneEPLChamp, Club Brugge,2500000,31/08/15
+2015-2016,Glenn Murray,Premier,Crystal Palace,Premier,Bournemouth,5000000,31/08/15
+2015-2016,Javier Hernandez,Premier,Manchester United,NoneEPLChamp, Bayer Leverkusen,7300000,31/08/15
+2015-2016,Fabio Borini,Premier,Liverpool,Premier,Sunderland,10000000,31/08/15
+2015-2016,Lasha Dvali,Championship,Reading,NoneEPLChamp, Duisburg,Free,31/08/15
+2015-2016,Barry Bannan,Premier,Crystal Palace,Championship,Sheffield Wednesday,Undisclosed,31/08/15
+2015-2016,Ryan Fredericks,Championship,Bristol City,Championship,Fulham,Undisclosed,31/08/15
+2015-2016,Javi Guerra,NoneEPLChamp, Cardiff City,NoneEPLChamp, Rayo Vallecano,Undisclosed,31/08/15
+2015-2016,Brown Ideye,Premier,West Bromwich Albion,NoneEPLChamp, Olympiacos,Undisclosed,31/08/15
+2015-2016,Modibo Maiga,Premier,West Ham United,NoneEPLChamp, Al-Nassr,Undisclosed,31/08/15
+2015-2016,Loic Nego,Championship,Charlton Athletic,NoneEPLChamp, Videoton,Undisclosed,31/08/15
+2015-2016,Idriss Saadi,NoneEPLChamp, Clermont Foot,NoneEPLChamp, Cardiff City,Undisclosed,31/08/15
+2015-2016,Etien Velikonja,NoneEPLChamp, Cardiff City,NoneEPLChamp, Lierse,Undisclosed,31/08/15
+2015-2016,Kevin De Bruyne,NoneEPLChamp, Wolfsburg,Premier,Manchester City,55000000,30/08/15
+2015-2016,Jonny Evans,Premier,Manchester United,Premier,West Bromwich Albion,8000000,29/08/15
+2015-2016,Fernando Forestieri,Premier,Watford,Championship,Sheffield Wednesday,3000000,29/08/15
+2015-2016,Elvis Manu,NoneEPLChamp, Feyenoord,Championship,Brighton & Hove Albion,Undisclosed,29/08/15
+2015-2016,Tommy Oar,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,29/08/15
+2015-2016,Piotr Malarczyk,NoneEPLChamp, Korona Kielce,Championship,Ipswich Town,8500,28/08/15
+2015-2016,Stephen McLaughlin,Championship,Nottingham Forest,NoneEPLChamp,Southend United,Undisclosed,28/08/15
+2015-2016,Daniel Tozser,NoneEPLChamp,Unattached,Championship,QPR,Free,28/08/15
+2015-2016,Leandro Rodriguez,NoneEPLChamp, River Plate,Premier,Everton,500000,28/08/15
+2015-2016,Son Heung-min,NoneEPLChamp, Bayer Leverkusen,Premier,Tottenham Hotspur,22000000,28/08/15
+2015-2016,Shaun Maloney,NoneEPLChamp, Chicago Fire,Championship,Hull City,1500000,27/08/15
+2015-2016,Aleksandar Tonev,Premier,Aston Villa,NoneEPLChamp, Frosinone,Free,27/08/15
+2015-2016,Joey Barton,NoneEPLChamp,Unattached,Championship,Burnley,Free,27/08/15
+2015-2016,Manuel Casado,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,27/08/15
+2015-2016,Pavel Pogrebnyak,Championship,Reading,NoneEPLChamp, Dynamo Moscow,Free,27/08/15
+2015-2016,Gabriel Tamas,NoneEPLChamp,Unattached,NoneEPLChamp, Cardiff City,Free,26/08/15
+2015-2016,Liam O'Neil,Premier,West Bromwich Albion,NoneEPLChamp,Chesterfield,Undisclosed,24/08/15
+2015-2016,James Alabi,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,24/08/15
+2015-2016,Kenedy,NoneEPLChamp,Fluminense,Premier,Chelsea,6300000,22/08/15
+2015-2016,Mehdi Abeid,Premier,Newcastle United,NoneEPLChamp, Panathinaikos,1500000,21/08/15
+2015-2016,Nicolai Brock-Madsen,NoneEPLChamp, Randers,Championship,Birmingham City,500000,21/08/15
+2015-2016,Andre Gray,Championship,Brentford,Championship,Burnley,9000000,21/08/15
+2015-2016,Tim Ream,Championship,Bolton Wanderers,Championship,Fulham,1400000,20/08/15
+2015-2016,Alex Smithies,Championship,Huddersfield Town,Championship,QPR,1500000,20/08/15
+2015-2016,Francesco Pisano,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,20/08/15
+2015-2016,Nicolas Otamendi,NoneEPLChamp, Valencia,Premier,Manchester City,32000000,20/08/15
+2015-2016,Pedro,NoneEPLChamp, Barcelona,Premier,Chelsea,21400000,20/08/15
+2015-2016,Connor Goldson,NoneEPLChamp,Shrewsbury Town,Championship,Brighton & Hove Albion,Undisclosed,19/08/15
+2015-2016,Gokhan Inler,NoneEPLChamp, Napoli,Premier,Leicester City,5000000,19/08/15
+2015-2016,Florian Thauvin,NoneEPLChamp, Marseille,Premier,Newcastle United,12000000,19/08/15
+2015-2016,Baba Rahman,NoneEPLChamp, Augsburg,Premier,Chelsea,17600000,16/08/15
+2015-2016,Maxime Colin,NoneEPLChamp, Anderlecht,Championship,Brentford,900000,14/08/15
+2015-2016,Jamie Murphy,NoneEPLChamp,Sheffield United,Championship,Brighton & Hove Albion,1750000,14/08/15
+2015-2016,Clinton N'Jie,NoneEPLChamp, Lyon,Premier,Tottenham Hotspur,12200000,14/08/15
+2015-2016,David Nugent,Premier,Leicester City,Championship,Middlesbrough,4000000,14/08/15
+2015-2016,Roberto Soldado,Premier,Tottenham Hotspur,NoneEPLChamp, Villarreal,10000000,14/08/15
+2015-2016,Adama Traore,NoneEPLChamp, Barcelona,Premier,Aston Villa,7000000,14/08/15
+2015-2016,Mason Holgate,NoneEPLChamp,Barnsley,Premier,Everton,500000,13/08/15
+2015-2016,Uwe Hunemeier,NoneEPLChamp, Paderborn 07,Championship,Brighton & Hove Albion,1780000,12/08/15
+2015-2016,Chris Kirkland,NoneEPLChamp,Unattached,Championship,Preston North End,Free,12/08/15
+2015-2016,Oriol Romeu,Premier,Chelsea,Premier,Southampton,5000000,12/08/15
+2015-2016,Josh Vickers,NoneEPLChamp,Unattached,Premier,Swansea City,Free,12/08/15
+2015-2016,Paolo Hurtado,NoneEPLChamp, Pacos de Ferreira,Championship,Reading,Undisclosed,12/08/15
+2015-2016,Hope Akpan,Championship,Reading,Championship,Blackburn Rovers,Free,11/08/15
+2015-2016,Xherdan Shaqiri,NoneEPLChamp, Inter Milan,Premier,Stoke City,12000000,11/08/15
+2015-2016,Dame N'Doye,Championship,Hull City,NoneEPLChamp, Trabzonspor,2200000,10/08/15
+2015-2016,Salomon Rondon,NoneEPLChamp, Zenit Saint Petersburg,Premier,West Bromwich Albion,12000000,10/08/15
+2015-2016,Josh Ginnelly,NoneEPLChamp,Shrewsbury Town,Championship,Burnley,400000,10/08/15
+2015-2016,Moses Odubajo,Championship,Brentford,Championship,Hull City,3500000,07/08/15
+2015-2016,Renny Smith,NoneEPLChamp,Unattached,Championship,Burnley,Free,07/08/15
+2015-2016,Grant Hall,Premier,Tottenham Hotspur,Championship,QPR,Undisclosed,07/08/15
+2015-2016,Nathan Delfouneso,NoneEPLChamp,Unattached,Championship,Blackburn Rovers,Free,06/08/15
+2015-2016,Angel Di Maria,Premier,Manchester United,NoneEPLChamp, Paris Saint-Germain,44300000,06/08/15
+2015-2016,Ryan Fredericks,Premier,Tottenham Hotspur,Championship,Bristol City,250000,06/08/15
+2015-2016,Oscar Gobern,NoneEPLChamp,Unattached,Championship,QPR,Free,06/08/15
+2015-2016,Luke Hendrie,NoneEPLChamp,Unattached,Championship,Burnley,Free,06/08/15
+2015-2016,Rafael Paez,Premier,Liverpool,NoneEPLChamp, Alcorcon,Undisclosed,06/08/15
+2015-2016,Ivan Toney,NoneEPLChamp,Northampton Town,Premier,Newcastle United,300000,06/08/15
+2015-2016,Stephen Dobbie,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,05/08/15
+2015-2016,Danny Guthrie,NoneEPLChamp,Unattached,Championship,Blackburn Rovers,Free,05/08/15
+2015-2016,Joe Newell,NoneEPLChamp,Peterborough United,Championship,Rotherham United,Undisclosed,05/08/15
+2015-2016,Bakary Sako,NoneEPLChamp,Unattached,Premier,Crystal Palace,Free,05/08/15
+2015-2016,Modou Sougou,NoneEPLChamp, Olympique Marseille,Championship,Sheffield Wednesday,Free,05/08/15
+2015-2016,Rhoys Wiggins,Championship,Charlton Athletic,Championship,Sheffield Wednesday,750000,05/08/15
+2015-2016,Lawrie Wilson,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,05/08/15
+2015-2016,Stuart Dallas,Championship,Brentford,Championship,Leeds United,1300000,04/08/15
+2015-2016,Jonathan Douglas,Championship,Brentford,Championship,Ipswich Town,Free,04/08/15
+2015-2016,Max Gradel,NoneEPLChamp, Saint-Etienne,Premier,Bournemouth,7000000,04/08/15
+2015-2016,Sakari Mattila,NoneEPLChamp, Aalesund,Championship,Fulham,500000,04/08/15
+2015-2016,Steve Morison,Championship,Leeds United,NoneEPLChamp,Millwall,Undisclosed,04/08/15
+2015-2016,Lee Tomlin,Championship,Middlesbrough,Premier,Bournemouth,3500000,04/08/15
+2015-2016,Rafael,Premier,Manchester United,NoneEPLChamp,Lyon,2500000,03/08/15
+2015-2016,Yohan Benalouane,NoneEPLChamp, Atalanta,Premier,Leicester City,5600000,03/08/15
+2015-2016,N'Golo Kante,NoneEPLChamp, Caen,Premier,Leicester City,5600000,03/08/15
+2015-2016,Larsen Toure,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,03/08/15
+2015-2016,Connor Wickham,Premier,Sunderland,Premier,Crystal Palace,7000000,03/08/15
+2015-2016,Bobby Zamora,NoneEPLChamp,Unattached,Championship,Brighton & Hove Albion,Free,03/08/15
+2015-2016,Jake Kean,NoneEPLChamp,Unattached,Premier,Norwich City,Free,01/08/15
+2015-2016,Craig Mackail-Smith,Championship,Brighton & Hove Albion,NoneEPLChamp,Luton Town,Free,01/08/15
+2015-2016,Rickie Lambert,Premier,Liverpool,Premier,West Bromwich Albion,3000000,31/07/15
+2015-2016,Lucas Joao,NoneEPLChamp, Nacional,Championship,Sheffield Wednesday,2000000,31/07/15
+2015-2016,James Perch,NoneEPLChamp,Wigan Athletic,Championship,QPR,1000000,31/07/15
+2015-2016,Sergio Aguza,NoneEPLChamp, Real Madrid B,Championship,Milton Keynes Dons,Undisclosed,31/07/15
+2015-2016,Jonas Knudsen,NoneEPLChamp, Esbjerg,Championship,Ipswich Town,350000,31/07/15
+2015-2016,Rudy Gestede,Championship,Blackburn Rovers,Premier,Aston Villa,7000000,31/07/15
+2015-2016,Jordan Veretout,NoneEPLChamp, Nantes,Premier,Aston Villa,7000000,31/07/15
+2015-2016,Vlad Chirches,Premier,Tottenham Hotspur,NoneEPLChamp,Napoil,4500000,30/07/15
+2015-2016,Tendayi Darikwa,NoneEPLChamp,Chesterfield,Championship,Burnley,500000,30/07/15
+2015-2016,Daniel Pinillos,NoneEPLChamp,Unattached,Championship,Nottingham Forest,Free,30/07/15
+2015-2016,Matthew Upson,NoneEPLChamp,Unattached,Championship,Milton Keynes Dons,Free,30/07/15
+2015-2016,Robbie Brady,Championship,Hull City,Premier,Norwich City,7000000,29/07/15
+2015-2016,James Chester,Championship,Hull City,Premier,West Bromwich Albion,8000000,29/07/15
+2015-2016,Daniel Agyei,NoneEPLChamp,Wimbledon,Championship,Burnley,Undisclosed,29/07/15
+2015-2016,Jose Angel Crespo,NoneEPLChamp, Cordoba,Premier,Aston Villa,500000,28/07/15
+2015-2016,Chris Long,Premier,Everton,Championship,Burnley,Undisclosed,28/07/15
+2015-2016,Filipe Luis,Premier,Chelsea,NoneEPLChamp, Atletico Madrid,11100000,28/07/15
+2015-2016,Naby Sarr,NoneEPLChamp, Sporting CP,Championship,Charlton Athletic,1420000,28/07/15
+2015-2016,Ibrahim Afellay,NoneEPLChamp, Barcelona,Premier,Stoke City,Free,27/07/15
+2015-2016,Jordan Ayew,NoneEPLChamp, Lorient,Premier,Aston Villa,8500000,27/07/15
+2015-2016,Steven Berghuis,NoneEPLChamp, AZ,Premier,Watford,4600000,27/07/15
+2015-2016,Alex Cisak,Championship,Burnley,NoneEPLChamp,Leyton Orient,Undisclosed,27/07/15
+2015-2016,Sam Clucas,NoneEPLChamp,Chesterfield,Championship,Hull City,1300000,27/07/15
+2015-2016,Greg Cunningham,Championship,Bristol City,Championship,Preston North End,Undisclosed,27/07/15
+2015-2016,Michael Jacobs,Championship,Wolverhampton Wanderers,NoneEPLChamp,Wigan Athletic,Undisclosed,27/07/15
+2015-2016,Maikel Kieftenbeld,NoneEPLChamp, Groningen,Championship,Birmingham City,180000,27/07/15
+2015-2016,Ryan Taylor,NoneEPLChamp,Unattached,Championship,Hull City,Free,27/07/15
+2015-2016,Sergio Romero,NoneEPLChamp,Unattached,Premier,Manchester United,Free,27/07/15
+2015-2016,Chancel Mbemba,NoneEPLChamp, Anderlecht,Premier,Newcastle United,6900000,26/07/15
+2015-2016,Ryan Williams,Championship,Fulham,NoneEPLChamp,Barnsley,300000,26/07/15
+2015-2016,Billy Sharp,Championship,Leeds United,NoneEPLChamp,Sheffield United,500000,25/07/15
+2015-2016,Chris Maguire,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,24/07/15
+2015-2016,Lasse Vibe,NoneEPLChamp, Goteborg,Championship,Brentford,1000000,24/07/15
+2015-2016,Jason Shackell,Championship,Burnley,Championship,Derby County,3000000,23/07/15
+2015-2016,Alex McCarthy,Championship,QPR,Premier,Crystal Palace,3500000,23/07/15
+2015-2016,Zakarya Bergdich,NoneEPLChamp,Real Valladolid,Championship,Charlton Athletic,Undisclosed,23/07/15
+2015-2016,Cristian Ceballos,NoneEPLChamp,Unattached,Championship,Charlton Athletic,Free,23/07/15
+2015-2016,Jack Harper,NoneEPLChamp,Real Madrid,Championship,Brighton & Hove Albion,Undisclosed,23/07/15
+2015-2016,Philipp Hofmann,NoneEPLChamp,Kaiserslautern,Championship,Brentford,Undisclosed,23/07/15
+2015-2016,Miguel Britos,NoneEPLChamp, Napoli,Premier,Watford,Free,22/07/15
+2015-2016,Martin Cranie,NoneEPLChamp,Unattached,Championship,Huddersfield Town,Free,22/07/15
+2015-2016,Vahid Hambo,NoneEPLChamp, Inter Turku,Championship,Brighton & Hove Albion,Undisclosed,22/07/15
+2015-2016,Jose Jurado,NoneEPLChamp, Spartak Moscow,Premier,Watford,Undisclosed,22/07/15
+2015-2016,Rowan Liburd,NoneEPLChamp,Billericay Town,Championship,Reading,Free,22/07/15
+2015-2016,Christian Benteke,Premier,Aston Villa,Premier,Liverpool,32500000,22/07/15
+2015-2016,Bengali-Fode Koita,NoneEPLChamp,Unattached,Championship,Blackburn Rovers,Free,21/07/15
+2015-2016,Aleksandar Mitrovic,NoneEPLChamp, Anderlecht,Premier,Newcastle United,13000000,21/07/15
+2015-2016,Sacha Petshi,NoneEPLChamp,Unattached,Championship,Blackburn Rovers,Free,21/07/15
+2015-2016,Benjamin Stambouli,Premier,Tottenham Hotspur,NoneEPLChamp, Paris Saint-Germain,6000000,21/07/15
+2015-2016,Tjaronn Chery,NoneEPLChamp, Groningen,Championship,QPR,2250000,20/07/16
+2015-2016,Jonathan Kodjia,NoneEPLChamp, Angers,Championship,Bristol City,2000000,20/07/15
+2015-2016,Patrick Roberts,Championship,Fulham,Premier,Manchester City,11000000,19/07/15
+2015-2016,Jordan Amavi,NoneEPLChamp, Nice,Premier,Aston Villa,9000000,18/07/15
+2015-2016,Ahmed Kashi,NoneEPLChamp, Metz,Championship,Charlton Athletic,Undisclosed,18/07/15
+2015-2016,Cristian Benavente,NoneEPLChamp, Real Mardrid B,Championship,Milton Keynes Dons,Free,17/07/15
+2015-2016,Fabian Delph,Premier,Aston Villa,Premier,Manchester City,8000000,17/07/15
+2015-2016,Jordy Hiwula,Premier,Manchester City,Championship,Huddersfield Town,150000,17/07/15
+2015-2016,Stewart Downing,Premier,West Ham United,Championship,Middlesbrough,5500000,16/07/15
+2015-2016,Younes Kaboul,Premier,Tottenham Hotspur,Premier,Sunderland,3000000,16/07/15
+2015-2016,Lewis McGugan,Premier,Watford,Championship,Sheffield Wednesday,300000,16/07/15
+2015-2016,Jordy Clasie,NoneEPLChamp, Feyenoord,Premier,Southampton,8000000,15/07/15
+2015-2016,Moha El Ouriachi,NoneEPLChamp, Barcelona B,Premier,Stoke City,Free,15/07/15
+2015-2016,Jeremain Lens,NoneEPLChamp, Dynamo Kyiv,Premier,Sunderland,8000000,15/07/15
+2015-2016,Ross Turnbull,NoneEPLChamp,Barnsley,Championship,Leeds United,Free,15/07/15
+2015-2016,Ali Al-Habsi,NoneEPLChamp,Unattached,Championship,Reading,Free,14/07/15
+2015-2016,Will Grigg,Championship,Brentford,NoneEPLChamp,Wigan Athletic,1000000,14/07/15
+2015-2016,Allan Nyom,NoneEPLChamp, Udinese,Premier,Watford,Undisclosed,14/07/15
+2015-2016,Robin van Persie,Premier,Manchester United,NoneEPLChamp, Fenerbahce,4200000,14/07/15
+2015-2016,Raheem Sterling,Premier,Liverpool,Premier,Manchester City,49000000,14/07/15
+2015-2016,Asmir Begovic,Premier,Stoke City,Premier,Chelsea,8000000,13/07/15
+2015-2016,Oliver McBurnie,NoneEPLChamp,Bradford City,NoneEPLChamp, Swansea City,Undisclosed,13/07/15
+2015-2016,Morgan Schneiderlin,Premier,Southampton,Premier,Manchester United,24000000,13/07/15
+2015-2016,Bastian Schweinsteiger,NoneEPLChamp, Bayern Munich,Premier,Manchester United,14400000,13/07/15
+2015-2016,Glen Johnson,NoneEPLChamp,Unattached,Premier,Stoke City,Free,12/07/15
+2015-2016,Valon Behrami,NoneEPLChamp, Hamburg,Premier,Watford,3000000,11/07/15
+2015-2016,Matteo Darmian,NoneEPLChamp, Torino,Premier,Manchester United,12700000,11/07/15
+2015-2016,Georginio Wijnaldum,NoneEPLChamp, PSV,Premier,Newcastle United,14500000,11/07/15
+2015-2016,Tyler Blackwood,NoneEPLChamp,Unattached,Championship,QPR,Free,10/07/15
+2015-2016,Kyle Dempsey,NoneEPLChamp,Carlisle United,Championship,Huddersfield Town,300000,10/07/15
+2015-2016,Shay Given,Premier,Aston Villa,Premier,Stoke City,Free,10/07/15
+2015-2016,Idrissa Gueye,NoneEPLChamp, Lille,Premier,Aston Villa,9000000,10/07/15
+2015-2016,Josh McEachran,Premier,Chelsea,Championship,Brentford,750000,10/07/15
+2015-2016,Angelo Ogbonna,NoneEPLChamp, Juventus,Premier,West Ham United,10000000,10/07/15
+2015-2016,Lewis Price,NoneEPLChamp,Unattached,Championship,Sheffield Wednesday,Free,10/07/15
+2015-2016,Ross Wallace,NoneEPLChamp,Unattached,Championship,Sheffield Wednesday,Free,10/07/15
+2015-2016,Yohan Cabaye,NoneEPLChamp, Paris Saint-Germain,Premier,Crystal Palace,10000000,10/07/15
+2015-2016,Mark Bunn,NoneEPLChamp,Unattached,Premier,Aston Villa,Free,09/07/15
+2015-2016,Marco Matias,NoneEPLChamp, Nacional,Championship,Sheffield Wednesday,3000000,09/07/15
+2015-2016,Steven N'Zonzi,Premier,Stoke City,NoneEPLChamp, Sevilla,7000000,09/07/15
+2015-2016,Toby Alderweireld,NoneEPLChamp, Atletico Madrid,Premier,Tottenham Hotspur,11500000,08/07/15
+2015-2016,Jamie O'Hara,NoneEPLChamp,Unattached,Championship,Fulham,Free,07/07/15
+2015-2016,Cuco Martina,NoneEPLChamp, Twente,Premier,Southampton,1000000,07/07/15
+2015-2016,Bryan Ruiz,Championship,Fulham,NoneEPLChamp, Sporting,2000000,07/07/15
+2015-2016,Jelle Vossen,NoneEPLChamp, Genk,Championship,Burnley,2500000,07/07/15
+2015-2016,Alex Baptiste,Championship,Bolton Wanderers,Championship,Middlesbrough,75000,06/07/15
+2015-2016,Etienne Capoue,Premier,Tottenham Hotspur,Premier,Watford,7000000,06/07/15
+2015-2016,Greg Halford,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,06/07/15
+2015-2016,Niki Maenpaa,NoneEPLChamp,Unattached,Championship,Brighton & Hove Albion,Free,06/07/15
+2015-2016,Nani,Premier,Manchester United,NoneEPLChamp, Fenerbahce,4250000,06/07/15
+2015-2016,Sanmi Odelusi,Championship,Bolton Wanderers,NoneEPLChamp,Wigan Athletic,50000,06/07/15
+2015-2016,Enes Unal,NoneEPLChamp, Bursaspor,Premier,Manchester City,2000000,06/07/15
+2015-2016,Jonathan Bond,Premier,Watford,Championship,Reading,250000,04/07/15
+2015-2016,Lukas Podolski,Premier,Arsenal,NoneEPLChamp, Galatasaray,1800000,04/07/15
+2015-2016,Conor Coady,Championship,Huddersfield Town,Championship,Wolverhampton Wanderers,2000000,03/07/15
+2015-2016,Danny Collins,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,03/07/15
+2015-2016,Andreas Bjelland,NoneEPLChamp, Twente,Championship,Brentford,2100000,02/07/15
+2015-2016,Gaetan Bong,NoneEPLChamp,Unattached,Championship,Brighton & Hove Albion,Free,02/07/15
+2015-2016,Jose Holebas,NoneEPLChamp, Roma,Premier,Watford,1800000,02/07/15
+2015-2016,Emmanuel Ledesma,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,02/07/15
+2015-2016,Paul McShane,NoneEPLChamp,Unattached,Championship,Reading,Free,02/07/15
+2015-2016,Sebastian Polter,NoneEPLChamp, Mainz 05,Championship,QPR,1000000,02/07/15
+2015-2016,Jazz Richards,NoneEPLChamp, Swansea City,Championship,Fulham,500000,02/07/15
+2015-2016,Jamie Ward,NoneEPLChamp,Unattached,Championship,Nottingham Forest,Free,02/07/15
+2015-2016,Luke Williams,Championship,Middlesbrough,NoneEPLChamp,Scunthorpe United,Free,02/07/15
+2015-2016,Ben Amos,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,01/07/15
+2015-2016,Nathaniel Clyne,Premier,Southampton,Premier,Liverpool,12500000,01/07/15
+2015-2016,Sebastian Coates,Premier,Liverpool,Premier,Sunderland,2000000,01/07/15
+2015-2016,Sylvain Distin,NoneEPLChamp,Unattached,Premier,Bournemouth,Free,01/07/15
+2015-2016,Portugal Eder,NoneEPLChamp,Portugal Braga,Premier,Swansea City,5000000,01/07/15
+2015-2016,Lewis Holtby,Premier,Tottenham Hotspur,NoneEPLChamp,Germany Hamburger SV,4600000,01/07/15
+2015-2016,Konstantin Kerschbaumer,NoneEPLChamp,Austria Admira,Championship,Brentford,Undisclosed,01/07/15
+2015-2016,Tomasz Kuszczak,Championship,Wolverhampton Wanderers,Championship,Birmingham City,Free,01/07/15
+2015-2016,Gary Madine,NoneEPLChamp,Unattached,Championship,Bolton Wanderers,Free,01/07/15
+2015-2016,Paddy McCourt,Championship,Brighton & Hove Albion,NoneEPLChamp,Luton Town,Free,01/07/15
+2015-2016,Matt Mills,NoneEPLChamp,Unattached,Championship,Nottingham Forest,Free,01/07/15
+2015-2016,Josh Morris,Championship,Blackburn Rovers,NoneEPLChamp,Bradford City,Free,01/07/15
+2015-2016,Matej Vydra,NoneEPLChamp,Italy Udinese,Premier,Watford,Undisclosed,01/07/15
+2015-2016,Chris Wood,Premier,Leicester City,Championship,Leeds United,2000000,01/07/15
+2015-2016,Stephen Hendrie,NoneEPLChamp,Hamilton,Premier,West Ham United,1000000,01/07/15
+2015-2016,Simon Church,NoneEPLChamp,Unattached,Championship,Milton Keynes Dons,Free,30/06/15
+2015-2016,Cody Cropper,NoneEPLChamp,Unattached,Championship,Milton Keynes Dons,Free,30/06/15
+2015-2016,Dale Jennings,NoneEPLChamp,Unattached,Championship,Milton Keynes Dons,Free,30/06/15
+2015-2016,Stephen Quinn,NoneEPLChamp,Unattached,Championship,Reading,Free,30/06/15
+2015-2016,Kari Arnason,Championship,Rotherham United,NoneEPLChamp, Malmo FF,Undisclosed,29/06/15
+2015-2016,El-Hadji Ba,Premier,Sunderland,Championship,Charlton Athletic,Undisclosed,29/06/15
+2015-2016,Petr Cech,Premier,Chelsea,Premier,Arsenal,10000000,29/06/15
+2015-2016,Paulinho,Premier,Tottenham Hotspur,NoneEPLChamp, Guangzhou Evergrande,9000000,29/06/15
+2015-2016,Orlando Sa,NoneEPLChamp, Legia Warsaw,Championship,Reading,1000000,29/06/15
+2015-2016,Adam Legzdins,NoneEPLChamp,Unattached,Championship,Birmingham City,Free,27/06/15
+2015-2016,Jacques Maghoma,NoneEPLChamp,Unattached,Championship,Birmingham City,Free,26/06/15
+2015-2016,Tyrone Mings,Championship,Ipswich Town,Premier,Bournemouth,8000000,26/06/15
+2015-2016,Tom Cairney,Championship,Blackburn Rovers,Championship,Fulham,3000000,26/06/15
+2015-2016,Jason Davidson,NoneEPLChamp,Unattached,Championship,Huddersfield Town,Free,26/06/15
+2015-2016,Brett Pitman,Premier,Bournemouth,Championship,Ipswich Town,Undisclosed,26/06/15
+2015-2016,Shinji Okazaki,NoneEPLChamp, Mainz 05,Premier,Leicester City,7000000,26/06/15
+2015-2016,Darryl Lachman,NoneEPLChamp, Twente,Championship,Sheffield Wednesday,Undisclosed,26/06/15
+2015-2016,Dimitri Payet,NoneEPLChamp, Marseille,Premier,West Ham United,10700000,26/06/15
+2015-2016,Yoann Barbet,NoneEPLChamp, Chamois Niortais,Championship,Brentford,Undisclosed,25/06/15
+2015-2016,Gerard Deulofeu,NoneEPLChamp, Barcelona,Premier,Everton,4300000,25/06/15
+2015-2016,Robert Huth,Premier,Stoke City,Premier,Leicester City,3000000,25/06/15
+2015-2016,Lewis Buxton,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,25/06/15
+2015-2016,Tomer Hemed,NoneEPLChamp, Almeria,Championship,Brighton & Hove Albion,1000000,24/06/15
+2015-2016,Josh Yorwerth,NoneEPLChamp,Unattached,Championship,Ipswich Town,Free,24/06/15
+2015-2016,Sol Bamba,NoneEPLChamp, Palermo,Championship,Leeds United,Undisclosed,24/06/15
+2015-2016,Roberto Firmino,NoneEPLChamp, Hoffenheim,Premier,Liverpool,29000000,24/06/15
+2015-2016,Yacouba Sylla,Premier,Aston Villa,NoneEPLChamp, Rennes,1000000,23/06/15
+2015-2016,Kristoffer Nordfeldt,NoneEPLChamp, Heerenveen,NoneEPLChamp, Swansea City,600000,23/06/15
+2015-2016,Liam Rosenior,NoneEPLChamp,Unattached,Championship,Brighton & Hove Albion,Free,23/06/15
+2015-2016,Patrick Bauer,NoneEPLChamp, Maritimo,Championship,Charlton Athletic,1200000,23/06/15
+2015-2016,Dean Whitehead,NoneEPLChamp,Unattached,Championship,Huddersfield Town,Free,23/06/15
+2015-2016,Rob Kiernan,NoneEPLChamp,Wigan Athletic,NoneEPLChamp, Rangers,200000,22/06/15
+2015-2016,Matthew Lowton,Premier,Aston Villa,Championship,Burnley,1000000,22/06/15
+2015-2016,Joe Gomez,Championship,Charlton Athletic,Premier,Liverpool,3500000,22/06/15
+2015-2016,Youssouf Mulumbu,NoneEPLChamp,Unattached,Premier,Norwich City,Free,22/06/15
+2015-2016,James McClean,NoneEPLChamp,Wigan Athletic,Premier,West Bromwich Albion,1500000,22/06/15
+2015-2016,Kieran Trippier,Championship,Burnley,Premier,Tottenham Hotspur,3500000,20/06/15
+2015-2016,Gael Kakuta,Premier,Chelsea,NoneEPLChamp, Sevilla,5200000,19/06/15
+2015-2016,Franck Tabanou,NoneEPLChamp, Saint-Etienne,NoneEPLChamp, Swansea City,3500000,19/06/15
+2015-2016,Andreas Weimann,Premier,Aston Villa,Championship,Derby County,2750000,19/06/15
+2015-2016,Chris Baird,NoneEPLChamp,Unattached,Championship,Derby County,Free,19/06/15
+2015-2016,Andy Lonergan,NoneEPLChamp,Unattached,Championship,Fulham,Free,19/06/15
+2015-2016,Ben Pringle,NoneEPLChamp,Unattached,Championship,Fulham,Free,19/06/15
+2015-2016,Semi Ajayi,NoneEPLChamp,Unattached,NoneEPLChamp, Cardiff City,Free,18/06/15
+2015-2016,Micah Richards,NoneEPLChamp,Unattached,Premier,Aston Villa,Free,18/06/15
+2015-2016,Cedric,NoneEPLChamp, Sporting Lisbon,Premier,Southampton,4700000,18/06/15
+2015-2016,Christophe Lepoint,Championship,Charlton Athletic,NoneEPLChamp, Zulte Waregem,Undisclosed,17/06/15
+2015-2016,Jamie Mackie,NoneEPLChamp,Unattached,Championship,QPR,Free,17/06/15
+2015-2016,Jay Emmanuel-Thomas,NoneEPLChamp,Unattached,Championship,QPR,Free,16/06/15
+2015-2016,Juanmi,NoneEPLChamp, Malaga,Premier,Southampton,5000000,16/06/15
+2015-2016,Joselu,NoneEPLChamp,Hannover 96,Premier,Stoke City,5900000,16/06/15
+2015-2016,Ryan Williams,NoneEPLChamp,Unattached,Championship,Brentford,Free,12/06/15
+2015-2016,Scott Carson,NoneEPLChamp,Wigan Athletic,Championship,Derby County,Undisclosed,12/06/15
+2015-2016,Adam Bogdan,NoneEPLChamp,Unattached,Premier,Liverpool,Free,12/06/15
+2015-2016,Memphis Depay,NoneEPLChamp, PSV,Premier,Manchester United,25000000,12/06/15
+2015-2016,Joe Mattock,NoneEPLChamp,Unattached,Championship,Rotherham United,Free,12/06/15
+2015-2016,Craig Morgan,NoneEPLChamp,Unattached,NoneEPLChamp,Wigan Athletic,Free,12/06/15
+2015-2016,Lee Erwin,NoneEPLChamp, Motherwell,Championship,Leeds United,375000,11/06/15
+2015-2016,Andre Ayew,NoneEPLChamp,Unattached,NoneEPLChamp, Swansea City,Free,10/06/15
+2015-2016,Charlie Horton,NoneEPLChamp, Cardiff City,Championship,Leeds United,Free,10/06/15
+2015-2016,Pedro Obiang,NoneEPLChamp, Sampdoria,Premier,West Ham United,4300000,10/06/15
+2015-2016,Alex Pearce,NoneEPLChamp,Unattached,Championship,Derby County,Free,09/06/15
+2015-2016,Darren Bent,NoneEPLChamp,Unattached,Championship,Derby County,Free,08/06/15
+2015-2016,Tom Cleverley,NoneEPLChamp,Unattached,Premier,Everton,Free,08/06/15
+2015-2016,Danny Ings,Championship,Burnley,Premier,Liverpool,Tribunal,08/06/15
+2015-2016,Jermaine Beckford,Championship,Bolton Wanderers,Championship,Preston North End,Free,08/06/15
+2015-2016,James Milner,NoneEPLChamp,Unattached,Premier,Liverpool,Free,05/06/15
+2015-2016,Christian Fuchs,NoneEPLChamp,Unattached,Premier,Leicester City,Free,04/06/15
+2015-2016,Giedrius Arlauskis,NoneEPLChamp,Unattached,Premier,Watford,Free,04/06/15
+2015-2016,Cameron McGeehan,Premier,Norwich City,NoneEPLChamp,Luton Town,Undisclosed,03/06/15
+2015-2016,Dedryck Boyata,Premier,Manchester City,NoneEPLChamp, Celtic,1500000,02/06/15
+2015-2016,Tim Erlandsson,NoneEPLChamp, Halmstad,Championship,Nottingham Forest,2000000,02/06/15
+2015-2016,Sebastian Prodl,NoneEPLChamp,Unattached,Premier,Watford,Free,02/06/15
+2015-2016,Darren Randolph,NoneEPLChamp,Unattached,Premier,West Ham United,Free,01/06/15
+2015-2016,Kevin Wimmer,NoneEPLChamp, Koln,Premier,Tottenham Hotspur,4300000,30/05/15
+2015-2016,Joe Walsh,NoneEPLChamp,Crawley Town,Championship,Milton Keynes Dons,Undisclosed,29/05/15
+2015-2016,Joshua King,Championship,Blackburn Rovers,Premier,Bournemouth,Free,28/05/15
+2015-2016,Ben Gladwin,NoneEPLChamp,Swindon Town,Championship,QPR,2000000,28/05/15
+2015-2016,Massimo Luongo,NoneEPLChamp,Swindon Town,Championship,QPR,2000000,28/05/15
+2015-2016,Jakob Haugaard,NoneEPLChamp, Midtjylland,Premier,Stoke City,600000,28/05/15
+2015-2016,Artur Boruc,Premier,Southampton,Premier,Bournemouth,Free,27/05/15
+2015-2016,Adam Federici,NoneEPLChamp,Unattached,Premier,Bournemouth,Free,27/05/15
+2015-2016,Graham Dorrans,Premier,West Bromwich Albion,Premier,Norwich City,3000000,27/05/15
+2015-2016,Philipp Wollscheid,NoneEPLChamp, Bayer Leverkusen,Premier,Stoke City,2750000,26/05/15
+2015-2016,Scott Sinclair,Premier,Manchester City,Premier,Aston Villa,2500000,21/05/15
+2015-2016,Jed Wallace,NoneEPLChamp,Portsmouth,Championship,Wolverhampton Wanderers,275000,21/05/15
+2015-2016,Alex Jones,NoneEPLChamp,Unattached,Championship,Birmingham City,Free,19/05/15
+2015-2016,Akaki Gogia,NoneEPLChamp, Hallescher,Championship,Brentford,Free,19/05/15
+2015-2016,Nathan,NoneEPLChamp, Atletico Paranaense,Premier,Chelsea,4500000,16/05/15
+2015-2016,Kemar Roofe,Premier,West Bromwich Albion,NoneEPLChamp,Oxford United,Undisclosed,14/05/15
+2015-2016,Zat Knight,NoneEPLChamp,Unattached,Championship,Reading,Free,12/03/15
+2015-2016,Fredrik Ulvestad,NoneEPLChamp,Unattached,Championship,Burnley,Free,11/03/15
+2015-2016,Marco Motta,NoneEPLChamp,Unattached,Premier,Watford,Free,26/02/15
+2015-2016,Alou Diarra,NoneEPLChamp,Unattached,Championship,Charlton Athletic,Free,24/02/15
+2015-2016,Jermaine Pennant,NoneEPLChamp,Unattached,NoneEPLChamp,Wigan Athletic,Free,21/02/15
+2015-2016,Chris Eagles,NoneEPLChamp,Unattached,Championship,Charlton Athletic,Free,19/02/15
+2015-2016,Kim Bo-kyung,NoneEPLChamp,Unattached,NoneEPLChamp,Wigan Athletic,Free,10/02/15
+2015-2016,Roger Johnson,NoneEPLChamp,Unattached,Championship,Charlton Athletic,Free,05/02/15

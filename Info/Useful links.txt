@@ -1,0 +1,10 @@
+Good D3 and Crossfilter website
+http://animateddata.co.uk/articles/crossfilter/
+http://animateddata.co.uk/articles/d3/datajoins/
+
+
+http://blog.rusty.io/2012/09/17/crossfilter-tutorial/
+
+
+Ish:
+https://github.com/square/crossfilter/wiki/API-Reference
