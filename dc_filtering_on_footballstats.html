@@ -48,13 +48,26 @@
 		</div>
 
 		<div class="row">
+			
+			<div id="chart-ring-year">Test</div>
 
-			<div id="chart-ring-year"></div>
-
-			<div  style="margin: 15px"  id="chart-ring-year2"></div>
+			<div  style="margin: 15px"  id="chart-ring-year2">Test2</div>
 	
+			Test3
 			<div id="chart-ring-year3"></div>
 		</div>
+
+
+		<div class="row">
+
+			<div id="chart-ring-year4"></div>
+
+			<div  style="margin: 15px"  id="chart-ring-year5"></div>
+	
+			<div id="chart-ring-year6"></div>
+		</div>
+
+
 </div>
 
 <script>
@@ -247,14 +260,11 @@ console.log(JSON.stringify(expensesCount));
 	*/
 	
 
-	print_filter("footyData");
-	var leagueDim  = ndx.dimension(function(d) {return d.club_moving_to;});
-	print_filter("leagueDim");
-	var leagueGroup = leagueDim.group().reduceSum(function(d) {return d.fee;});
-	print_filter("leagueGroup");	
+	var clubDim  = ndx.dimension(function(d) {return d.club_moving_to;});
+	//print_filter("leagueDim");
+	var clubGroup = clubDim.group().reduceSum(function(d) {return d.fee;});
+	//print_filter("leagueGroup");	
 
-
-	
 	//Associate chart with HTML element
 	var hitspieChart3 = dc.pieChart("#chart-ring-year3");
 	//criteria for pie chart
@@ -263,10 +273,47 @@ console.log(JSON.stringify(expensesCount));
 		.height(290)
 		.slicesCap(4)
 		.innerRadius(50)
+   		.dimension(clubDim)
+   		.group(clubGroup);
+
+
+
+   		//THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
+	var leagueDim  = ndx.dimension(function(d) {return d.league_moving_to;});
+	//print_filter("leagueDim");
+	var leagueGroup = leagueDim.group().reduceSum(function(d) {return d.fee;});
+	//print_filter("leagueGroup");	
+
+	//Associate chart with HTML element
+	var hitspieChart4 = dc.pieChart("#chart-ring-year4");
+	//criteria for pie chart
+	hitspieChart4
+		.width(290)
+		.height(290)
+		.slicesCap(4)
+		.innerRadius(50)
    		.dimension(leagueDim)
    		.group(leagueGroup);
 
 
+
+   		//THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
+	var windowDim  = ndx.dimension(function(d) {return d.transfer_window;});
+	//print_filter("leagueDim");
+	var windowGroup = windowDim.group().reduceSum(function(d) {return d.fee;});
+	//print_filter("leagueGroup");	
+
+
+	//Associate chart with HTML element
+	var hitspieChart5 = dc.pieChart("#chart-ring-year5");
+	//criteria for pie chart
+	hitspieChart5
+		.width(290)
+		.height(290)
+		.slicesCap(4)
+		.innerRadius(50)
+   		.dimension(windowDim)
+   		.group(windowGroup);
 
 
     dc.renderAll();
