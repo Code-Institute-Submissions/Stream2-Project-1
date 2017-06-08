@@ -41,8 +41,7 @@
 <div class = "container-fluid">
 	
 	<div class="row">
-			
-	    	<!-- Poverty -->
+	    <!-- Overall Transfer Activity shown through all fees both in/out -->
     	<div class="col-sm-12">
    			<div class="chart-wrapper">
         		<div class="chart-title">
@@ -50,7 +49,7 @@
           		</div>
          			<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-line-transfer"></div>
+					<div id="chart-line-overall-transfer-spend"></div>
 				</div>
     		</div>
     	</div>	
@@ -58,7 +57,7 @@
 
 
 	<div class="row">
-    	<!-- Poverty -->
+    	<!-- Year Data -->
     	<div class="col-sm-3">
    			<div class="chart-wrapper">
         		<div class="chart-title">
@@ -66,7 +65,7 @@
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year"></div>
+					<div id="piechart-year"></div>
     			</div>
     		</div>	
     	</div>	
@@ -78,7 +77,7 @@
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year2"></div>
+					<div id="piechart-season"></div>
     			</div>
     		</div>	
     	</div>	
@@ -87,11 +86,11 @@
     	<div class="col-sm-3">
    			<div class="chart-wrapper">
         		<div class="chart-title">
-            		Overall Team Transfer Activity (Fees involed in buying and selling)
+            		Overall Team Transfer Activity (All Buy/Sell Fees)
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year3"></div>
+					<div id="piechart-clubsMovToo"></div>
     			</div>
     		</div>	
     	</div>	
@@ -101,11 +100,11 @@
     	<div class="col-sm-3">
    			<div class="chart-wrapper">
         		<div class="chart-title">
-            		League Moving To
+            		League Player Moving To
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year4"></div>
+					<div id="piechart-leagueMovTo"></div>
     			</div>
     		</div>	
     	</div>	
@@ -117,7 +116,7 @@
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year5"></div>
+					<div id="piechart-window"></div>
     			</div>
     		</div>	
     	</div>	
@@ -129,7 +128,7 @@
           		</div>
          		<div class="chart-stage">
 				<!-- This is the anchor point for the chart in the page-->
-					<div id="chart-ring-year6"></div>
+					<div id="piechart-clubMovFrom"></div>
     			</div>
     		</div>	
     	</div>	
@@ -234,50 +233,35 @@ var footyData = [
 	});
 
 
-	// Getting all required Dimensions
-	//Club Moving TO Dim
-//	var seasonDim = ndx.dimension(function(d) {return d.season;});
-	//Transfer Window
+	// Required Dimensions
+	// -------------------
+	// Transfer Window
 	var transfer_windowDim = ndx.dimension(function(d) {return d.transfer_window;});
-	//League Moving FROM Dim
+	// League Moving FROM Dim
 	var league_moving_fromDim = ndx.dimension(function(d) {return d.league_moving_from;});
-	//Club Moving FROM Dim
+	// Club Moving FROM Dim
 	var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
-	//League Moving TO Dim
+	// League Moving TO Dim
 	var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
-	//Club Moving To Dim
+	// Club Moving To Dim
 	var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
-	//Fee
+	// Fee
 	var feeDim = ndx.dimension(function(d) {return d.fee;});	
-	//Use crossfilter to get views of the data for X axis (date) and Y axis (hits)
+	// Use crossfilter to get views of the data for X axis (date) and Y axis (hits)
 	var dateDim = ndx.dimension(function(d) {return d.date;});
-	//Groups total for each club for range in data
 	
-	//print_filter("dateDim");	
 
-
+	// Groups total fees (incoming and outgoing) for each club for range in data
+	// Gauges overall activity
+	// MAYBE SCATTERPLOT WITH CHANGING CIRCLE SIZE WOULD BE GOOD?
 	var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee;});
-	//Groups total for each club for range in data
 	//print_filter("feeDateDim_filter");	
-
-
-	/*
-	var transferCost_filter = club_moving_toDim.group().reduceSum(function (d) {
-		if (d.transfer_window == "Summer" || d.transfer_window == "Winter"){
-   			return d.fee;			
-		}
-		else{
-			return 0;	
-		}
-	});
-	*/
 
 	//Getting max and min values for time based chart
 	var minDate = dateDim.bottom(1)[0].date;
     var maxDate = dateDim.top(1)[0].date;
 
-   	//Charts
-   	var chartTransfer = dc.lineChart("#chart-line-transfer");
+   	var chartTransfer = dc.lineChart("#chart-line-overall-transfer-spend");
 	//var chartTransfer = dc.scatterPlot("#chart-line-transfer");
 	chartTransfer
        .width(800)
@@ -292,14 +276,14 @@ var footyData = [
        .xAxisLabel("Year")
        .yAxis().ticks(4);
 
-
+    // Grouping for year data
 	var yearDim  = ndx.dimension(function(d) {return +d.Year;});
 	var year_total = yearDim.group().reduceSum(function(d) {return d.fee;});
 	
 	//Associate chart with HTML element
-	var hitspieChart = dc.pieChart("#chart-ring-year");
+	var yearPieChart = dc.pieChart("#piechart-year");
 	//criteria for pie chart
-	hitspieChart
+	yearPieChart
 		.width(190)
 		.height(190)
 		.slicesCap(4)
@@ -308,113 +292,107 @@ var footyData = [
    		.group(year_total);
 
 
+
+
 	var seasonDim  = ndx.dimension(function(d) {return d.season;});
 	//print_filter("seasonDim");	
-	var season_total = seasonDim.group().reduceSum(function(d) {return d.fee;});
+	var season_totals = seasonDim.group().reduceSum(function(d) {return d.fee;});
 	//print_filter("season_total");	
-	
+
+	//Working out the total amount of seasons in group so can range/slices can be dynamically managed
+	var amountOfSeasons = ndx.groupAll().reduceCount(function(d) {return d.season;}).value();
+	//console.log(clubTotal2);
+
 	//Associate chart with HTML element
-	var hitspieChart2 = dc.pieChart("#chart-ring-year2");
+	var seasonPieChart = dc.pieChart("#piechart-season");
 	//criteria for pie chart
-	hitspieChart2
+	seasonPieChart
 		.width(190)
 		.height(190)
-		.slicesCap(4)
+		.slicesCap(amountOfSeasons)
 		.innerRadius(50)
    		.dimension(seasonDim)
-   		.group(season_total);
+   		.group(season_totals);
 
-   	/*
- 	var leagueDim = d3.nest()
- 	  .key(function(d) { return d.name; })
-
-var expensesCount = d3.nest()
-  .key(function(d) { return d.name; })
-  .rollup(function(v) { return v.length; })
-  .entries(expenses);
-console.log(JSON.stringify(expensesCount));
-
-
-	*/
 	
 
-	var clubDim  = ndx.dimension(function(d) {return d.club_moving_to;});
+	var clubMovTooDim  = ndx.dimension(function(d) {return d.club_moving_to;});
 	//print_filter("clubDim");
-	var clubGroup = clubDim.group().reduceSum(function(d) {return d.fee;});
+	var clubMovTooGroup = clubMovTooDim.group().reduceSum(function(d) {return d.fee;});
 	//print_filter("clubGroup");	
 
+	//Working out the total amount of clubs in group so can range/slices can be dynamically managed
+	var amountOfclubsMovToo = ndx.groupAll().reduceCount(function(d) {return d.club_moving_to;}).value();
+	//console.log(clubTotal2);
+
 	//Associate chart with HTML element
-	var hitspieChart3 = dc.pieChart("#chart-ring-year3");
+	var clubsMovTooPieChart = dc.pieChart("#piechart-clubsMovToo");
 	//criteria for pie chart
-	hitspieChart3
+	clubsMovTooPieChart
 		.width(190)
 		.height(190)
-		.slicesCap(4)
+		.slicesCap(amountOfclubsMovToo)
 		.innerRadius(50)
-   		.dimension(clubDim)
-   		.group(clubGroup);
+   		.dimension(clubMovTooDim)
+   		.group(clubMovTooGroup);
 
 
 
    		//THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
-	var leagueDim  = ndx.dimension(function(d) {return d.league_moving_to;});
+	var leagueMovToDim  = ndx.dimension(function(d) {return d.league_moving_to;});
 	//print_filter("leagueDim");
-	var leagueGroup = leagueDim.group().reduceSum(function(d) {return d.fee;});
+	var leagueMovToGroup = leagueMovToDim.group().reduceSum(function(d) {return d.fee;});
 	//print_filter("leagueGroup");	
 
 	//Associate chart with HTML element
-	var hitspieChart4 = dc.pieChart("#chart-ring-year4");
+	var leagueMovToPieChart = dc.pieChart("#piechart-leagueMovTo");
 	//criteria for pie chart
-	hitspieChart4
+	leagueMovToPieChart
 		.width(190)
 		.height(190)
-		.slicesCap(4)
+		.slicesCap(3)
 		.innerRadius(50)
-   		.dimension(leagueDim)
-   		.group(leagueGroup);
+   		.dimension(leagueMovToDim)
+   		.group(leagueMovToGroup);
 
 
-   		//THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
+   	
 	var windowDim  = ndx.dimension(function(d) {return d.transfer_window;});
 	//print_filter("leagueDim");
 	var windowGroup = windowDim.group().reduceSum(function(d) {return d.fee;});
 	//print_filter("leagueGroup");	
 
-
 	//Associate chart with HTML element
-	var hitspieChart5 = dc.pieChart("#chart-ring-year5");
+	var windowPieChart = dc.pieChart("#piechart-window");
 	//criteria for pie chart
-	hitspieChart5
+	windowPieChart
 		.width(190)
 		.height(190)
-		.slicesCap(4)
+		.slicesCap(2)
 		.innerRadius(50)
    		.dimension(windowDim)
    		.group(windowGroup);
 
 
-
-   	//Slices Cap needs to be variable, so it needs to be a count of the total of th 
-
-	var clubDim2  = ndx.dimension(function(d) {return d.club_moving_from;});
-	print_filter("clubDim2");
-	var clubGroup2 = clubDim2.group().reduceSum(function(d) {return d.fee;});
-	print_filter("clubGroup2");	
+	var clubMovFromDim  = ndx.dimension(function(d) {return d.club_moving_from;});
+	print_filter("clubMovFromDim");
+	var clubMovFromGroup = clubMovFromDim.group().reduceSum(function(d) {return d.fee;});
+	print_filter("clubMovFromGroup");	
 
 	//Working out the total amount of clubs in group so can range/slices can be dynamically managed
-	var clubTotal2 = ndx.groupAll().reduceCount(function(d) {return d.club_moving_from;}).value();
+	var amountOfclubsMovFrom = ndx.groupAll().reduceCount(function(d) {return d.club_moving_from;}).value();
 	//console.log(clubTotal2);
 
 	//Associate chart with HTML element
-	var hitspieChart6 = dc.pieChart("#chart-ring-year6");
+	var clubMovFromPieChart = dc.pieChart("#piechart-clubMovFrom");
 	//criteria for pie chart
-	hitspieChart6
+	clubMovFromPieChart
 		.width(190)
 		.height(190)
-		.slicesCap(clubTotal2)
+		.slicesCap(amountOfclubsMovFrom)
 		.innerRadius(50)
-   		.dimension(clubDim2)
-   		.group(clubGroup2);
+   		.dimension(clubMovFromDim)
+   		.group(clubMovFromGroup);
 
 
 
