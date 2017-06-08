@@ -38,36 +38,102 @@
        </div>
      </div>
   </div>
-<div class = "container">
+<div class = "container-fluid">
 	
-		<div class="row">
+	<div class="row">
 			
-			<!-- This is the anchor point for the chart in the page-->
-			<div id="chart-line-transfer"></div>
-
-		</div>
-
-		<div class="row">
-			
-			<div id="chart-ring-year">Test</div>
-
-			<div  style="margin: 15px"  id="chart-ring-year2">Test2</div>
-	
-			Test3
-			<div id="chart-ring-year3"></div>
-		</div>
-
-
-		<div class="row">
-
-			<div id="chart-ring-year4"></div>
-
-			<div  style="margin: 15px"  id="chart-ring-year5"></div>
-	
-			<div id="chart-ring-year6"></div>
-		</div>
+	    	<!-- Poverty -->
+    	<div class="col-sm-12">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Transfer Spending
+          		</div>
+         			<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-line-transfer"></div>
+				</div>
+    		</div>
+    	</div>	
+    </div>
 
 
+	<div class="row">
+    	<!-- Poverty -->
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Yearly Spending
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year"></div>
+    			</div>
+    		</div>	
+    	</div>	
+
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Season Spending
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year2"></div>
+    			</div>
+    		</div>	
+    	</div>	
+
+
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Overall Team Transfer Activity (Fees involed in buying and selling)
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year3"></div>
+    			</div>
+    		</div>	
+    	</div>	
+	</div>
+	<div class="row">
+    	<!-- Poverty -->
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		League Moving To
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year4"></div>
+    			</div>
+    		</div>	
+    	</div>	
+
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Transfer Window
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year5"></div>
+    			</div>
+    		</div>	
+    	</div>	
+
+    	<div class="col-sm-3">
+   			<div class="chart-wrapper">
+        		<div class="chart-title">
+            		Clubs selling amounts to EPL & Championship
+          		</div>
+         		<div class="chart-stage">
+				<!-- This is the anchor point for the chart in the page-->
+					<div id="chart-ring-year6"></div>
+    			</div>
+    		</div>	
+    	</div>	
+	</div>
 </div>
 
 <script>
@@ -83,19 +149,8 @@
 
 
 var footyData = [
-	  {
-    "season": "20102011",
-    "transfer_window": "Summer",
-    "player_name": "Andrew Carroll",
-    "league_moving_from": "Premier",
-    "club_moving_from": "Newcastle United",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Liverpool",
-    "fee": 35000000,
-    "date": "31/01/2011"
-  },
   {
-    "season": "20102011",
+    "season": "2010-11",
     "transfer_window": "Winter",
     "player_name": "Conor Sammon",
     "league_moving_from": "NonEPLChamp",
@@ -105,19 +160,20 @@ var footyData = [
     "fee": 6000000,
     "date": "28/01/2011"
   },
-  {
-    "season": "20112012",
+
+    {
+    "season": "2010-11",
     "transfer_window": "Winter",
-    "player_name": "David Ball",
-    "league_moving_from": "Premier",
-    "club_moving_from": "Manchester City",
-    "league_moving_to": "NonEPLChamp",
-    "club_moving_to": "Chelsea",
-    "fee": "20000000",
-    "date": "31/01/2012"
+    "player_name": "Conor Sammon",
+    "league_moving_from": "NonEPLChamp",
+    "club_moving_from": "Blahblah",
+    "league_moving_to": "Premier",
+    "club_moving_to": "Blurblur",
+    "fee": 6000000,
+    "date": "28/01/2011"
   },
   {
-    "season": "20112012",
+    "season": "2011-12",
     "transfer_window": "Summer",
     "player_name": "David Luiz",
     "league_moving_from": "NonEPLChamp",
@@ -128,13 +184,35 @@ var footyData = [
     "date": "16/07/2011"
   },
   {
-    "season": "20122013",
+    "season": "2012-13",
     "transfer_window": "Winter",
     "player_name": "Fernando Torres",
     "league_moving_from": "Premier",
-    "club_moving_from": "Liverpool",
+    "club_moving_from": "Chelsea",
+    "league_moving_to": "Championship",
+    "club_moving_to": "Arsenal",
+    "fee": 50000000,
+    "date": "31/01/2013"
+  },
+  {
+    "season": "2012-13",
+    "transfer_window": "Summer",
+    "player_name": "Fernando Mores",
+    "league_moving_from": "Premier",
+    "club_moving_from": "Burnley",
     "league_moving_to": "Premier",
-    "club_moving_to": "Aldershot",
+    "club_moving_to": "Arsenal",
+    "fee": 50000000,
+    "date": "31/01/2013"
+  },
+  {
+    "season": "2012-13",
+    "transfer_window": "Summer",
+    "player_name": "Fernando Mores",
+    "league_moving_from": "Premier",
+    "club_moving_from": "Momoooo",
+    "league_moving_to": "Premier",
+    "club_moving_to": "Moomooo",
     "fee": 50000000,
     "date": "31/01/2013"
   }];
@@ -178,7 +256,7 @@ var footyData = [
 	//print_filter("dateDim");	
 
 
-	var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee/1000;});
+	var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee;});
 	//Groups total for each club for range in data
 	//print_filter("feeDateDim_filter");	
 
@@ -230,9 +308,9 @@ var footyData = [
    		.group(year_total);
 
 
-	var seasonDim  = ndx.dimension(function(d) {return +d.season;});
+	var seasonDim  = ndx.dimension(function(d) {return d.season;});
 	//print_filter("seasonDim");	
-	var season_total = seasonDim.group().reduceSum(function(d) {return d.season;});
+	var season_total = seasonDim.group().reduceSum(function(d) {return d.fee;});
 	//print_filter("season_total");	
 	
 	//Associate chart with HTML element
@@ -261,16 +339,16 @@ console.log(JSON.stringify(expensesCount));
 	
 
 	var clubDim  = ndx.dimension(function(d) {return d.club_moving_to;});
-	//print_filter("leagueDim");
+	//print_filter("clubDim");
 	var clubGroup = clubDim.group().reduceSum(function(d) {return d.fee;});
-	//print_filter("leagueGroup");	
+	//print_filter("clubGroup");	
 
 	//Associate chart with HTML element
 	var hitspieChart3 = dc.pieChart("#chart-ring-year3");
 	//criteria for pie chart
 	hitspieChart3
-		.width(290)
-		.height(290)
+		.width(190)
+		.height(190)
 		.slicesCap(4)
 		.innerRadius(50)
    		.dimension(clubDim)
@@ -288,13 +366,12 @@ console.log(JSON.stringify(expensesCount));
 	var hitspieChart4 = dc.pieChart("#chart-ring-year4");
 	//criteria for pie chart
 	hitspieChart4
-		.width(290)
-		.height(290)
+		.width(190)
+		.height(190)
 		.slicesCap(4)
 		.innerRadius(50)
    		.dimension(leagueDim)
    		.group(leagueGroup);
-
 
 
    		//THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
@@ -308,12 +385,38 @@ console.log(JSON.stringify(expensesCount));
 	var hitspieChart5 = dc.pieChart("#chart-ring-year5");
 	//criteria for pie chart
 	hitspieChart5
-		.width(290)
-		.height(290)
+		.width(190)
+		.height(190)
 		.slicesCap(4)
 		.innerRadius(50)
    		.dimension(windowDim)
    		.group(windowGroup);
+
+
+
+   	//Slices Cap needs to be variable, so it needs to be a count of the total of th 
+
+	var clubDim2  = ndx.dimension(function(d) {return d.club_moving_from;});
+	print_filter("clubDim2");
+	var clubGroup2 = clubDim2.group().reduceSum(function(d) {return d.fee;});
+	print_filter("clubGroup2");	
+
+	//Working out the total amount of clubs in group so can range/slices can be dynamically managed
+	var clubTotal2 = ndx.groupAll().reduceCount(function(d) {return d.club_moving_from;}).value();
+	//console.log(clubTotal2);
+
+	//Associate chart with HTML element
+	var hitspieChart6 = dc.pieChart("#chart-ring-year6");
+	//criteria for pie chart
+	hitspieChart6
+		.width(190)
+		.height(190)
+		.slicesCap(clubTotal2)
+		.innerRadius(50)
+   		.dimension(clubDim2)
+   		.group(clubGroup2);
+
+
 
 
     dc.renderAll();
