@@ -1,42 +1,29 @@
 
+//Queuing data so it all loads before 'makeGraph' is invoked 
 queue()
    .defer(d3.json, "data/FootyData.json")
-   //.defer(FootyData.json, "../")
    .await(makeGraphs);
 
-/*
- d3.json("data/FootyData.json", function(error, footballData) {
-     footballData.forEach(function(d) {
-    d.date = parseDate(d.date);
-    d.Year = d.date.getFullYear();
-     });
-*/
 
 function makeGraphs(error, footballData) {
 
   //console.log(footballData);
- 
-  var count = 0;
+  //var count = 0;
 
-   //Clean footy Json data
-  var footyData = footballData;
+   var footyData = footballData;
   //Get dates in a state they will be recognised as dates
   var parseDate = d3.time.format("%d/%m/%Y").parse;
     footyData.forEach(function(d) {
-      count = count +1;
+      //count = count +1;
       d.date = parseDate(d.date);
       d.Year = d.date.getFullYear();
-      console.log(count);
-      console.log(d.player_name);
+      //console.log(count);
+      //console.log(d.player_name);
   });
-
 
   //creating a cross filter instance
   var ndx = crossfilter(footyData);
   //print_filter("footyData");    
-
-
-
 
 
   //helper function to print out filter
@@ -47,78 +34,6 @@ function makeGraphs(error, footballData) {
     if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
     console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
   }
-
-/*
-var footyData = [
-  {
-    "season": "2010-11",
-    "transfer_window": "Winter",
-    "player_name": "Conor Sammon",
-    "league_moving_from": "NonEPLChamp",
-    "club_moving_from": "Kilmarnock",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Wigan Athletic",
-    "fee": 6000000,
-    "date": "28/01/2011"
-  },
-
-    {
-    "season": "2010-11",
-    "transfer_window": "Winter",
-    "player_name": "Conor Sammon",
-    "league_moving_from": "NonEPLChamp",
-    "club_moving_from": "Blahblah",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Blurblur",
-    "fee": 6000000,
-    "date": "28/01/2011"
-  },
-  {
-    "season": "2011-12",
-    "transfer_window": "Summer",
-    "player_name": "David Luiz",
-    "league_moving_from": "NonEPLChamp",
-    "club_moving_from": "Benfica",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Chelsea",
-    "fee": 21300000,
-    "date": "16/07/2011"
-  },
-  {
-    "season": "2012-13",
-    "transfer_window": "Winter",
-    "player_name": "Fernando Torres",
-    "league_moving_from": "Premier",
-    "club_moving_from": "Chelsea",
-    "league_moving_to": "Championship",
-    "club_moving_to": "Arsenal",
-    "fee": 50000000,
-    "date": "31/01/2013"
-  },
-  {
-    "season": "2012-13",
-    "transfer_window": "Summer",
-    "player_name": "Fernando Mores",
-    "league_moving_from": "Premier",
-    "club_moving_from": "Burnley",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Arsenal",
-    "fee": 50000000,
-    "date": "31/01/2013"
-  },
-  {
-    "season": "2012-13",
-    "transfer_window": "Summer",
-    "player_name": "Fernando Mores",
-    "league_moving_from": "Premier",
-    "club_moving_from": "Momoooo",
-    "league_moving_to": "Premier",
-    "club_moving_to": "Moomooo",
-    "fee": 50000000,
-    "date": "31/01/2013"
-  }];
-*/
-
 
 
   // Required Dimensions
@@ -263,13 +178,12 @@ var footyData = [
 
 
   var clubMovFromDim  = ndx.dimension(function(d) {return d.club_moving_from;});
-  print_filter("clubMovFromDim");
+  //print_filter("clubMovFromDim");
   var clubMovFromGroup = clubMovFromDim.group().reduceSum(function(d) {return d.fee;});
-  print_filter("clubMovFromGroup"); 
+  //print_filter("clubMovFromGroup"); 
 
   //Working out the total amount of clubs in group so can range/slices can be dynamically managed
   var amountOfclubsMovFrom = ndx.groupAll().reduceCount(function(d) {return d.club_moving_from;}).value();
-  //console.log(clubTotal2);
 
   //Associate chart with HTML element
   var clubMovFromPieChart = dc.pieChart("#piechart-clubMovFrom");
@@ -281,6 +195,35 @@ var footyData = [
     .innerRadius(50)
       .dimension(clubMovFromDim)
       .group(clubMovFromGroup);
+
+
+
+
+//-----------------------------------------------------------------------------------------
+
+
+  //Got amount of transfers and also top 10
+  var clubMovFromGroupCount = clubMovFromDim.group().reduceCount();
+  var clubMovFromGroupCount = clubMovFromGroupCount.top(Infinity).splice(1,clubMovFromGroupCount.top(Infinity).length);
+  //Top 10 of array as 'top()' won't work again after be used once (guess object change?)
+  var clubMovFromGroupTop10 = clubMovFromGroupCount.splice(0,10);
+  print_filter("clubMovFromGroupTop10");
+
+
+ //Associate chart with HTML element
+  var clubMovFromPieChartTop10 = dc.pieChart("#piechart-clubMovFromTop10");
+  //criteria for pie chart
+  clubMovFromPieChartTop10
+    .width(190)
+    .height(190)
+    .slicesCap(amountOfclubsMovFrom)
+    .innerRadius(50)
+      .dimension(clubMovFromDim)
+      .group(clubMovFromGroup);
+
+
+
+
 
 
 

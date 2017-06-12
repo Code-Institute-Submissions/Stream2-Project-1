@@ -1,0 +1,6 @@
+Sorting out the years
+
+- Bar chart rather than line?
+- Scatter with circles proportional
+- Have a "top 5" pie chart?
+- Team drop down list
