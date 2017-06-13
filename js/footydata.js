@@ -7,17 +7,13 @@ queue()
 
 function makeGraphs(error, footballData) {
 
-  //console.log(footballData);
-  //var count = 0;
-
-   var footyData = footballData;
+  var footyData = footballData;
   //Get dates in a state they will be recognised as dates
   var parseDate = d3.time.format("%d/%m/%Y").parse;
     footyData.forEach(function(d) {
-      //count = count +1;
       d.date = parseDate(d.date);
       d.Year = d.date.getFullYear();
-      //console.log(count);
+      //console.log(d.date.getFullYear());
       //console.log(d.player_name);
   });
 
@@ -26,7 +22,7 @@ function makeGraphs(error, footballData) {
   //print_filter("footyData");    
 
 
-  //helper function to print out filter
+  //Enables the results of crossfilter filters to be output to the concsole log
   function print_filter(filter){
     var f=eval(filter);
     if (typeof(f.length) != "undefined") {}else{}
@@ -35,36 +31,34 @@ function makeGraphs(error, footballData) {
     console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
   }
 
-
-  // Required Dimensions
-  // -------------------
-  // Transfer Window
+  // Dimensions:
+  // -----------
   var transfer_windowDim = ndx.dimension(function(d) {return d.transfer_window;});
-  // League Moving FROM Dim
   var league_moving_fromDim = ndx.dimension(function(d) {return d.league_moving_from;});
-  // Club Moving FROM Dim
-  var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
-  // League Moving TO Dim
-  var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
-  // Club Moving To Dim
-  var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
-  // Fee
+  var league_moving_toDim = ndx.dimension(function(d) {return d.league_moving_to;});
+  var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_from;});
+  var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_to;});
   var feeDim = ndx.dimension(function(d) {return d.fee;});  
-  // Use crossfilter to get views of the data for X axis (date) and Y axis (hits)
   var dateDim = ndx.dimension(function(d) {return d.date;});
-  
+  var yearDim  = ndx.dimension(function(d) {return +d.Year;});  
 
-  // Groups total fees (incoming and outgoing) for each club for range in data
-  // Gauges overall activity
-  // MAYBE SCATTERPLOT WITH CHANGING CIRCLE SIZE WOULD BE GOOD?
+
+  /*  ----------------------------------------------------------------------------------------------
+
+      Linear chart showing ALL tranfer activity involving Premiership and Championship league teams
+
+      ---------------------------------------------------------------------------------------------- */
+ 
+  //Generates a view of    
   var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee;});
   //print_filter("feeDateDim_filter");  
 
   //Getting max and min values for time based chart
   var minDate = dateDim.bottom(1)[0].date;
-    var maxDate = dateDim.top(1)[0].date;
+  var maxDate = dateDim.top(1)[0].date;
 
-    var chartTransfer = dc.lineChart("#chart-line-overall-transfer-spend");
+  /* 
+  var chartTransfer = dc.lineChart("#chart-line-overall-transfer-spend");
   //var chartTransfer = dc.scatterPlot("#chart-line-transfer");
   chartTransfer
        .width(800)
@@ -78,22 +72,47 @@ function makeGraphs(error, footballData) {
        .yAxisLabel("Amount Spent (£'s)")
        .xAxisLabel("Year")
        .yAxis().ticks(4);
+   */
 
-    // Grouping for year data
-  var yearDim  = ndx.dimension(function(d) {return +d.Year;});
+  var chartTransfer = dc.barChart("#chart-bar-overall-transfer-spend");
+  //var chartTransfer = dc.scatterPlot("#chart-line-transfer");
+  chartTransfer
+       .width(900)
+       .height(300)
+       .margins({top: 10, right: 50, bottom: 30, left: 50})
+       .dimension(dateDim)
+       .group(feeDateDim_filter)
+       .transitionDuration(500)
+       .x(d3.time.scale().domain([minDate, maxDate]))
+       .elasticY(true)
+       //'Gap' put in for bar chart
+       .gap(65)
+       .yAxisLabel("Amount Spent (£'s)")
+       .xAxisLabel("Year")
+       .yAxis().ticks(5);
+
+
+
+
+
+
+  // Returns a result of all tranfers fees based on year
+  // Grouping for year data
   var year_total = yearDim.group().reduceSum(function(d) {return d.fee;});
-  
+  //Working out the total amount of unique years in group so range/slices can be dynamically managed
+  var amountOfYears = ndx.groupAll().reduceCount(function(d) {return d.Year;}).value();
+  //print_filter("amountOfYears");
+
   //Associate chart with HTML element
   var yearPieChart = dc.pieChart("#piechart-year");
   //criteria for pie chart
   yearPieChart
     .width(190)
     .height(190)
-    .slicesCap(4)
+    .slicesCap(amountOfYears)
     .innerRadius(50)
-      .dimension(yearDim)
-      .group(year_total);
-
+    .dimension(yearDim)
+    .group(year_total);
 
 
 
@@ -102,9 +121,10 @@ function makeGraphs(error, footballData) {
   var season_totals = seasonDim.group().reduceSum(function(d) {return d.fee;});
   //print_filter("season_total"); 
 
-  //Working out the total amount of seasons in group so can range/slices can be dynamically managed
+  //Working out the total amount of unique seasons in group so can range/slices can be dynamically managed
   var amountOfSeasons = ndx.groupAll().reduceCount(function(d) {return d.season;}).value();
-  //console.log(clubTotal2);
+  //print_filter("amountOfSeasons");
+  //console.log("Amount of season: "+amountOfSeasons);
 
   //Associate chart with HTML element
   var seasonPieChart = dc.pieChart("#piechart-season");
@@ -114,19 +134,21 @@ function makeGraphs(error, footballData) {
     .height(190)
     .slicesCap(amountOfSeasons)
     .innerRadius(50)
-      .dimension(seasonDim)
-      .group(season_totals);
+    .dimension(seasonDim)
+    .group(season_totals);
+
+
 
   
 
   var clubMovTooDim  = ndx.dimension(function(d) {return d.club_moving_to;});
-  //print_filter("clubDim");
+  //print_filter("clubMovTooDim");
   var clubMovTooGroup = clubMovTooDim.group().reduceSum(function(d) {return d.fee;});
-  //print_filter("clubGroup");  
+  //print_filter("clubMovTooGroup");  
 
-  //Working out the total amount of clubs in group so can range/slices can be dynamically managed
+  //Working out the total amount of unique clubs in group so range/slices can be dynamically managed
   var amountOfclubsMovToo = ndx.groupAll().reduceCount(function(d) {return d.club_moving_to;}).value();
-  //console.log(clubTotal2);
+  //console.log(amountOfclubsMovToo);
 
   //Associate chart with HTML element
   var clubsMovTooPieChart = dc.pieChart("#piechart-clubsMovToo");
@@ -141,7 +163,8 @@ function makeGraphs(error, footballData) {
 
 
 
-      //THIS IS WHICH CLUBS HAVE SOLD TO THE DIV (In MONETRY TERMS)
+
+
   var leagueMovToDim  = ndx.dimension(function(d) {return d.league_moving_to;});
   //print_filter("leagueDim");
   var leagueMovToGroup = leagueMovToDim.group().reduceSum(function(d) {return d.fee;});
@@ -177,13 +200,19 @@ function makeGraphs(error, footballData) {
       .group(windowGroup);
 
 
+
+
+
+
+
   var clubMovFromDim  = ndx.dimension(function(d) {return d.club_moving_from;});
   //print_filter("clubMovFromDim");
   var clubMovFromGroup = clubMovFromDim.group().reduceSum(function(d) {return d.fee;});
   //print_filter("clubMovFromGroup"); 
 
-  //Working out the total amount of clubs in group so can range/slices can be dynamically managed
+  //Working out the total amount of unique clubs in group so range/slices can be dynamically managed
   var amountOfclubsMovFrom = ndx.groupAll().reduceCount(function(d) {return d.club_moving_from;}).value();
+  //console.log(amountOfclubsMovFrom);
 
   //Associate chart with HTML element
   var clubMovFromPieChart = dc.pieChart("#piechart-clubMovFrom");
@@ -193,37 +222,40 @@ function makeGraphs(error, footballData) {
     .height(190)
     .slicesCap(amountOfclubsMovFrom)
     .innerRadius(50)
-      .dimension(clubMovFromDim)
-      .group(clubMovFromGroup);
+    .dimension(clubMovFromDim)
+    .group(clubMovFromGroup);
 
 
 
 
-//-----------------------------------------------------------------------------------------
+  var clubMovFromGroupCount = clubMovFromDim.group();
+  print_filter("clubMovFromGroupCount");
 
-
-  //Got amount of transfers and also top 10
-  var clubMovFromGroupCount = clubMovFromDim.group().reduceCount();
-  var clubMovFromGroupCount = clubMovFromGroupCount.top(Infinity).splice(1,clubMovFromGroupCount.top(Infinity).length);
-  //Top 10 of array as 'top()' won't work again after be used once (guess object change?)
-  var clubMovFromGroupTop10 = clubMovFromGroupCount.splice(0,10);
-  print_filter("clubMovFromGroupTop10");
-
-
- //Associate chart with HTML element
-  var clubMovFromPieChartTop10 = dc.pieChart("#piechart-clubMovFromTop10");
-  //criteria for pie chart
-  clubMovFromPieChartTop10
+  var clubMovFromGroupCountPieChart = dc.pieChart("#piechart-clubMovFromCount");
+  clubMovFromGroupCountPieChart
     .width(190)
     .height(190)
     .slicesCap(amountOfclubsMovFrom)
     .innerRadius(50)
-      .dimension(clubMovFromDim)
-      .group(clubMovFromGroup);
+    .dimension(clubMovFromDim)
+    .group(clubMovFromGroupCount);  
 
 
-
-
+ /* --------------------------------------------------------------------------------------------- */
+  var clubMovFromGroupCountTop10 = clubMovFromDim.group().top(10);
+  print_filter("clubMovFromGroupCountTop10");
+  
+ //Associate chart with HTML element
+  var clubMovFromPieChartCountTop10PieChart = dc.pieChart("#piechart-clubMovFromCountTop10");
+  //criteria for pie chart
+  clubMovFromPieChartCountTop10PieChart
+    .width(190)
+    .height(190)
+    .slicesCap(10)
+    .innerRadius(50)
+    .dimension(clubMovFromDim)
+    .group(clubMovFromGroupCountTop10);  
+ 
 
 
 
