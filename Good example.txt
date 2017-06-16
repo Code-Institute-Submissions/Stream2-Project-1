@@ -1,0 +1,27 @@
+
+Do Wireframes!
+
+
+
+He's probably a Web Dev before you go panicking!
+Anyone struggling with MongoDB may want to look too, hope this helps people.
+https://github.com/FutoiSaru/pokemon
+
+
+https://fierce-crag-29219.herokuapp.com/graphs
+
+Also note his "reset pie" and "reset all"
+
+@canny I may be wrong, but I think you can't make the charts responsive as in for them to resize when you want them to. But you can make the containers they are in move around when a certain size screen size comes into play, in the same way you learnt in stream 1.
+
+In my app https://fierce-crag-29219.herokuapp.com/graphs if you view on a mobile device I created a pop up that says it's best viewed in landscape.
+
+Or you could create two graphs of the same type with different dimensions and have one set to display: none but when it comes to a certain screen size change it to display: block (or what ever you like) and then the other one to display: none this should hide the 'larger' one for desktops and bring the 'mobile' one into play. (edited)
+
+
+@canny You can make the dashboard responsive using the methods @jamessan85 describes. However the svg image will only shrink to a certain size before being cropped. I like the idea of having a smaller chart appear by media query on a small screen size.
+
+----------------------
+
+You can make your charts responsive in javascript by giving your charts width a variable that you update when you initially create the charts and again whenever the browser window is resized.
+My project is still being worked on but you can see this working https://pokemon-stream2-project.herokuapp.com/charts

@@ -273,6 +273,8 @@
     "club_moving_to": "TSG Hoffenheim",
     "fee": 5800000,
     "date": "25/01/2011"
+
+
   },
   {
     "season": "2010-2011",
@@ -1511,7 +1513,7 @@
     "transfer_window": "Summer",
     "player_name": "Pablo Barrera",
     "league_moving_from": "NonEPLChamp",
-    "club_moving_from": "UNAM",
+    "club_moving_from": "Unattached",
     "league_moving_to": "Premier",
     "club_moving_to": "West Ham United",
     "fee": 4000000,

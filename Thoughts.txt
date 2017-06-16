@@ -1,3 +1,8 @@
+Check file structure is correct
+
+Reduce file size of background image?
+Make Axis of graphs not effected by opacity!
+
 
 Label Graphs
 Clubs sold graph line (green)

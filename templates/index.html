@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football Transfer Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for ('static',
+    filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static',
+    filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}" />
+
+<style type="text/css">
+
+  .btn-padding  {margin: 5px;}
+
+
+  #test {
+    background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+</style>
+
+</head>
+<body>
+
+<body class="application" id="test">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">Footy Data Dashboard</a>
+        </div>
+      
+        <div class = "nav navbar-nav navbar-right">
+          <button class="btn btn-danger btn-xs btn-padding" role="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+       </div>
+     </div>
+  </div>
+<div class = "container-fluid">
+  
+  <div class="row">
+      <!-- Overall Transfer Activity shown through all fees both in/out -->
+      <div class="col-sm-12">
+        <div class="chart-wrapper"  style="opacity: 0.75;">
+            <div class="chart-title" style="background-color: rgb(212, 214, 216)">
+                Transfer Spending
+            </div>
+            <div class="chart-stage">
+            <!-- This is the anchor point for the chart in the page-->
+            <!--
+            <div id="chart-line-overall-transfer-spend"></div>
+            -->
+              <div id="bar-chart-overall-transfer-spend"></div>
+          </div>
+        </div>
+      </div>  
+  </div>
+  <div class="row">
+      <!-- Year Data -->
+      <div class="col-sm-3">
+        <div class="chart-wrapper" style="background-color: orange; opacity: 0.80;">
+            <div class="chart-title"  style="opacity: 1;">
+                Amount of transfers per Season
+              </div>
+            <div class="chart-stage">
+        <!-- This is the anchor point for the chart in the page-->
+          <div id="piechart-seasonal-total-amount"></div>
+          </div>
+        </div>  
+      </div>        
+      <div class="col-sm-1">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Total Transfer Spend (£)
+              </div>
+            <div class="chart-stage" style="background-color: red">
+        <!-- This is the anchor point for the chart in the page-->
+                <div id="total-transfer-spend"></div>
+            </div>
+        </div>  
+      </div>  
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Financial Value of Seasonal Transfers
+              </div>
+            <div class="chart-stage">
+        <!-- This is the anchor point for the chart in the page-->
+          <div id="rowchart-seasonal-total-fees"></div>
+          </div>
+        </div>  
+      </div>  
+  </div>    
+  <div class="row">  
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Distribution of Transfer Window Spending
+              </div>
+            <div class="chart-stage">
+        <!-- This is the anchor point for the chart in the page-->
+          <div id="piechart-window"></div>
+          </div>
+        </div>  
+      </div>  
+
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Amount of Players sold to (League)
+              </div>
+            <div class="chart-stage">
+        <!-- This is the anchor point for the chart in the page-->
+          <div id="piechart-leagueMovTo"></div>
+          </div>
+        </div>  
+      </div>  
+
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Amount of Players Bought From (League)
+              </div>
+            <div class="chart-stage">
+        <!-- This is the anchor point for the chart in the page-->
+          <div id="piechart-leagueMovFrom"></div>
+          </div>
+        </div>  
+      </div>  
+
+  </div>
+</div>
+  <hr>
+  <p class="small text-muted"> Data viz &#9829; from Code Institute</p>
+  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>  
+</body>
+</html>
