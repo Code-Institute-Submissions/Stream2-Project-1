@@ -13,10 +13,6 @@ DBS_NAME = os.getenv('MONGO_DB_NAME', 'Stream2Project-LOCAL-DB')
 #Remote Connection
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://<dbuser>:<dbpassword>@ds129442.mlab.com:29442/heroku_2z1cv575')
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'heroku_2z1cv575')
-
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'stream2project'
 COLLECTION_NAME = 'projects'
  
  
