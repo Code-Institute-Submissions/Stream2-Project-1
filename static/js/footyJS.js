@@ -106,12 +106,13 @@ function makeGraphs(error, footballData) {
    
 
 //Associate chart with HTML element
+  var seasonalFees = seasonDim.group().reduceCount(function(d) {return d.fee;});
   var chartSeasonalFees = dc.rowChart("#rowchart-seasonal-total-fees");
   chartSeasonalFees
     .width(490)
     .height(190)
     .dimension(seasonDim)
-    .group(seasonalAmount)
+    .group(seasonalFees)
     .xAxis().ticks(5)
     
    var totalFees = ndx.groupAll().reduceSum(function (d) {
