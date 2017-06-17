@@ -12,15 +12,18 @@
 
 <style type="text/css">
 
-  .btn-padding  {margin: 5px;}
+  	.btn-padding  {margin: 5px;}
 
+	#rowchart-seasonal-total-fees{
+		pointer-events: none;
+	}
 
-  #test {
-    background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+  	#test {
+    	background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
+    	background-size: 100% 100%;
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+  	}
 
 </style>
 
@@ -85,7 +88,7 @@
       <div class="col-sm-6">
         <div class="chart-wrapper">
             <div class="chart-title">
-                Financial Value of Seasonal Transfers
+                Financial Value of Seasonal Transfers (READ-ONLY)
               </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
