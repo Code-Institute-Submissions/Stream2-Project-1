@@ -71,6 +71,7 @@ function makeGraphs(error, footballData) {
        .transitionDuration(500)
        .x(d3.time.scale().domain([minDate, maxDate]))
        .elasticY(true)
+       .brushOn(false)
        .ordinalColors(['#e41a1c']) //Line colour
        .yAxisLabel("Amount Spent (£'s)")
        .xAxisLabel("Year")
