@@ -11,8 +11,8 @@ app = Flask(__name__)
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'Stream2Project-LOCAL-DB')
 #Remote Connection
-MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://<dbuser>:<dbpassword>@ds129442.mlab.com:29442/heroku_2z1cv575')
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'heroku_2z1cv575')
+#MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://<dbuser>:<dbpassword>@ds129442.mlab.com:29442/heroku_2z1cv575')
+#DBS_NAME = os.getenv('MONGO_DB_NAME', 'heroku_2z1cv575')
 COLLECTION_NAME = 'projects'
  
  
@@ -33,7 +33,7 @@ def stream2_projects():
  
     # A constant that defines the record fields that we wish to retrieve.
     FIELDS = {
-        '_id': False, 'season': True, 'playet_name': True,
+        '_id': False, 'transfer_window': True, 'season': True, 'player_name': True,
         'league_moving_from': True, 'club_moving_from': True,
         'league_moving_to': True, 'club_moving_to': True, 'fee': True, 'date': True
     }

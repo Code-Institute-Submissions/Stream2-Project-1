@@ -37,7 +37,7 @@ function makeGraphs(error, footballData) {
       //A minor issue within the transfer_window data causing to an 'undefined' to be returned and causing crossfilter to fall 
       //over, rather than trawling the 3K rows of data to find it for this small project, am using fix:
       //https://stackoverflow.com/questions/35119862/maximum-call-stack-size-exceeded-crossfilter
-  var transfer_windowDim = ndx.dimension(function(d) {return d.transfer_window ? d.transfer_window : "";});
+  var transfer_windowDim = ndx.dimension(function(d) {return d.transfer_window;});
   var league_moving_fromDim = ndx.dimension(function(d) {return d.league_moving_from;});
   var league_moving_toDim = ndx.dimension(function(d) {return d.league_moving_to;});
   var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
