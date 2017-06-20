@@ -7,10 +7,31 @@
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/keen-dashboards.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}" />
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
 <style type="text/css">
+
+	#test {
+		font-family: 'Cabin', sans-serif;	
+
+		background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
+    	background-size: 100% 100%;
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+  	}
+
+	
+	.chart-title {
+		color: red;
+	}
+
+	.chart-wrapper {
+		 opacity: 0.75;
+	}
+
 
   	.btn-padding  {margin: 5px;}
 
@@ -18,20 +39,16 @@
 		pointer-events: none;
 	}
 
-  	#test {
-    	background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
-    	background-size: 100% 100%;
-    	background-repeat: no-repeat;
-    	background-attachment: fixed;
-  	}
-
+    .middle{
+    	text-align: center;
+    }
+  	
 </style>
 
 </head>
-<body>
+<body class="application" id="#test">
 
-<body class="application" id="test">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+ <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="./">Footy Data Dashboard</a>
@@ -47,8 +64,8 @@
   <div class="row">
       <!-- Overall Transfer Activity shown through all fees both in/out -->
       <div class="col-sm-12">
-        <div class="chart-wrapper"  style="opacity: 0.75;">
-            <div class="chart-title" style="background-color: rgb(212, 214, 216)">
+        <div class="chart-wrapper" id="bar-chart-overall-transfer-spend-cont">
+            <div class="chart-title">
                 Transfer Spending
             </div>
             <div class="chart-stage">
@@ -63,10 +80,10 @@
   </div>
   <div class="row">
       <!-- Year Data -->
-      <div class="col-sm-3">
-        <div class="chart-wrapper" style="background-color: orange; opacity: 0.80;">
-            <div class="chart-title"  style="opacity: 1;">
-                Amount of transfers per Season
+      <div class="col-sm-2 middle">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Amount
               </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
@@ -79,13 +96,13 @@
             <div class="chart-title">
                 Total Transfer Spend (£)
               </div>
-            <div class="chart-stage" style="background-color: red">
+            <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
                 <div id="total-transfer-spend"></div>
             </div>
         </div>  
       </div>  
-      <div class="col-sm-6">
+      <div class="col-sm-7">
         <div class="chart-wrapper">
             <div class="chart-title">
                 Financial Value of Seasonal Transfers (READ-ONLY)
@@ -145,7 +162,7 @@
   <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
-  <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>  
+  <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>  
 </body>
 </html>

@@ -1,57 +1,48 @@
-#number-projects-nd {
-   font-size: 60px;
+/*
+   This CSS has been updated using sublime autoprefixer which uses data from caniuse.com to see what vendor prefixes 
+   are required and then applies them the CSS, it will also remove prefixes that are no longer required.
+
+   To update/refresh CSS ctrl+shit+p, select 'autoprefix css'
+*/
+
+/*****************************************************************************************************************************/
+/* There is no inital media query since a "mobile first" approach is being taken and so the intial values will be used       */
+/* unless ones are subsequently set for a bigger screen size.                                                                */
+/*****************************************************************************************************************************/
+
+/*********************************************/
+/* Extra small devices (phones, up to 480px) */
+/*                 col-xs-*                  */
+/*********************************************/
+
+/* Declaring root elements size in an absolute/fixed value, so by using rem there is a consistent 
+   reference point from which size changes take place across devices/pages */
+
+
+   
+
+/********************************************/
+/* Small devices (tablets, 768px to 991px) */
+/*                 col-sm-*                */
+/*********************************************/
+@media (min-width: 768px) and (max-width: 991px) {
+
 }
- 
-#total-donations-nd {
-   font-size: 60px;
+
+
+/******************************************************/
+/* Medium devices (tablets/desktops, 992px to 1199px) */
+/*                        col-md-*                    */
+/******************************************************/
+@media (min-width: 992px) { 
+
+
 }
- 
- 
- 
- 
-.dc-chart g.row text {
-   fill: black;
-   font-size: 12px;
-}
- 
-#total-projects {
-   background: #33CC99;
-   width: 200px;
-   position: relative;
-   height: 60px;
-   font-size: 29px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 12px;
-   padding-bottom: 0px;
-}
- 
-#net-donations {
-   background: #33CC99;
-   width: 200px;
-   position: relative;
-   height: 60px;
-   font-size: 29px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 12px;
-   padding-bottom: 0px;
-}
- 
- 
-.dc-select-menu {
-   background: #33CC99;
-   width: 80%;
-   border: none;
-   position: relative;
-   height: 31px;
-   font-size: 15px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 4px;
-   padding-bottom: 0px;
- 
+
+
+/* Large devices (large desktops 1200px and above) */
+/*                    col-lg-*                     */
+@media screen and (min-width: 1200px) {
+
+
 }

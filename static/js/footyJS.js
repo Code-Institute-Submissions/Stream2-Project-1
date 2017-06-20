@@ -63,8 +63,10 @@ function makeGraphs(error, footballData) {
   //Associate graph with HTML anchor and define chart 
   var chartTotalFees = dc.barChart("#bar-chart-overall-transfer-spend");
   chartTotalFees
-       .width(1200)
-       .height(300)
+       .width(document.getElementById('bar-chart-overall-transfer-spend').clientWidth)
+       .height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
+//       .width(barWidth)
+//       .height(barHeight)       
        .margins({top: 10, right: 50, bottom: 30, left: 80})
        .dimension(dateDim)
        .group(feeDateDim_filter)
@@ -82,9 +84,9 @@ function makeGraphs(error, footballData) {
   var seasonalAmount = seasonDim.group().reduceCount(function(d) {return d.fee;});
   var chartSeasonalAmounts = dc.pieChart("#piechart-seasonal-total-amount");
   chartSeasonalAmounts
-    .width(190)
-    .height(190)
-    .innerRadius(50)
+    .width(120)
+    .height(120)
+    .innerRadius(10)
     .ordinalColors(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']) //Segment colour
     .dimension(seasonDim)
     .group(seasonalAmount);
