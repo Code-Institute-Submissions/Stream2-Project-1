@@ -63,10 +63,10 @@ function makeGraphs(error, footballData) {
   //Associate graph with HTML anchor and define chart 
   var chartTotalFees = dc.barChart("#bar-chart-overall-transfer-spend");
   chartTotalFees
-       .width(document.getElementById('bar-chart-overall-transfer-spend').clientWidth)
-       .height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
-//       .width(barWidth)
-//       .height(barHeight)       
+       //.width(document.getElementById('bar-chart-overall-transfer-spend').clientWidth)
+       //.height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
+       .width(1200)
+       .height(300)       
        .margins({top: 10, right: 50, bottom: 30, left: 80})
        .dimension(dateDim)
        .group(feeDateDim_filter)
