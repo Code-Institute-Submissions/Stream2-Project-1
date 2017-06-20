@@ -56,7 +56,7 @@ function makeGraphs(error, footballData) {
       ---------------------------------------------------------------------------------------------- */
  
   //Group fee's paid by date    
-  var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee;});
+  var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee/1000000;});
   //Getting max and min values for time based chart
   var minDate = dateDim.bottom(1)[0].date;
   var maxDate = dateDim.top(1)[0].date;
@@ -67,7 +67,7 @@ function makeGraphs(error, footballData) {
        //.height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
        .width(1200)
        .height(300)       
-       .margins({top: 10, right: 50, bottom: 30, left: 80})
+       .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
        .group(feeDateDim_filter)
        .transitionDuration(500)
@@ -75,7 +75,7 @@ function makeGraphs(error, footballData) {
        .elasticY(true)
        .brushOn(false)
        .ordinalColors(['#e41a1c']) //Line colour
-       .yAxisLabel("Amount Spent (£'s)")
+       .yAxisLabel("Amount Spent (in millions of £'s)")
        .xAxisLabel("Year")
        .yAxis().ticks(5);
 
@@ -84,11 +84,17 @@ function makeGraphs(error, footballData) {
   var seasonalAmount = seasonDim.group().reduceCount(function(d) {return d.fee;});
   var chartSeasonalAmounts = dc.pieChart("#piechart-seasonal-total-amount");
   chartSeasonalAmounts
-    .width(120)
-    .height(120)
-    .innerRadius(10)
+    .width(190)
+    .height(190)
+    .innerRadius(50)
     .ordinalColors(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']) //Segment colour
     .dimension(seasonDim)
+    //.label(function(d) {
+    //     console.log(JSON.stringify(d.value));
+    //  })
+    .label(function(d) {
+         return d.value;
+      })
     .group(seasonalAmount);
 
 
@@ -125,7 +131,7 @@ function makeGraphs(error, footballData) {
 
 
 
-  var transferWindow_totals = transfer_windowDim.group().reduceSum(function(d) {return d.fee;});
+  var transferWindow_totals = transfer_windowDim.group().reduceSum(function(d) {return d.fee/1000000;});
   //print_filter("season_total"); 
 
   //Associate chart with HTML element
