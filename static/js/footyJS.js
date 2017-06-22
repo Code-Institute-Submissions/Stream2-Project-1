@@ -65,8 +65,8 @@ function makeGraphs(error, footballData) {
   chartTotalFees
        //.width(document.getElementById('bar-chart-overall-transfer-spend').clientWidth)
        //.height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
-       .width(1200)
-       .height(300)       
+       .width(700)
+       .height(175)       
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
        .group(feeDateDim_filter)
@@ -92,9 +92,9 @@ function makeGraphs(error, footballData) {
     //.label(function(d) {
     //     console.log(JSON.stringify(d.value));
     //  })
-    .label(function(d) {
-         return d.value;
-      })
+    //.label(function(d) {
+    //     return d.value;
+    //  })
     .group(seasonalAmount);
 
 
@@ -103,14 +103,17 @@ function makeGraphs(error, footballData) {
        return d.fee;
    });
 
+   //var string = numeral(1000).format('0,0');
+  //console.log(numeral(totalFeesSeasonal).format('0,0');
+
    var chartTotalSpend = dc.numberDisplay("#total-transfer-spend");
    chartTotalSpend
-       .formatNumber(d3.format("d"))
+       .formatNumber(d3.format(",d"))
        .valueAccessor(function (d) {
            return d;
        })
-       .group(totalFeesSeasonal)
-       .formatNumber(d3.format(".3s"));
+       .group(totalFeesSeasonal);
+       
 
    
 
@@ -122,7 +125,7 @@ function makeGraphs(error, footballData) {
     .height(190)
     .dimension(seasonDim)
     .group(seasonalFees)
-    .xAxis().ticks(5)
+    .xAxis().ticks(5);
     
    var totalFees = ndx.groupAll().reduceSum(function (d) {
        return d.fee;

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 
 <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
 <style type="text/css">
 
@@ -25,6 +26,11 @@
 
 
   	}
+
+	.dashboard-title-text{
+		font-family: 'Permanent Marker', cursive;
+	}
+
 
 	/* 
 		Needs to be set in the parent child format to ensure specificty/cascade rules enure it over-rides the
@@ -43,16 +49,36 @@
 		border-radius: 5px;
 	}
 
-	.chart-wrapper {
+	.leftchart{
+		opacity: 0.75;
+		border-radius: 5px;
+		margin-top:10px;		
+		margin-left:20px;
+		margin-right:5px;
+	}
+
+
+	.rightchart{
 		opacity: 0.75;
 		border-radius: 5px;		 
+		margin-top:10px;		
+		margin-left:5px;
+		margin-right:20px;
+	}
+
+	.testKey{
+		display: inline-block;
+		border: 2px solid red;
+		color: white;
+
 	}
 
 
 	/* Total transfer spend size value */
 	#total-transfer-spend .number-display{
 		color: red;
-		font-size: 8em;
+		font-size: 3em;
+		vertical-align: middle;
 
 	}
 
@@ -76,6 +102,31 @@
     .middle{
     	text-align: center;
     }
+
+	.read-only-cont{
+		border: 2px solid white;
+		margin-top:10px;				
+		border-radius: 5px;
+	}
+
+
+	.interactive-cont{
+		border: 2px solid blue;
+		margin-top:10px;				
+		border-radius: 5px;
+	}
+
+	.read-only-title{
+		margin-top:10px;		
+		margin-left:30px;
+		margin-right:5px;	
+		opacity: 0.75;
+		color: white;
+	}
+
+	.change-to-inline{
+		display: inline-block;
+	}
   	
 </style>
 
@@ -93,14 +144,32 @@
        </div>
      </div>
   </div>
-<div class = "container-fluid">
-  
-
+<div class = "container-fluid read-only-cont">
 
   <div class="row">
-      <!-- Overall Transfer Activity shown through all fees both in/out -->
-      <div class="col-sm-12">
-        <div class="chart-wrapper">
+      <div class="col-sm-6">
+      		<div  class="read-only-title dashboard-title-text">
+            	Read Only Dashboard
+            </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper text-right">
+            <div class="chart-title change-to-inline">
+            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">
+                Total Transfer Spend (£)
+              </div>
+            <div class="chart-stage change-to-inline">
+        <!-- This is the anchor point for the chart in the page-->
+                <div class="change-to-inline" id="total-transfer-spend"></div>
+            </div>
+         </div>  
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-7">
+        <div class="chart-wrapper leftchart">
             <div class="chart-title">
             <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">
                 Transfer Spending
@@ -114,8 +183,23 @@
           </div>
         </div>
       </div>  
-  </div>
-  <div class="row">
+      <div class="col-sm-5">
+        <div class="chart-wrapper rightchart">
+            <div class="chart-title">
+      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
+                Financial Value of Seasonal Transfers
+              </div>
+            <div class="chart-stage">
+    	    <!-- This is the anchor point for the chart in the page-->
+	          <div id="rowchart-seasonal-total-fees"></div>
+          </div>
+        </div>  
+      </div>  
+	</div>	
+
+</div>
+<div class = "container-fluid  interactive-cont">
+  <div class="row">  
       <!-- Year Data -->
       <div class="col-sm-3">
         <div class="chart-wrapper">
@@ -126,35 +210,11 @@
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
           <div id="piechart-seasonal-total-amount"></div>
+          <div class="testKey"> Pie Chart Key </div>
           </div>
         </div>  
       </div>        
-      <div class="col-sm-3">
-        <div class="chart-wrapper">
-            <div class="chart-title">
-      		<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
-                Total Transfer Spend (£)
-              </div>
-            <div class="chart-stage">
-        <!-- This is the anchor point for the chart in the page-->
-                <div id="total-transfer-spend"></div>
-            </div>
-        </div>  
-      </div>  
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-            <div class="chart-title">
-      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
-                Financial Value of Seasonal Transfers (READ-ONLY)
-              </div>
-            <div class="chart-stage">
-        <!-- This is the anchor point for the chart in the page-->
-          <div id="rowchart-seasonal-total-fees"></div>
-          </div>
-        </div>  
-      </div>  
-  </div>    
-  <div class="row">  
+
       <div class="col-sm-3">
         <div class="chart-wrapper">
             <div class="chart-title">
@@ -197,7 +257,7 @@
   </div>
 </div>
   <hr>
-  <p class="small text-muted"> Data viz &#9829; from Code Institute</p>
+  <p class="small text-muted"> Data visualization brought to you by 'The Cheesemonster' &#129472; &#128059;</p>
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
@@ -207,5 +267,7 @@
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>  
   <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>  
+
+  
 </body>
 </html>
