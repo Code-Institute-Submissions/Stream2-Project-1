@@ -42,6 +42,7 @@ function makeGraphs(error, footballData) {
   var league_moving_toDim = ndx.dimension(function(d) {return d.league_moving_to;});
   var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
   var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
+  var player_name = ndx.dimension(function(d) {return d.player_name;});
   var feeDim = ndx.dimension(function(d) {return d.fee;});  
   var dateDim = ndx.dimension(function(d) {return d.date;});
   var seasonDim  = ndx.dimension(function(d) {return d.season;});
@@ -63,10 +64,8 @@ function makeGraphs(error, footballData) {
   //Associate graph with HTML anchor and define chart 
   var chartTotalFees = dc.barChart("#bar-chart-overall-transfer-spend");
   chartTotalFees
-       //.width(document.getElementById('bar-chart-overall-transfer-spend').clientWidth)
-       //.height(document.getElementById('bar-chart-overall-transfer-spend').clientheight) 
        .width(700)
-       .height(175)       
+       .height(190)       
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
        .group(feeDateDim_filter)
@@ -75,27 +74,9 @@ function makeGraphs(error, footballData) {
        .elasticY(true)
        .brushOn(false)
        .ordinalColors(['#e41a1c']) //Line colour
-       .yAxisLabel("Amount Spent (in millions of £'s)")
+       .yAxisLabel("Amount (£ millions)")
        .xAxisLabel("Year")
        .yAxis().ticks(5);
-
-
-  //Associate graph with HTML anchor and define chart 
-  var seasonalAmount = seasonDim.group().reduceCount(function(d) {return d.fee;});
-  var chartSeasonalAmounts = dc.pieChart("#piechart-seasonal-total-amount");
-  chartSeasonalAmounts
-    .width(190)
-    .height(190)
-    .innerRadius(50)
-    .ordinalColors(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']) //Segment colour
-    .dimension(seasonDim)
-    //.label(function(d) {
-    //     console.log(JSON.stringify(d.value));
-    //  })
-    //.label(function(d) {
-    //     return d.value;
-    //  })
-    .group(seasonalAmount);
 
 
 
@@ -141,9 +122,9 @@ function makeGraphs(error, footballData) {
   var windowPieChart = dc.pieChart("#piechart-window");
   //criteria for pie chart
   windowPieChart
-    .width(190)
-    .height(190)
-    .innerRadius(50)
+    .width(150)
+    .height(150)
+    .innerRadius(25)
     .dimension(transfer_windowDim)
     .group(transferWindow_totals);
 
@@ -151,35 +132,64 @@ function makeGraphs(error, footballData) {
 
   var leagueMovToDim  = ndx.dimension(function(d) {return d.league_moving_to;});
   var leagueMovToGroup = leagueMovToDim.group().reduceCount(function(d) {return d.fee;});
-  var leagueMovToPieChart = dc.pieChart("#piechart-leagueMovTo");
-  //criteria for pie chart
-  leagueMovToPieChart
-    .width(190)
-    .height(190)
-    .innerRadius(50)
+  var leagueMovToRowChart = dc.rowChart("#rowchart-leagueMovTo");
+  leagueMovToRowChart
+    .width(390)
+    .height(150)
     .dimension(leagueMovToDim)
-    .group(leagueMovToGroup);
+    .group(leagueMovToGroup)
+    .xAxis().ticks(5);
 
 
   var leagueMovFromDim  = ndx.dimension(function(d) {return d.league_moving_from;});
   var leagueMovFromGroup = leagueMovFromDim.group().reduceCount(function(d) {return d.fee;});
-  var leagueMovFromPieChart = dc.pieChart("#piechart-leagueMovFrom");
+  var leagueMovFromRowChart = dc.rowChart("#rowchart-leagueMovFrom");
   //criteria for pie chart
-  leagueMovFromPieChart
-    .width(190)
-    .height(190)
-    .innerRadius(50)
+  leagueMovFromRowChart
+    .width(390)
+    .height(150)
     .dimension(leagueMovFromDim)
-    .group(leagueMovFromGroup);
+    .group(leagueMovFromGroup)
+    .xAxis().ticks(5);
 
 
-/*
-  var preTeamsDimGrp = preTeamsDim.group();
-
-     selectField = dc.selectMenu('#menu-select')
-       .dimension(preTeamsDim)
-       .group(preTeamsDimGrp);
-*/
+var datatable = dc.dataTable("#dc-data-table");
+datatable
+   .dimension(dateDim)
+   .group(function (d) {
+       return d.date;
+   })
+   //size of the data table in rows, this needs to be automatic...
+   //.size(3000)
+  // create the columns dynamically
+   .columns([
+       function (d) {
+           return d.date.getDate() + "/" + (d.date.getMonth() + 1) + "/" + d.date.getFullYear();
+       },
+       function (d) {
+           return d.player_name;
+       },
+       function (d) {
+           return d.fee;
+       },
+       function (d) {
+           return d.club_moving_from;
+       },
+       function (d) {
+           return d.league_moving_from;
+       },
+       function (d) {
+           return d.club_moving_to;
+       },
+       function (d) {
+           return d.league_moving_to;
+       }       
+   ]);
 
     dc.renderAll();
+
 }
+
+
+
+ 
