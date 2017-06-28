@@ -84,9 +84,7 @@ function makeGraphs(error, footballData) {
        return d.fee;
    });
 
-   //var string = numeral(1000).format('0,0');
-  //console.log(numeral(totalFeesSeasonal).format('0,0');
-
+   /*
    var chartTotalSpend = dc.numberDisplay("#total-transfer-spend");
    chartTotalSpend
        .formatNumber(d3.format(",d"))
@@ -94,7 +92,44 @@ function makeGraphs(error, footballData) {
            return d;
        })
        .group(totalFeesSeasonal);
-       
+    */
+
+    var UK = d3.locale({
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": [3],
+  "currency": ["£", ""],
+  "dateTime": "%a %b %e %X %Y",
+  "date": "%m/%d/%Y",
+  "time": "%H:%M:%S",
+  "periods": ["AM", "PM"],
+  "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+});
+
+
+// Getting M, B thousands etc.
+// https://github.com/d3/d3/issues/2241
+
+formatSi = UK.numberFormat("$.2s");
+
+function formatAbbreviation(x) {
+  var s = formatSi(x);
+  switch (s[s.length - 1]) {
+    case "G": return s.slice(0, -1) + "B";
+  }
+  return s;
+}
+
+ var chartTotalSpend = dc.numberDisplay("#total-transfer-spend");
+ chartTotalSpend
+     .formatNumber(formatAbbreviation)
+     .valueAccessor(function (d) {
+         return d;
+     })
+     .group(totalFeesSeasonal);  
 
    
 
@@ -185,6 +220,36 @@ datatable
            return d.league_moving_to;
        }       
    ]);
+
+
+var UK = d3.locale({
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": [3],
+  "currency": ["£", ""],
+  "dateTime": "%a %b %e %X %Y",
+  "date": "%m/%d/%Y",
+  "time": "%H:%M:%S",
+  "periods": ["AM", "PM"],
+  "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+});
+
+
+// Getting M, B thousands etc.
+// https://github.com/d3/d3/issues/2241
+
+formatSi = UK.numberFormat("$.2s");
+
+function formatAbbreviation(x) {
+  var s = formatSi(x);
+  switch (s[s.length - 1]) {
+    case "G": return s.slice(0, -1) + "B";
+  }
+  return s;
+}
 
     dc.renderAll();
 
