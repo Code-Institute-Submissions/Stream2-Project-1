@@ -43,7 +43,7 @@ function makeGraphs(error, footballData) {
   var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
   var club_moving_toDim = ndx.dimension(function(d) {return d.club_moving_to;});
   var player_name = ndx.dimension(function(d) {return d.player_name;});
-  var feeDim = ndx.dimension(function(d) {return d.fee;});  
+  var feeDim = ndx.dimension(function(d) {return +d.fee;});  
   var dateDim = ndx.dimension(function(d) {return d.date;});
   var seasonDim  = ndx.dimension(function(d) {return d.season;});
 
@@ -94,6 +94,11 @@ function makeGraphs(error, footballData) {
        .group(totalFeesSeasonal);
     */
 
+
+
+//---------------------------------------------------------
+// Code supplied by Timmy
+//---------------------------------------------------------
     var UK = d3.locale({
   "decimal": ".",
   "thousands": ",",
@@ -131,6 +136,7 @@ function formatAbbreviation(x) {
      })
      .group(totalFeesSeasonal);  
 
+//---------------------------------------------------------
    
 
 //Associate chart with HTML element
@@ -150,7 +156,7 @@ function formatAbbreviation(x) {
 
 
 
-  var transferWindow_totals = transfer_windowDim.group().reduceSum(function(d) {return d.fee/1000000;});
+  var transferWindow_totals = transfer_windowDim.group().reduceCount(function(d) {return d.fee/1000000;});
   //print_filter("season_total"); 
 
   //Associate chart with HTML element
@@ -173,7 +179,7 @@ function formatAbbreviation(x) {
     .height(150)
     .dimension(leagueMovToDim)
     .group(leagueMovToGroup)
-    .xAxis().ticks(5);
+    .xAxis().ticks(4);
 
 
   var leagueMovFromDim  = ndx.dimension(function(d) {return d.league_moving_from;});
@@ -185,14 +191,30 @@ function formatAbbreviation(x) {
     .height(150)
     .dimension(leagueMovFromDim)
     .group(leagueMovFromGroup)
-    .xAxis().ticks(5);
+    .xAxis().ticks(4);
+
+
+
+  //Group fee's paid by date    
+
+
+//Need to create a filter that has the values ordered
+//var feeDateDim_filter2 = dateDim.order(d3.descending).(function(d) {return +d.fee;}));
+//console.log (feeDateDim_filter2);
+
+
+
+
+
+
 
 
 var datatable = dc.dataTable("#dc-data-table");
 datatable
-   .dimension(dateDim)
+   //.dimension(feeDateDim_filter2)
+   .dimension(feeDim)   
    .group(function (d) {
-       return d.date;
+      return +d.fee;
    })
    //size of the data table in rows, this needs to be automatic...
    //.size(3000)
@@ -205,7 +227,7 @@ datatable
            return d.player_name;
        },
        function (d) {
-           return d.fee;
+           return +d.fee;
        },
        function (d) {
            return d.club_moving_from;
@@ -219,37 +241,12 @@ datatable
        function (d) {
            return d.league_moving_to;
        }       
-   ]);
+   ])
+   .order(d3.descending);
 
 
-var UK = d3.locale({
-  "decimal": ".",
-  "thousands": ",",
-  "grouping": [3],
-  "currency": ["£", ""],
-  "dateTime": "%a %b %e %X %Y",
-  "date": "%m/%d/%Y",
-  "time": "%H:%M:%S",
-  "periods": ["AM", "PM"],
-  "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-  "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-  "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-});
 
 
-// Getting M, B thousands etc.
-// https://github.com/d3/d3/issues/2241
-
-formatSi = UK.numberFormat("$.2s");
-
-function formatAbbreviation(x) {
-  var s = formatSi(x);
-  switch (s[s.length - 1]) {
-    case "G": return s.slice(0, -1) + "B";
-  }
-  return s;
-}
 
     dc.renderAll();
 

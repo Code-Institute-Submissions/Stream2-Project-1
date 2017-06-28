@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Football Transfer Dashboard</title>
+  <title>Transfer Data Dashboard</title>
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static',
@@ -18,13 +18,12 @@
 	body.application {
 		font-family: 'Cabin', sans-serif;	
 
-		background-image: url({{ url_for('static', filename='img/wembley_stadium.jpg') }});
+		background-image: url({{ url_for('static', filename='img/wembley_stadium_v3.jpg') }});
     	background-size: 100% 100%;
     	background-repeat: no-repeat;
     	background-attachment: fixed;
-
-
   	}
+
 
 	/* 
 		Needs to be set in the parent child format to ensure specificty/cascade rules enure it over-rides the
@@ -36,13 +35,17 @@
 
 	.chart-wrapper .chart-title {
 		color: black;
-		background: rgba(107, 107, 107, 0.8);
+		background: rgba(107, 107, 107, 0.7);
 		font-size: 15px;
 		font-style: bold;
 		margin: 5px;
 		border-radius: 5px;
 	}
 
+	/* This stops the table data having group entries in it, making it look clunky */
+  .dc-table-group {
+  	display:none
+  }
 
 	.chart-wrapper {
 		background: rgba(255, 255, 255, 0.8);				
@@ -60,9 +63,23 @@
 	/* Total transfer spend size value */
 	#total-transfer-spend .number-display{
 		color: red;
-		font-size: 1.5em;
+		font-size: 4em;
+
 
 	}
+
+	/* Expands Total Transfer Spend container to
+	   be same height as other graph containers */
+	.extraHeight{
+		height: 215px;
+	}
+
+	/* Pushes Total Transfer Spend text down
+	   into middle of container */
+	.pushTextDown{
+		margin-top: 40px;
+	}
+
 
 	/* Size of text on axis of row and bar charts */
 	.dc-chart g.axis text{
@@ -105,6 +122,20 @@
 		color: white;
 	}
 
+
+	.headingCont{
+		background: rgba(107, 107, 107, 0.7);		
+		color: white;
+		font-size: 2.5em;
+		border-radius: 5px;
+		margin: 15px 0;
+	}
+
+	h1{
+		display: inline-block;
+	}
+
+
 </style>
 
 </head>
@@ -113,7 +144,7 @@
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="./">Footy Data Dashboard</a>
+        <a class="navbar-brand" href="./">Premiership & Championship Transfer Data Dashboard</a>
         </div>
       
         <div class = "nav navbar-nav navbar-right">
@@ -123,12 +154,23 @@
   </div>
 <div class = "container-fluid">
 
-  <div class="row">
+  	<div class="row">
+    	<div class="col-sm-12">
+    		<div class="text-center headingCont">
+            	<img src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge" height="100" width="100">
+				<h1>Premier League and Championship Transfers Data Dashboard</h1>
+            	<img src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge" height="80" width="80">
+            </div>
+      	</div>
+	</div>
+
+
+  	<div class="row">
       <div class="col-sm-7">
         <div class="chart-wrapper leftchart">
-            <div class="chart-title">
-            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="30" width="30">
-                Transfer Spending
+            <div class="chart-title" data-step="1" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                Transfer Spending (£)
             </div>
             <div class="chart-stage">
             <!-- This is the anchor point for the chart in the page-->
@@ -141,9 +183,9 @@
       </div>  
       <div class="col-sm-5">
         <div class="chart-wrapper rightchart">
-            <div class="chart-title">
-			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="30" width="30">
-                Financial Value of Seasonal Transfers
+            <div class="chart-title"  data-step="2" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                Value of Seasonal Transfers (£)
               </div>
             <div class="chart-stage">
     	    <!-- This is the anchor point for the chart in the page-->
@@ -158,11 +200,12 @@
 <div class = "container-fluid">
   <div class="row">  
       <div class="col-sm-2">
-        <div class="chart-wrapper">
-            <div class="chart-title">            
-                Total Transfer Spend (£)
+        <div class="chart-wrapper extraHeight">
+            <div class="chart-title" data-step="3" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                Total Transfer Spend
             </div>
-            <div class="chart-stage">
+            <div class="chart-stage pushTextDown">
         <!-- This is the anchor point for the chart in the page-->
                 <div id="total-transfer-spend">
                 </div>
@@ -171,8 +214,8 @@
       </div>    
       <div class="col-sm-2">
         <div class="chart-wrapper">
-            <div class="chart-title">
-               <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">
+            <div class="chart-title" data-step="4" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+            		<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
                 Transfer Window
               </div>
             <div class="chart-stage">
@@ -184,8 +227,8 @@
 
       <div class="col-sm-4">
         <div class="chart-wrapper">
-            <div class="chart-title">
-      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
+            <div class="chart-title" data-step="5" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
                 League Sold To
             </div>
             <div class="chart-stage">
@@ -199,8 +242,8 @@
 
       <div class="col-sm-4">
         <div class="chart-wrapper">
-            <div class="chart-title">
-      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
+            <div class="chart-title" data-step="6" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
                 League Bought From
               </div>
             <div class="chart-stage">
@@ -210,38 +253,38 @@
         </div>  
       </div>  
 
-  </div>
-</div>
+  	</div>
 
-
-<div class="row">  
-    <div class="chart-wrapper">
-        <div class="chart-title">
- 			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="40" width="40">            
-             League Bought From
-          </div>
-          <div class="chart-stage">
-        <!-- This is the anchor point for the chart in the page-->
+	<div class="row">  
+	    <div class="col-sm-12">
+    		<div class="chart-wrapper">
+        		<div class="chart-title" data-step="7" data-intro="This is the chart which shows XYZ" style="font-weight: normal"  data-position="top">
+ 				    <img class="middle-it" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+             		The 25 Most Expensive Transfers
+          		</div>
+          		<div class="chart-stage">
+        		<!-- This is the anchor point for the chart in the page-->
           
-			<div style='clear:both;'  class="table table-responsive">
-	    		<table id="dc-data-table">
-    	    		<thead>
-        	    		<tr class="header">
-            	    		<th>Date</th>
-                			<th>Player</th>
-                			<th>Fee</th>                    
-                			<th>Selling Club</th>
-                			<th>League</th>
-                			<th>Buying Club</th>
-                			<th>League</th>
-            			</tr>
-       				</thead>
-    			</table>
-			</div>
-        </div>
-    </div>  
+					<div style='clear:both;'>
+		    			<table id="dc-data-table" class="table table-responsive">
+    	    			<thead>
+        	    			<tr class="header">
+            	    				<th>Date</th>
+                					<th>Player</th>
+                					<th>Fee</th>                    
+                					<th>Selling Club</th>
+                					<th>League</th>
+                					<th>Buying Club</th>
+                					<th>League</th>
+            					</tr>
+       						</thead>
+    					</table>
+					</div>
+        		</div>
+    		</div>  
+		</div>	
+	</div>
 </div>	
-
 
   <hr>
   <p class="small text-muted"> Data visualization brought to you by 'The Cheesemonster' &#129472; &#128059;</p>
