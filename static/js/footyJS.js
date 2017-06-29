@@ -195,19 +195,9 @@ function formatAbbreviation(x) {
 
 
 
-  //Group fee's paid by date    
 
-
-//Need to create a filter that has the values ordered
-//var feeDateDim_filter2 = dateDim.order(d3.descending).(function(d) {return +d.fee;}));
-//console.log (feeDateDim_filter2);
-
-
-
-
-
-
-
+//Needed to get comma's into fee amounts
+var formatInCommas = d3.format(",");
 
 var datatable = dc.dataTable("#dc-data-table");
 datatable
@@ -227,7 +217,7 @@ datatable
            return d.player_name;
        },
        function (d) {
-           return +d.fee;
+           return "£" + formatInCommas(+d.fee);
        },
        function (d) {
            return d.club_moving_from;

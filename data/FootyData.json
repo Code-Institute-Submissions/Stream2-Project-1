@@ -18938,7 +18938,7 @@
     "player_name": "Angel Di Maria",
     "league_moving_from": "Other",
     "club_moving_from": "Real Madrid",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Manchester United",
     "fee": 59700000,
     "date": "26/08/2014"
@@ -19466,7 +19466,7 @@
     "player_name": "Eliaquim Mangala",
     "league_moving_from": "Other",
     "club_moving_from": "Porto",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Manchester City",
     "fee": 40000000,
     "date": "11/08/2014"
@@ -20566,7 +20566,7 @@
     "player_name": "Luis Saurez",
     "league_moving_from": "Premier",
     "club_moving_from": "Liverpool",
-    "league_moving_to": "Premier",
+    "league_moving_to": "Other",
     "club_moving_to": "Barcelona",
     "fee": 65000000,
     "date": "16/07/2014"
@@ -20610,7 +20610,7 @@
     "player_name": "Lazar Markovic",
     "league_moving_from": "Other",
     "club_moving_from": "Benfica",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Liverpool",
     "fee": 20000000,
     "date": "15/07/2014"
@@ -20775,7 +20775,7 @@
     "player_name": "Alexis Sanchez",
     "league_moving_from": "Other",
     "club_moving_from": "Barcelona",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Arsenal",
     "fee": 35000000,
     "date": "10/07/2014"
@@ -21061,7 +21061,7 @@
     "player_name": "Diego Costa",
     "league_moving_from": "Other",
     "club_moving_from": "Atletico Madrid",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Chelsea",
     "fee": 32000000,
     "date": "01/07/2014"
@@ -21149,7 +21149,7 @@
     "player_name": "Cesc Fabregas",
     "league_moving_from": "Other",
     "club_moving_from": "Barcelona",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Chelsea",
     "fee": 30000000,
     "date": "01/07/2014"
@@ -21160,7 +21160,7 @@
     "player_name": "Emre Can",
     "league_moving_from": "Other",
     "club_moving_from": "Bayer Leverkusen",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "Liverpool",
     "fee": 10000000,
     "date": "01/07/2014"
@@ -21699,7 +21699,7 @@
     "player_name": "David Luiz",
     "league_moving_from": "Premier",
     "club_moving_from": "Chelsea",
-    "league_moving_to": "Premier",
+    "league_moving_to": "Other",
     "club_moving_to": "Paris Saint-Germain",
     "fee": 40000000,
     "date": "01/07/2014"
