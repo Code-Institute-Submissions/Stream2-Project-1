@@ -316,6 +316,8 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>  
+  <!-- Needs to be above footyJS as sets variables for it to use based on screen size -->
+  <script src="{{ url_for ('static', filename='js/customJS.js')}}"></script>    
   <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>  
 </body>
 </html>

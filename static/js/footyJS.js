@@ -58,16 +58,19 @@ function makeGraphs(error, footballData) {
 
       ---------------------------------------------------------------------------------------------- */
  
+
   //Group fee's paid by date    
   var feeDateDim_filter = dateDim.group().reduceSum(function(d) {return d.fee/1000000;});
   //Getting max and min values for time based chart
   var minDate = dateDim.bottom(1)[0].date;
   var maxDate = dateDim.top(1)[0].date;
   //Associate graph with HTML anchor and define chart 
+
+
   var chartTotalFees = dc.barChart("#bar-chart-overall-transfer-spend");
   chartTotalFees
-       .width(700)
-       .height(190)       
+       .width(barChartWidth)
+       .height(barChartHeight)       
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
        .group(feeDateDim_filter)
@@ -76,9 +79,9 @@ function makeGraphs(error, footballData) {
        .elasticY(true)
        .brushOn(false)
        .ordinalColors(['#e41a1c']) //Line colour
-       .yAxisLabel("Amount (£ millions)")
+       .yAxisLabel(barChartYAxisLabel)
        .xAxisLabel("Year")
-       .yAxis().ticks(5);
+       .yAxis().ticks(barChartYTicks);
 
 
 
