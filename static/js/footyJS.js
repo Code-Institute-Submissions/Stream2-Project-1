@@ -145,14 +145,15 @@ function formatAbbreviation(x) {
    
 
 //Associate chart with HTML element
-  var seasonalFees = seasonDim.group().reduceSum(function(d) {return d.fee;});
+  var seasonalFees = seasonDim.group().reduceSum(function(d) {return d.fee/1000000000;});
   var chartSeasonalFees = dc.rowChart("#rowchart-seasonal-total-fees");
   chartSeasonalFees
     .width(490)
     .height(190)
+    .margins({top: 10, left: 15, right: 15, bottom: 40})
     .dimension(seasonDim)
     .group(seasonalFees)
-    .xAxis().ticks(5);
+    .xAxis().ticks(4);
     
    var totalFees = ndx.groupAll().reduceSum(function (d) {
        return d.fee;
@@ -161,7 +162,7 @@ function formatAbbreviation(x) {
 
 
 
-  var transferWindow_totals = transfer_windowDim.group().reduceCount(function(d) {return d.fee/1000000;});
+  var transferWindow_totals = transfer_windowDim.group().reduceCount(function(d) {return d.fee;});
   //print_filter("season_total"); 
 
   //Associate chart with HTML element
@@ -182,9 +183,10 @@ function formatAbbreviation(x) {
   leagueMovToRowChart
     .width(390)
     .height(150)
+    .margins({top: 10, left: 15, right: 15, bottom: 40})    
     .dimension(leagueMovToDim)
     .group(leagueMovToGroup)
-    .xAxis().ticks(4);
+    .xAxis().ticks(5);
 
 
   var leagueMovFromDim  = ndx.dimension(function(d) {return d.league_moving_from;});
@@ -194,15 +196,36 @@ function formatAbbreviation(x) {
   leagueMovFromRowChart
     .width(390)
     .height(150)
+    .margins({top: 10, left: 15, right: 15, bottom: 40})    
     .dimension(leagueMovFromDim)
     .group(leagueMovFromGroup)
-    .xAxis().ticks(4);
+    .xAxis().ticks(5);
 
 
 
 
 //Needed to get comma's into fee amounts
 var formatInCommas = d3.format(",");
+
+
+
+
+//Zero filing dates for table aesthetics
+function zeroFillDay(dd){
+  if(dd<10){
+    dd='0'+dd;
+  } 
+  return dd;  
+}
+
+//Zero filing dates for table aesthetics
+function zeroFillMonth(mm){
+  if(mm<10){
+    mm='0'+mm;
+  } 
+  return mm;  
+}
+
 
 var datatable = dc.dataTable("#dc-data-table");
 datatable
@@ -216,7 +239,7 @@ datatable
   // create the columns dynamically
    .columns([
        function (d) {
-           return d.date.getDate() + "/" + (d.date.getMonth() + 1) + "/" + d.date.getFullYear();
+           return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
        },
        function (d) {
            return d.player_name;
@@ -240,10 +263,27 @@ datatable
    .order(d3.descending);
 
 
-
-
-
     dc.renderAll();
+
+
+    //Adding Axis labels to the row charts
+    //Code idea taken from:
+    //https://stackoverflow.com/questions/21114336/how-to-add-axis-labels-for-row-chart-using-dc-js-or-d3-js
+    function AddXAxis(chartToUpdate, displayText)
+    {
+        chartToUpdate.svg()
+          .append("text")
+          .attr("class", "x-axis-label")
+          .attr("text-anchor", "middle")
+          .attr("x", chartToUpdate.width()/2)
+          .attr("y", chartToUpdate.height()-3.5)
+          .text(displayText);
+    }
+
+    AddXAxis(chartSeasonalFees, "Billions (£)");
+    AddXAxis(leagueMovToRowChart, "Amount of Players");
+    AddXAxis(leagueMovFromRowChart, "Amount of Players");
+
 
 }
 
