@@ -1,4 +1,6 @@
 
+/* Noddy text change to allow for another Heroku update to see if last one was corrupted or if something actually wrong */
+
 //Queuing data so it all loads before 'makeGraph' is invoked 
 queue()
    .defer(d3.json, "/footy/projectdata")
