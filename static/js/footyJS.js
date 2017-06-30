@@ -141,6 +141,16 @@ function formatAbbreviation(x) {
      })
      .group(totalFeesSeasonal);  
 
+//For hidden chart that is made visible in xs view
+var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
+ chartTotalSpend_xs
+     .formatNumber(formatAbbreviation)
+     .valueAccessor(function (d) {
+         return d;
+     })
+     .group(totalFeesSeasonal);  
+
+
 //---------------------------------------------------------
    
 

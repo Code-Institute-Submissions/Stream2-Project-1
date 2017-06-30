@@ -47,9 +47,7 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
     barChartYTicks = 5
     barChartYAxisLabel = "Millions (£)"
 
-    datatableSmall = dc.dataTable("#dc-data-table");
-
-    //Setting the table to have less columns for small screen sizes
+     //Setting the table to have less columns for small screen sizes
     datatableSize = "Small"
 }
 
