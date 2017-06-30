@@ -227,8 +227,14 @@ function zeroFillMonth(mm){
 }
 
 
-var datatable = dc.dataTable("#dc-data-table");
-datatable
+console.log("Data Table sezie: "+datatableSize);
+
+//This is set in customJS to enable a different table to be shown depending on screen size
+//var datatableBig = dc.dataTable("#dc-data-table"); 
+//var datatableSmall = dc.dataTable("#dc-data-table"); 
+if (datatableSize == "Big"){
+  datatableBig = dc.dataTable("#dc-data-table");
+  datatableBig
    //.dimension(feeDateDim_filter2)
    .dimension(feeDim)   
    .group(function (d) {
@@ -262,11 +268,51 @@ datatable
    ])
    .order(d3.descending);
 
+}
+else {
+  datatableSmall = dc.dataTable("#dc-data-table");
+  datatableSmall
+     .dimension(feeDim)   
+    .group(function (d) {
+      return +d.fee;
+   })
+   //size of the data table in rows, this needs to be automatic...
+   //.size(3000)
+  // create the columns dynamically
+   .columns([
+       function (d) {
+           return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
+       },
+       function (d) {
+           return d.player_name;
+       },
+       function (d) {
+           return "£" + formatInCommas(+d.fee);
+       },
+       function (d) {
+           return d.club_moving_from;
+       },
+       function (d) {
+           return d.club_moving_to;
+       },
+   ])
+   .order(d3.descending);
+
+
+}
+
+
+
+
+
+
+
+
 
     dc.renderAll();
 
 
-    //Adding Axis labels to the row charts
+    //Adding Axis labels to the row charts AFTER they have been built by DC.JS
     //Code idea taken from:
     //https://stackoverflow.com/questions/21114336/how-to-add-axis-labels-for-row-chart-using-dc-js-or-d3-js
     function AddXAxis(chartToUpdate, displayText)
