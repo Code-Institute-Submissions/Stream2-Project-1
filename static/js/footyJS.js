@@ -237,8 +237,6 @@ function zeroFillMonth(mm){
 }
 
 
-console.log("Data Table sezie: "+datatableSize);
-
 //This is set in customJS to enable a different table to be shown depending on screen size
 //var datatableBig = dc.dataTable("#dc-data-table"); 
 //var datatableSmall = dc.dataTable("#dc-data-table"); 
