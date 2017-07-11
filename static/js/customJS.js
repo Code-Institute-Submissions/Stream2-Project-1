@@ -12,11 +12,11 @@ var datatableSize;
 if (window.matchMedia("(min-width: 1200px)").matches) {
     barChartWidth = 700;
     barChartHeight = 190;
-    barChartYTicks = 5
-    barChartYAxisLabel = "Millions (£)"
+    barChartYTicks = 5;
+    barChartYAxisLabel = "Millions (£)";
 
     //Setting the table to have less columns for small screen sizes
-    datatableSize = "Big"
+    datatableSize = "Big";
 }
 
 
@@ -28,11 +28,11 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 else if (window.matchMedia("(min-width: 992px)").matches) {
     barChartWidth = 700;
     barChartHeight = 190;
-    barChartYTicks = 5
-    barChartYAxisLabel = "Millions (£)"
+    barChartYTicks = 5;
+    barChartYAxisLabel = "Millions (£)";
 
     //Setting the table to have less columns for small screen sizes
-    datatableSize = "Big"
+    datatableSize = "Big";
 }
 
 
@@ -44,11 +44,11 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
     barChartWidth = 350;
     barChartHeight = 120;
-    barChartYTicks = 5
-    barChartYAxisLabel = "Millions (£)"
+    barChartYTicks = 5;
+    barChartYAxisLabel = "Millions (£)";
 
      //Setting the table to have less columns for small screen sizes
-    datatableSize = "Small"
+    datatableSize = "Small";
 }
 
 
@@ -67,9 +67,8 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 
     barChartWidth = 350;
     barChartHeight = 120;
-    barChartYTicks = 5
-    barChartYAxisLabel = "Millions (£)"
-
+    barChartYTicks = 5;
+    barChartYAxisLabel = "Millions (£)";
     //Setting the table to have less columns for small screen sizes
-    datatableSize = "Small"
+    datatableSize = "Small";
 }

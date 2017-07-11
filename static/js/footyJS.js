@@ -39,7 +39,7 @@ function makeGraphs(error, footballData) {
       //A minor issue within the transfer_window data causing to an 'undefined' to be returned and causing crossfilter to fall 
       //over, rather than trawling the 3K rows of data to find it for this small project, am using fix:
       //https://stackoverflow.com/questions/35119862/maximum-call-stack-size-exceeded-crossfilter
-  var transfer_windowDim = ndx.dimension(function(d) {return d.transfer_window;});
+  var transferWindowDim = ndx.dimension(function(d) {return d.transfer_window;});
   var league_moving_fromDim = ndx.dimension(function(d) {return d.league_moving_from;});
   var league_moving_toDim = ndx.dimension(function(d) {return d.league_moving_to;});
   var club_moving_fromDim = ndx.dimension(function(d) {return d.club_moving_from;});
@@ -171,8 +171,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
 
 
 
-
-  var transferWindow_totals = transfer_windowDim.group().reduceCount(function(d) {return d.fee;});
+  var transferWindow_totals = transferWindowDim.group().reduceCount(function(d) {return d.fee;});
   //print_filter("season_total"); 
 
   //Associate chart with HTML element
@@ -182,7 +181,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
     .width(150)
     .height(150)
     .innerRadius(25)
-    .dimension(transfer_windowDim)
+    .dimension(transferWindowDim)
     .group(transferWindow_totals);
 
 
@@ -310,13 +309,6 @@ else {
 }
 
 
-
-
-
-
-
-
-
     dc.renderAll();
 
 
@@ -338,6 +330,51 @@ else {
     AddXAxis(leagueMovToRowChart, "Amount of Players");
     AddXAxis(leagueMovFromRowChart, "Amount of Players");
 
+
+
+
+var resetAllFilters = function() {
+  dc.filterAll();
+  dc.redrawAll();
+  return false;
+};
+
+var resetTransferWinFilter = function() {
+  transferWindowDim.filterAll();
+  windowPieChart.filter(null);
+  dc.redrawAll();
+  return false;
+};
+
+
+
+var resetSeasonFilter = function() {
+  seasonDim.filterAll();
+  seasonDim.filter(null);
+  dc.redrawAll();
+  return false;
+};
+
+var resetMoveToFilter = function() {
+  leagueMovToDim.filterAll();
+  dc.redrawAll();
+  return false;
+};
+
+
+var resetMoveFromFilter= function() {
+  leagueMovFromDim.filterAll();
+  dc.redrawAll();
+  return false;
+};
+
+
+//jQuery click event to manage button presses
+$('#reset-all').click(resetAllFilters);
+$('#reset-season').click(resetSeasonFilter);
+$('#reset-window').click(resetTransferWinFilter);
+$('#reset-moveTo').click(resetMoveToFilter);
+$('#reset-moveFrom').click(resetMoveFromFilter);
 
 }
 

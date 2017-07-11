@@ -2,10 +2,8 @@
 <html>
 <head>
   <title>Transfer Data Dashboard</title>
-  <link rel="stylesheet" href="{{ url_for ('static',
-    filename='lib/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{ url_for ('static',
-    filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}" />
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
@@ -139,6 +137,11 @@
 	 .btn-left-margin{
 	 }
 
+  p{
+    /* Hack to enable reset image to align nicely */
+    display: inline-block;
+  }
+
 
 </style>
 
@@ -170,24 +173,19 @@
             	<img src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge" height="100" width="100">
 				<h1>Premier League and Championship Transfers Data Dashboard</h1>
             	<img src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge" height="80" width="80">
-
-
-
             </div>
       	</div>
 	</div>
+
 
   	<div class="row">
     	<div class="col-xs-6">
  	        <button class="btn btn-danger btn-sm btn-padding btn-left-margin" role="button" autofocus onclick="javascript:introJs().start();">Dashboard Explanation</button>
     	</div>
     	<div class="col-xs-6">
-			<a class="reset" href="javascript:dc.filterAll();dc.redrawAll();"><img src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image" height="65" width="65"></a>
+			   <a id="reset-all" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image" height="65" width="65"></a>
     	</div>    	
     </div>
-
-	<a class="reset" style="background-color: black" href="javascript:chartTotalSpend.filterAll();dc.redrawAll();">reset season</a>
-
 
 
   	<div class="row">
@@ -196,6 +194,7 @@
             <div class="chart-title" data-step="1" data-intro="This is a read-only chart which shows transfer spending over time." style="font-weight: normal"  data-position="top">
             <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
                 Transfer Spending
+
             </div>
             <div class="chart-stage">
             <!-- This is the anchor point for the chart in the page-->
@@ -206,15 +205,28 @@
           </div>
         </div>
       </div>  
+    
+
+
       <div class="col-lg-5">
         <div class="chart-wrapper rightchart">
             <div class="chart-title"  data-step="2" data-intro="This chart shows, and enables filtering on, seasonal transfer spending." style="font-weight: normal"  data-position="top">
-			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                Value of Seasonal Transfers
+            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+
+            <p>Value of Seasonal Transfers</p>
+
+            <a id="reset-season" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+
+            
+
+
               </div>
+
             <div class="chart-stage">
     	    <!-- This is the anchor point for the chart in the page-->
-	          <div id="rowchart-seasonal-total-fees"></div>
+	          <div id="rowchart-seasonal-total-fees">
+             
+             </div>
           </div>
         </div>  
       </div>  
@@ -228,7 +240,9 @@
         <div class="chart-wrapper">
             <div class="chart-title" data-step="4" data-intro="This chart shows, and enables filtering on, the amount of transfers completed within a given transfer window as a proportion of all transfers, for the given filters applied." style="font-weight: normal"  data-position="top">
             		<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                Transfer Window
+                <p>Transfer Window</p>
+
+              <a id="reset-window" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>                 
               </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
@@ -262,7 +276,11 @@
         <div class="chart-wrapper">
             <div class="chart-title" data-step="5" data-intro="This chart shows, and enables filtering on, the amount of tranfers made FROM a given league, for the given filters applied." style="font-weight: normal"  data-position="top">
       			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                League Sold To
+                <p>League Sold To</p>
+
+              <a id="reset-MoveTo" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+
+
             </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page
@@ -277,7 +295,10 @@
         <div class="chart-wrapper">
             <div class="chart-title" data-step="6" data-intro="This chart shows, and enables filtering on, the amount of tranfers made TO a given league, for the given filters applied." style="font-weight: normal"  data-position="top">
       			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                League Bought From
+                <p>League Sold From</p>
+
+              <a id="reset-MoveFrom" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+
               </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
