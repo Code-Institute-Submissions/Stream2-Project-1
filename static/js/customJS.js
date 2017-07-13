@@ -17,10 +17,15 @@ var movFromWidth;
 
 var datatableSize;
 
+//To track the device size for orientiation checking
+var device_size;
+
+
 /* Large devices (large desktops 1200px and above) */
 /*                    col-lg-*                     */
 if (window.matchMedia("(min-width: 1200px)").matches) {
 
+    device_size = "Large";
     console.log("Large Device");
 
     barChartWidth = 700;
@@ -40,6 +45,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 /******************************************************/
 else if (window.matchMedia("(min-width: 992px)").matches) {
 
+    device_size = "Medium";
     console.log("Medium Device");
 
 
@@ -71,8 +77,9 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 /*********************************************/
 else if (window.matchMedia("(min-width: 768px)").matches) {
 
+    device_size = "Small";   
     console.log("Small Device");
-
+ 
     barChartWidth = 750;
     barChartHeight = 200;
     barChartYTicks = 5;
@@ -94,31 +101,19 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
 }
 
-/*
-
-Keep track of device size, if it change reload page (to refresh layout) as some devices transition 
-//Put in that this was the trade of to having responsive graphs, as it is JS that needs changing not CSS
-
-$(window).on("orientationchange",function(){
-  location.reload();
-});
-
-*/
-
 
 
 /***********************************************/
 /* very Small devices (phones, 768px to 991px) */
 /*                 col-xs-*                    */
 /***********************************************/
+
+
+
 else if (window.matchMedia("(max-width: 767px)").matches) {
 
+    device_size = "Very Small";
     console.log("VERY Small Device");
-
-  //Alert to tell users for best orientation
-  if(window.innerHeight > window.innerWidth){ 
-      alert("The charts are best viewed in landscape mode on small mobile devices"); 
-    }
 
     //Bar chart
     barChartWidth = 650;
@@ -140,7 +135,27 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 
 }
 
-//Heroku Test
+
+//To track the device size for orientiation checking, if size changes on orientation change then need to reload page to reformat layout.
+//Only want to target specific instances where it has shown to be an issue (rather than reload everytime) to avoid impact on user.
+//Design decision was to make output as responsive as possible (graph resizing for device) but the pay-off is that this reload is required
+//on occassion. As reload only taakes around 5 seconds and users are unlikly to repeatedly switch device orientation it was deemed the 
+//better approach.
 $(window).on("orientationchange",function(){
-  location.reload();
+    //if an iPad is turned from portrait to landscape
+    if (device_size == "Small" && screen.width > 991){
+        location.reload();
+    }
+    //if an iPad is turned from landscape to portrait
+    if (device_size == "Medium" && screen.width < 992){
+        location.reload();
+    }
+    //if an iPadPro is turned from portrait to landscape
+    if (device_size == "Medium" && screen.width > 1199){
+        location.reload();
+    }
+    //if an iPadPro is turned from landscape to portrait
+    if (device_size == "Large" && screen.width < 1200){
+        location.reload();
+    }
 });
