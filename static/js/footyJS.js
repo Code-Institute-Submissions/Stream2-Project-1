@@ -36,9 +36,6 @@ function makeGraphs(error, footballData) {
 
   // Dimensions:
   // -----------
-      //A minor issue within the transfer_window data causing to an 'undefined' to be returned and causing crossfilter to fall 
-      //over, rather than trawling the 3K rows of data to find it for this small project, am using fix:
-      //https://stackoverflow.com/questions/35119862/maximum-call-stack-size-exceeded-crossfilter
   var transferWindowDim = ndx.dimension(function(d) {return d.transfer_window;});
   var league_moving_fromDim = ndx.dimension(function(d) {return d.league_moving_from;});
   var league_moving_toDim = ndx.dimension(function(d) {return d.league_moving_to;});
@@ -48,8 +45,6 @@ function makeGraphs(error, footballData) {
   var feeDim = ndx.dimension(function(d) {return +d.fee;});  
   var dateDim = ndx.dimension(function(d) {return d.date;});
   var seasonDim  = ndx.dimension(function(d) {return d.season;});
-
-  //var yearDim  = ndx.dimension(function(d) {return +d.Year;});  
 
 
   /*  ----------------------------------------------------------------------------------------------
@@ -88,16 +83,6 @@ function makeGraphs(error, footballData) {
    var totalFeesSeasonal = ndx.groupAll().reduceSum(function (d) {
        return d.fee;
    });
-
-   /*
-   var chartTotalSpend = dc.numberDisplay("#total-transfer-spend");
-   chartTotalSpend
-       .formatNumber(d3.format(",d"))
-       .valueAccessor(function (d) {
-           return d;
-       })
-       .group(totalFeesSeasonal);
-    */
 
 
 
@@ -158,8 +143,8 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
   var seasonalFees = seasonDim.group().reduceSum(function(d) {return d.fee/1000000000;});
   var chartSeasonalFees = dc.rowChart("#rowchart-seasonal-total-fees");
   chartSeasonalFees
-    .width(490)
-    .height(190)
+    .width(seasonalFeesWidth)
+    .height(seasonalFeesHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})
     .dimension(seasonDim)
     .group(seasonalFees)
@@ -190,8 +175,8 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
   var leagueMovToGroup = leagueMovToDim.group().reduceCount(function(d) {return d.fee;});
   var leagueMovToRowChart = dc.rowChart("#rowchart-leagueMovTo");
   leagueMovToRowChart
-    .width(390)
-    .height(150)
+    .width(movToWidth)
+    .height(movToHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})    
     .dimension(leagueMovToDim)
     .group(leagueMovToGroup)
@@ -203,8 +188,8 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
   var leagueMovFromRowChart = dc.rowChart("#rowchart-leagueMovFrom");
   //criteria for pie chart
   leagueMovFromRowChart
-    .width(390)
-    .height(150)
+    .width(movFromWidth)
+    .height(movFromHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})    
     .dimension(leagueMovFromDim)
     .group(leagueMovFromGroup)
@@ -236,6 +221,7 @@ function zeroFillMonth(mm){
 }
 
 
+
 //This is set in customJS to enable a different table to be shown depending on screen size
 //var datatableBig = dc.dataTable("#dc-data-table"); 
 //var datatableSmall = dc.dataTable("#dc-data-table"); 
@@ -243,10 +229,9 @@ if (datatableSize == "Big"){
   datatableBig = dc.dataTable("#dc-data-table");
   datatableBig
    //.dimension(feeDateDim_filter2)
-   .dimension(feeDim)   
-   .group(function (d) {
-      return +d.fee;
-   })
+   .dimension(feeDim)
+   .group( function(d){return ''; })  // an empty string
+   .sortBy(function(d){ return d.fee; })
    //size of the data table in rows, this needs to be automatic...
    //.size(3000)
   // create the columns dynamically
@@ -279,10 +264,9 @@ if (datatableSize == "Big"){
 else {
   datatableSmall = dc.dataTable("#dc-data-table");
   datatableSmall
-     .dimension(feeDim)   
-    .group(function (d) {
-      return +d.fee;
-   })
+   .dimension(feeDim)
+   .group( function(d){return ''; })  // an empty string
+   .sortBy(function(d){ return d.fee; })
    //size of the data table in rows, this needs to be automatic...
    //.size(3000)
   // create the columns dynamically
@@ -304,8 +288,6 @@ else {
        },
    ])
    .order(d3.descending);
-
-
 }
 
 
@@ -350,18 +332,19 @@ var resetTransferWinFilter = function() {
 
 var resetSeasonFilter = function() {
   seasonDim.filterAll();
-  seasonDim.filter(null);
+  seasonDim.filter(null);  
   dc.redrawAll();
   return false;
 };
 
+//League Sold To
 var resetMoveToFilter = function() {
   leagueMovToDim.filterAll();
   dc.redrawAll();
   return false;
 };
 
-
+//League Sold From
 var resetMoveFromFilter= function() {
   leagueMovFromDim.filterAll();
   dc.redrawAll();
