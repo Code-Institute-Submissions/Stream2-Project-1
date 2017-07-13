@@ -127,20 +127,24 @@
 		color: white;
 		font-size: 2.5em;
 		border-radius: 5px;
-		margin: 15px 0 30px 0;
+		margin: 15px 0 10px 0;
 	}
 
 	h1{
 		display: inline-block;
 	}
 
-	 .btn-left-margin{
-	 }
+h3{
+  font-style: italic;
+  display: inline-block;
+  margin-right: 50px;
+}
 
-  p{
-    /* Hack to enable reset image to align nicely */
-    display: inline-block;
-  }
+
+p{
+   /* Hack to enable reset image to align nicely */
+   display: inline-block;
+}
 
 
 </style>
@@ -163,30 +167,31 @@
               <li><a href="/Data">Data</a></li>
               <li><a href="/About">About</a></li>
 			</ul>
+
+        <a class="pull-right" id="reset-all" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image" height="65" width="65"></a>
 		</nav>
 
 <div class = "container-fluid">
 
   	<div class="row">
-    	<div class="col-sm-12">
+    	<div class="col-sm-offset-1 col-sm-10">
     		<div class="text-center headingCont">
-            	<img src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge" height="100" width="100">
-				<h1>Premier League and Championship Transfers Data Dashboard</h1>
-            	<img src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge" height="80" width="80">
-            </div>
-      	</div>
+       	  <img src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge" height="90" width="90">
+      		<h1>Premier League and Championship Transfer Dashboard</h1>
+          <img src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge" height="80" width="80">
+          
+            <h3>Giving a new perspective on the English top flight transfer markets</h3>
+
+        </div>
+
+     </div>
 	</div>
 
-
+    <!--
   	<div class="row">
-    	<div class="col-xs-6">
  	        <button class="btn btn-danger btn-sm btn-padding btn-left-margin" role="button" autofocus onclick="javascript:introJs().start();">Dashboard Explanation</button>
-    	</div>
-    	<div class="col-xs-6">
-			   <a id="reset-all" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image" height="65" width="65"></a>
-    	</div>    	
-    </div>
-
+     </div>
+    -->
 
   	<div class="row">
       <div class="col-lg-7">
