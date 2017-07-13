@@ -20,6 +20,9 @@ var datatableSize;
 /* Large devices (large desktops 1200px and above) */
 /*                    col-lg-*                     */
 if (window.matchMedia("(min-width: 1200px)").matches) {
+
+    console.log("Large Device");
+
     barChartWidth = 700;
     barChartHeight = 190;
     barChartYTicks = 5;
@@ -36,6 +39,10 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 /*                        col-md-*                    */
 /******************************************************/
 else if (window.matchMedia("(min-width: 992px)").matches) {
+
+    console.log("Medium Device");
+
+
     barChartWidth = 950;
     barChartHeight = 230;
     barChartYTicks = 5;
@@ -64,6 +71,8 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 /*********************************************/
 else if (window.matchMedia("(min-width: 768px)").matches) {
 
+    console.log("Small Device");
+
     barChartWidth = 750;
     barChartHeight = 200;
     barChartYTicks = 5;
@@ -85,6 +94,16 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
 }
 
+/*
+
+Keep track of device size, if it change reload page (to refresh layout) as some devices transition 
+//Put in that this was the trade of to having responsive graphs, as it is JS that needs changing not CSS
+
+$(window).on("orientationchange",function(){
+  location.reload();
+});
+
+*/
 
 
 
@@ -93,6 +112,8 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 /*                 col-xs-*                    */
 /***********************************************/
 else if (window.matchMedia("(max-width: 767px)").matches) {
+
+    console.log("VERY Small Device");
 
   //Alert to tell users for best orientation
   if(window.innerHeight > window.innerWidth){ 
@@ -111,15 +132,15 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
     seasonalFeesHeight = 210;
 
     movToWidth = 600;
-    movToHeight = 170;
+    movToHeight = 150;
 
 
     movFromWidth = 600;
-    movFromHeight = 170;
-
-
-
-
-
+    movFromHeight = 150;
 
 }
+
+//Heroku Test
+$(window).on("orientationchange",function(){
+  location.reload();
+});
