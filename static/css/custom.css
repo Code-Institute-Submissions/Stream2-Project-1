@@ -57,17 +57,9 @@
 	}
 
 
-	.testKey{
-		display: inline-block;
-		border: 2px solid red;
-		color: white;
-
-	}
-
-
 	/* Total transfer spend size value */
 	.total-transfer-spend .number-display{
-		color: red;
+		color: blue;
 		font-size: 4em;
 
 
@@ -143,26 +135,21 @@
    	display: inline-block;
 	}
 
-	h3{
-  		font-style: italic;
-  		display: inline-block;
-  		margin-right: 50px;
-	}
-
 
 	h1{
 		display: inline-block;
+		font-size: 20px;
+		margin: 0px 5px;
 	}
 
 	.titleImg1{
- 		height: 90px;
- 		width: 90px;
+ 		height: 65px;
+ 		width: 65px;
 	}
 
 	#titleImg2{
- 		height: 80px;
- 		width: 80px;
- 		margin-left: 300px;
+ 		height: 55px;
+ 		width: 55px;
 	}
 
 
@@ -178,6 +165,21 @@
 /*                 col-sm-*                */
 /*********************************************/
 @media (min-width: 768px) and (max-width: 991px) {
+
+	h1{
+		font-size: 25px;
+		margin: 0px 10px;
+	}
+
+	.titleImg1{
+ 		height: 70px;
+ 		width: 70px;
+	}
+
+	#titleImg2{
+ 		height: 60px;
+ 		width: 60px;
+	}
    
 
 }
@@ -189,22 +191,19 @@
 /******************************************************/
 @media (min-width: 992px) { 
 
-.titleImg1{
- 		height: 90px;
- 		width: 90px;
+	h1{
+		font-size: 30px;
+		margin: 0px 30px;
+	}
+
+	.titleImg1{
+ 		height: 80px;
+ 		width: 80px;
 	}
 
 	#titleImg2{
- 		height: 80px;
- 		width: 80px;
- 		margin-left: 300px;
-	}
-
-
-	#reset-all-img{
- 		height: 35px;
- 		width: 35px;
- 		margin: 12px;
+ 		height: 70px;
+ 		width: 70px;
 	}
 
 }
@@ -213,6 +212,11 @@
 /* Large devices (large desktops 1200px and above) */
 /*                    col-lg-*                     */
 @media screen and (min-width: 1200px) {
+
+	h1{
+		font-size: 40px;
+		margin: 0px 40px;
+	}
 
 	.titleImg1{
  		height: 90px;
