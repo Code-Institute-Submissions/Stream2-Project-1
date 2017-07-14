@@ -39,7 +39,6 @@
 	*/	
 
 	.chart-wrapper .chart-title {
-		color: black;
 		background: rgba(107, 107, 107, 0.7);
 		font-size: 15px;
 		font-style: bold;
@@ -49,7 +48,7 @@
 
 	/* This stops the table data having group entries in it, making it look clunky */
   .dc-table-group {
-  	display:none
+  	display:none;
   }
 
 	.chart-wrapper {
