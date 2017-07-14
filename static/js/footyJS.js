@@ -73,7 +73,7 @@ function makeGraphs(error, footballData) {
        .x(d3.time.scale().domain([minDate, maxDate]))
        .elasticY(true)
        .brushOn(false)
-       .ordinalColors(['#e41a1c']) //Line colour
+       .ordinalColors(['#002b80']) //Line colour
        .yAxisLabel(barChartYAxisLabel)
        .xAxisLabel("Year")
        .yAxis().ticks(barChartYTicks);
@@ -146,6 +146,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
     .width(seasonalFeesWidth)
     .height(seasonalFeesHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})
+    .ordinalColors(['#b3ccff','#80aaff','#4d88ff','#1a66ff','#004de6','#003cb3','#002b80'])
     .dimension(seasonDim)
     .group(seasonalFees)
     .xAxis().ticks(4);
@@ -154,7 +155,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
        return d.fee;
    });
 
-
+    
 
   var transferWindow_totals = transferWindowDim.group().reduceCount(function(d) {return d.fee;});
   //print_filter("season_total"); 
@@ -166,6 +167,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
     .width(150)
     .height(150)
     .innerRadius(25)
+    .ordinalColors(['#80aaff','#003cb3'])
     .dimension(transferWindowDim)
     .group(transferWindow_totals);
 
@@ -178,6 +180,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
     .width(movToWidth)
     .height(movToHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})    
+    .ordinalColors(['#80aaff','#1a66ff','#003cb3'])
     .dimension(leagueMovToDim)
     .group(leagueMovToGroup)
     .xAxis().ticks(5);
@@ -191,6 +194,7 @@ var chartTotalSpend_xs = dc.numberDisplay("#total-transfer-spend-xs");
     .width(movFromWidth)
     .height(movFromHeight)
     .margins({top: 10, left: 15, right: 15, bottom: 40})    
+    .ordinalColors(['#80aaff','#1a66ff','#003cb3'])
     .dimension(leagueMovFromDim)
     .group(leagueMovFromGroup)
     .xAxis().ticks(5);
@@ -233,7 +237,7 @@ if (datatableSize == "Big"){
    .group( function(d){return ''; })  // an empty string
    .sortBy(function(d){ return d.fee; })
    //size of the data table in rows, this needs to be automatic...
-   //.size(3000)
+   .size(50)
   // create the columns dynamically
    .columns([
        function (d) {

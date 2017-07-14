@@ -29,9 +29,22 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     console.log("Large Device");
 
     barChartWidth = 700;
-    barChartHeight = 190;
+    barChartHeight = 250;
     barChartYTicks = 5;
     barChartYAxisLabel = "Millions (£)";
+
+    //Setting the table to have less columns for small screen sizes
+    datatableSize = "Big";
+
+    seasonalFeesWidth = 500;
+    seasonalFeesHeight = 250;
+
+    movToWidth = 400;
+    movToHeight = 150;
+
+
+    movFromWidth = 400;
+    movFromHeight = 150;
 
     //Setting the table to have less columns for small screen sizes
     datatableSize = "Big";
@@ -49,7 +62,7 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
     console.log("Medium Device");
 
 
-    barChartWidth = 950;
+    barChartWidth = 985;
     barChartHeight = 230;
     barChartYTicks = 5;
     barChartYAxisLabel = "Millions (£)";
@@ -57,14 +70,14 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
     //Setting the table to have less columns for small screen sizes
     datatableSize = "Big";
 
-    seasonalFeesWidth = 950;
+    seasonalFeesWidth = 985;
     seasonalFeesHeight = 250;
 
-    movToWidth = 710;
+    movToWidth = 730;
     movToHeight = 150;
 
 
-    movFromWidth = 710;
+    movFromWidth = 730;
     movFromHeight = 150;
 
 
