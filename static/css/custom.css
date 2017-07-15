@@ -22,8 +22,7 @@
 	/* needs to be this specific for changes to be applied based on loading presedence as keen.js has them set up this way */
 	body.application {
 		font-family: 'Cabin', sans-serif;	
-
-		background-image: url({{ url_for('static', filename='../img/wembley_stadium_v3.jpg') }});
+		background-image: url('../img/wembley_stadium_v3.jpg');
     	background-size: 100% 100%;
     	background-repeat: no-repeat;
     	background-attachment: fixed;
