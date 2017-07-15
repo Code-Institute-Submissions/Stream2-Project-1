@@ -28,7 +28,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     device_size = "Large";
     console.log("Large Device");
 
-    barChartWidth = 700;
+    barChartWidth = 775;
     barChartHeight = 250;
     barChartYTicks = 5;
     barChartYAxisLabel = "Millions (£)";
@@ -36,8 +36,8 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     //Setting the table to have less columns for small screen sizes
     datatableSize = "Big";
 
-    seasonalFeesWidth = 500;
-    seasonalFeesHeight = 250;
+    seasonalFeesWidth = 550;
+    seasonalFeesHeight = 243;
 
     movToWidth = 400;
     movToHeight = 150;
@@ -104,11 +104,11 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
     seasonalFeesWidth = 720;
     seasonalFeesHeight = 200;
 
-    movToWidth = 525;
+    movToWidth = 475;
     movToHeight = 150;
 
 
-    movFromWidth = 525;
+    movFromWidth = 475;
     movFromHeight = 150;
 
 
@@ -148,12 +148,11 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 
 }
 
-
+//Design decision was to make output as responsive as possible (graph resizing for device) but the pay-off is that this reload is required
+//on occassion. As reload only takes around 5 seconds and users are unlikly to repeatedly switch device orientation it was deemed the 
+//better approach.
 //To track the device size for orientiation checking, if size changes on orientation change then need to reload page to reformat layout.
 //Only want to target specific instances where it has shown to be an issue (rather than reload everytime) to avoid impact on user.
-//Design decision was to make output as responsive as possible (graph resizing for device) but the pay-off is that this reload is required
-//on occassion. As reload only taakes around 5 seconds and users are unlikly to repeatedly switch device orientation it was deemed the 
-//better approach.
 $(window).on("orientationchange",function(){
     //if an iPad is turned from portrait to landscape
     if (device_size == "Small" && screen.width > 991){

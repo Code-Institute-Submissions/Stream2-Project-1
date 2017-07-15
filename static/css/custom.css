@@ -39,12 +39,14 @@
 	*/	
 
 	.chart-wrapper .chart-title {
+		color: black;
 		background: rgba(107, 107, 107, 0.7);
 		font-size: 15px;
 		font-style: bold;
 		margin: 5px;
 		border-radius: 5px;
 	}
+
 
 	/* This stops the table data having group entries in it, making it look clunky */
   .dc-table-group {
