@@ -80,6 +80,8 @@ function makeGraphs(error, footballData) {
 
 
 
+
+
    var totalFeesSeasonal = ndx.groupAll().reduceSum(function (d) {
        return d.fee;
    });

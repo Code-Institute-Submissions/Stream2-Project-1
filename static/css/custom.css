@@ -68,7 +68,7 @@
 	/* Expands Total Transfer Spend container to
 	   be same height as other graph containers */
 	.extraHeight{
-		height: 210px;
+		height: 220px;
 	}
 
 	/* Pushes Total Transfer Spend text down
@@ -86,10 +86,6 @@
 	#bar-chart-overall-transfer-spend{
 		/*background-color: black;*/
 	}
-
-
-
-  	.btn-padding  {margin: 5px;}
 
 
     .middle{
@@ -125,40 +121,63 @@
 		color: white;
 		font-size: 2.5em;
 		border-radius: 5px;
-		margin: 15px 0 10px 0;
+		margin: 20px 5px 25px 5px;
+		line-height: 100px;	
+		text-align: center;
+	}
+
+	.headingContInline{
+		display: inline-block;
 	}
 
 
-
-	p{
+	/* Specific identifier so that general P tag not impacted */
+	p.sectionTitles{
    	/* Hack to enable reset image to align nicely */
    	display: inline-block;
 	}
 
 
-	h1{
+	/* Specific identifier so that general H1 tag not impacted */
+	h1#inline{
 		display: inline-block;
-		font-size: 20px;
-		margin: 0px 5px;
+		vertical-align: middle;
+		font-size: 25px;
 	}
 
-	.titleImg1{
- 		height: 65px;
- 		width: 65px;
+	a.navbar-brand{
+		font-size: 15px;
 	}
 
-	#titleImg2{
- 		height: 55px;
- 		width: 55px;
+	.navMenuList{
+		font-size: 15px;		
+	}
+	#premBadge{
+ 		height: 90px;
+ 		width: 90px;
+		vertical-align: middle;
+	}
+
+	#champBadge{
+ 		height: 80px;
+ 		width: 80px;
+ 		padding: 5px;
+		vertical-align: middle; 		
 	}
 
 
-	#reset-all-img{
+	.sectionResetAllImg{
  		height: 30px;
  		width: 30px;
- 		margin: 10px;
+ 		margin: 0px 0px 10px 0px;
 	}
    
+	.mainResetAllImg{
+	 	height: 40px;
+ 		width: 40px;
+ 		margin: 5px 5px 5px 20px;
+	}
+
 
 /********************************************/
 /* Small devices (tablets, 768px to 991px) */
@@ -166,21 +185,35 @@
 /*********************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 
-	h1{
-		font-size: 25px;
-		margin: 0px 10px;
+	.headingCont{
+		margin: 20px 5px 25px 5px;
+		line-height: 100px;	
 	}
 
-	.titleImg1{
- 		height: 70px;
- 		width: 70px;
+	h1#inline{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 30px;
 	}
 
-	#titleImg2{
- 		height: 60px;
- 		width: 60px;
+	a.navbar-brand{
+		font-size: 18px;
 	}
-   
+
+	.navMenuList{
+		font-size: 18px;		
+	}
+
+	#premBadge{
+ 		height: 120px;
+ 		width: 120px;
+	}
+
+	#champBadge{
+ 		height: 110px;
+ 		width: 110px;
+ 		padding: 10px;
+	}
 
 }
 
@@ -191,21 +224,36 @@
 /******************************************************/
 @media (min-width: 992px) { 
 
-	h1{
-		font-size: 30px;
-		margin: 0px 30px;
+	.headingCont{
+		margin: 25px 5px 30px 5px;
+		line-height: 125px;	
 	}
 
-	.titleImg1{
- 		height: 80px;
- 		width: 80px;
+	h1#inline{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 35px;
+		margin: 0px 25px;
 	}
 
-	#titleImg2{
- 		height: 70px;
- 		width: 70px;
+	a.navbar-brand{
+		font-size: 20px;
 	}
 
+	.navMenuList{
+		font-size: 20px;		
+	}
+
+	#premBadge{
+ 		height: 125px;
+ 		width: 125px;
+	}
+
+	#champBadge{
+ 		height: 115px;
+ 		width: 115px;
+ 		padding: 10px;
+	}
 }
 
 
@@ -213,19 +261,34 @@
 /*                    col-lg-*                     */
 @media screen and (min-width: 1200px) {
 
-	h1{
-		font-size: 40px;
+	.headingCont{
+		margin: 30px 5px 35px 5px;
+		line-height: 135px;	
+	}
+
+	h1#inline{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 45px;
 		margin: 0px 40px;
 	}
 
-	.titleImg1{
- 		height: 90px;
- 		width: 90px;
+	a.navbar-brand{
+		font-size: 20px;
 	}
 
-	#titleImg2{
- 		height: 80px;
- 		width: 80px;
+	.navMenuList{
+		font-size: 18px;		
 	}
 
+	#premBadge{
+ 		height: 125px;
+ 		width: 125px;
+	}
+
+	#champBadge{
+ 		height: 115px;
+ 		width: 115px;
+ 		padding: 10px;
+	}
 }

@@ -17,23 +17,24 @@
 
 		<nav class="navbar navbar-inverse navbar-fixed-top"">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Transfer Data:</a>
+				<a class="navbar-brand" href="#">Transfer Data Dashboard</a>
 
-      <a class="pull-right hidden-sm hidden-md hidden-lg" id="reset-all" href=""><img id="reset-all-img"  src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
+      <a class="pull-right hidden-sm hidden-md hidden-lg" id="reset-all" href=""><img class="mainResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
 
-    	   		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="	#myCollapsingList">
-					     <span class="icon-bar"></span>
+    	   		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+					     <span></span>
        				 <span class="icon-bar"></span>
        				 <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
         		</button>
 
 			</div>
 
-      <a class="pull-right hidden-xs" id="reset-all" href=""><img id="reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
+      <a class="pull-right hidden-xs" id="reset-all" href=""><img class="mainResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
 			<ul id="myCollapsingList" class ="nav navbar-nav navbar-right collapse navbar-collapse">
-              <li><a href="/">Home</a></li>
-              <li><a href="/Data">Data</a></li>
-              <li><a href="/About">About</a></li>
+              <li><a class="navMenuList" href="/">Home</a></li>
+              <li><a class="navMenuList" href="/Data">Data</a></li>
+              <li><a class="navMenuList" href="/About">About</a></li>
 			</ul>
 
 		</nav>
@@ -44,24 +45,26 @@
 
   	<div class="row">
 
-        <div class="text-center headingCont">
-          <img class="titleImg1" src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge">
-      		
-          <h1>Premier League and Championship Transfer Dashboard</h1>
-          <img id="titleImg2" src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge">
+        <div class="headingCont">
 
+          <div class="headingContInline">
+              <img id="premBadge" src="{{ url_for('static', filename='img/Premier_League.png')}}" alt="premier league badge">
+      		</div>
+          <div class="headingContInline">
+            <h1 id="inline">Premier League and Championship <br> Transfer Dashboard</h1>
+          </div>
+          <div class="headingContInline">
+            <img id="champBadge" src="{{ url_for('static', filename='img/EFL_Championship.png')}}" alt="English Football League Championship badge">
+          </div>
         </div>
-          
-
-
-	</div>
+	 </div>
 
   	<div class="row">
       <div class="col-lg-7">
         <div class="chart-wrapper leftchart">
             <div class="chart-title">
-            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                Transfer Spending
+              <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+              <p class="sectionTitles">Transfer Spending</p>
 
             </div>
             <div class="chart-stage">
@@ -79,11 +82,11 @@
       <div class="col-lg-5">
         <div class="chart-wrapper rightchart">
             <div class="chart-title">
-            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
 
-            <p>Value of Seasonal Transfers</p>
+            <p class="sectionTitles">Value of Seasonal Transfers</p>
 
-            <a id="reset-season" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+            <a id="reset-season" href=""><img class="sectionResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
 
               </div>
 
@@ -104,10 +107,11 @@
       <div class="col-xs-4 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3 col-lg-2">
         <div class="chart-wrapper">
             <div class="chart-title">
-            		<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                <p>Window</p>
+            		<img  class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+      
+                <p class="sectionTitles">Window</p>
 
-              <a id="reset-window" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>                 
+              <a id="reset-window" href=""><img class="sectionResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
               </div>
             <div class="chart-stage">
         <!-- This is the anchor point for the chart in the page-->
@@ -120,8 +124,8 @@
       <div class="col-xs-4 col-md-2  col-xs-offset-2 hidden-sm  hidden-md  hidden-lg">
         <div class="chart-wrapper extraHeight">
             <div class="chart-title">
-            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                Total Transfer Spend
+            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                <p class="sectionTitles">Total Transfer Spend</p>
             </div>
             <div class="chart-stage pushTextDown">
         <!-- This is the anchor point for the chart in the page-->
@@ -134,10 +138,10 @@
       <div class="col-xs-12 col-sm-8 col-md-9 col-lg-4">
         <div class="chart-wrapper">
             <div class="chart-title">
-      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                <p>League Sold To</p>
+      			<img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                <p class="sectionTitles">League Sold To</p>
 
-              <a id="reset-MoveTo" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+              <a id="reset-MoveTo" href=""><img class="sectionResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
 
 
             </div>
@@ -153,10 +157,10 @@
       <div class="col-xs-12  col-sm-8 col-md-9 col-lg-4">
         <div class="chart-wrapper">
             <div class="chart-title">
-      			<img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                <p>League Sold From</p>
+      			<img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                <p class="sectionTitles">League Sold From</p>
 
-              <a id="reset-MoveFrom" href=""><img src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image" height="30" width="30"></a>
+              <a id="reset-MoveFrom" href=""><img class="sectionResetAllImg" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
 
               </div>
             <div class="chart-stage">
@@ -168,8 +172,8 @@
       <div class="col-xs-4  col-lg-2 hidden-xs  col-sm-4 col-md-3">
         <div class="chart-wrapper extraHeight">
             <div class="chart-title">
-            <img src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
-                Total Transfer Spend
+            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                <p class="sectionTitles">Total Transfer Spend</p>
             </div>
             <div class="chart-stage pushTextDown">
         <!-- This is the anchor point for the chart in the page-->
@@ -185,10 +189,10 @@
 	    <div class="col-sm-12">
     		<div class="chart-wrapper">
         		<div class="chart-title">
- 				    <img class="middle-it" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+ 				    <img class="footballImg" class="middle-it" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
              		
-            <p class="hidden-xs hidden-sm">The 50 Most Expensive Transfers</p>
-            <p class="hidden-md hidden-lg">The 25 Most Expensive Transfers</p>
+            <p class="hidden-xs hidden-sm sectionTitles">The 50 Most Expensive Transfers</p>
+            <p class="hidden-md hidden-lg sectionTitles">The 25 Most Expensive Transfers</p>
 
 
           		</div>

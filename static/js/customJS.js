@@ -28,16 +28,16 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     device_size = "Large";
     console.log("Large Device");
 
-    barChartWidth = 775;
-    barChartHeight = 250;
+    barChartWidth = 725;
+    barChartHeight = 235;
     barChartYTicks = 5;
     barChartYAxisLabel = "Millions (£)";
 
     //Setting the table to have less columns for small screen sizes
     datatableSize = "Big";
 
-    seasonalFeesWidth = 550;
-    seasonalFeesHeight = 243;
+    seasonalFeesWidth = 500;
+    seasonalFeesHeight = 235;
 
     movToWidth = 400;
     movToHeight = 150;
@@ -147,6 +147,8 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
     movFromHeight = 150;
 
 }
+
+
 
 //Design decision was to make output as responsive as possible (graph resizing for device) but the pay-off is that this reload is required
 //on occassion. As reload only takes around 5 seconds and users are unlikly to repeatedly switch device orientation it was deemed the 
