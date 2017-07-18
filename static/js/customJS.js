@@ -27,6 +27,8 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
     device_size = "Large";
     console.log("Large Device");
+	document.getElementById("myTest").innerHTML="Large Device";
+
 
     barChartWidth = 725;
     barChartHeight = 235;
@@ -60,7 +62,7 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 
     device_size = "Medium";
     console.log("Medium Device");
-
+	document.getElementById("myTest").innerHTML="Medium Device";
 
     barChartWidth = 985;
     barChartHeight = 230;
@@ -92,7 +94,8 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
     device_size = "Small";   
     console.log("Small Device");
- 
+ 	document.getElementById("myTest").innerHTML="Small Device";
+
     barChartWidth = 750;
     barChartHeight = 200;
     barChartYTicks = 5;
@@ -127,6 +130,7 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 
     device_size = "Very Small";
     console.log("VERY Small Device");
+	document.getElementById("myTest").innerHTML="Very Small Device";
 
     //Bar chart
     barChartWidth = 650;
