@@ -22,7 +22,7 @@
 	/* needs to be this specific for changes to be applied based on loading presedence as keen.js has them set up this way */
 	body.application {
 		font-family: 'Cabin', sans-serif;	
-		background-image: url('../img/wembley_stadium_v3.jpg');
+		background-image: url('../img/wembley_stadium.jpg');
     	background-size: 100% 100%;
     	background-repeat: no-repeat;
     	background-attachment: fixed;
@@ -155,7 +155,9 @@
 	#premBadge{
  		height: 90px;
  		width: 90px;
+ 		padding-bottom: 5px;
 		vertical-align: middle;
+
 	}
 
 	#champBadge{
@@ -207,6 +209,7 @@
 	#premBadge{
  		height: 120px;
  		width: 120px;
+ 		padding-bottom: 10px; 		
 	}
 
 	#champBadge{
@@ -247,6 +250,7 @@
 	#premBadge{
  		height: 125px;
  		width: 125px;
+ 		padding-bottom: 10px; 		
 	}
 
 	#champBadge{
@@ -284,6 +288,7 @@
 	#premBadge{
  		height: 125px;
  		width: 125px;
+ 		padding-bottom: 10px;
 	}
 
 	#champBadge{

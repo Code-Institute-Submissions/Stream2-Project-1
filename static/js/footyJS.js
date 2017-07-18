@@ -338,7 +338,7 @@ var resetTransferWinFilter = function() {
 
 var resetSeasonFilter = function() {
   seasonDim.filterAll();
-  seasonDim.filter(null);  
+  chartSeasonalFees.filter(null);  
   dc.redrawAll();
   return false;
 };
@@ -346,6 +346,7 @@ var resetSeasonFilter = function() {
 //League Sold To
 var resetMoveToFilter = function() {
   leagueMovToDim.filterAll();
+  leagueMovToRowChart.filter(null);  
   dc.redrawAll();
   return false;
 };
@@ -353,13 +354,14 @@ var resetMoveToFilter = function() {
 //League Sold From
 var resetMoveFromFilter= function() {
   leagueMovFromDim.filterAll();
+  leagueMovFromRowChart.filter(null);    
   dc.redrawAll();
   return false;
 };
 
 
 //jQuery click event to manage button presses
-$('#reset-all').click(resetAllFilters);
+$('.reset-all').click(resetAllFilters);
 $('#reset-season').click(resetSeasonFilter);
 $('#reset-window').click(resetTransferWinFilter);
 $('#reset-moveTo').click(resetMoveToFilter);
