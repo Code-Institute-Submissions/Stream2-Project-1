@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Transfer Data Home</title>
+    <title>Transfer Data About</title>
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
@@ -34,7 +34,7 @@
         <header class="row">
             <div class="heading-container">
                 <div class="heading-container-inline">
-                    <img id="premBadge" src="{{ url_for('static', filename='img/premierLeague.png')}}" alt="premier league badge">
+                    <img id="prem-badge" src="{{ url_for('static', filename='img/premierLeague.png')}}" alt="premier league badge">
                 </div>
                 <div class="heading-container-inline">
                     <h1 id="inline">Premier League and Championship <br> Transfer Dashboard</h1>
@@ -45,8 +45,14 @@
             </div>
         </header>
         <section class="row">
-            <div class="generalTextCont">
-                <p>WELCOME! to a website which presents transfer data about the Premier League and Championship into a new perspective</p>
+            <div class="general-text-cont">
+                <p>Whilst looking for a good data set on which to base my DC.js project....</p>
+                <p>I have enjoyed football for a long time and I have always been amazed at how the transfer market manages to generate vast sums of money changing hands. This site is based around data from the website <a>http://www.transferleague.co.uk/</a></p>
+                <p>From the transfer league website:
+                    <q cite="http://www.wwf.org"> The Transfer League lists all players transfers and transfer fees for English Premier League and current Championship football clubs. The transfers are updated regularly during the January and summer transfer window. We also bring you the very latest transfer news in the transfer windows. As well as listing all transfers and transfer fees we compare clubs transfer spending with their progress in the premiership and against other clubs.</q>
+                </p>
+                <p>Transfer league is a static website with a detailed view, the aim of this site was to take a broader view of the English and Championship transfer data and present an interactive interface where uses could drill down into the data, in essence I wanted to use the some of the data but present a different and interactive perspective. DC.js has been used to present the data, which helps to make interactive graphs using D3,js and map those graphs to a data source which can be dynamically filtered in many ways using crossfilter.</p>
+            </div>
         </section>
     </main>
     <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>

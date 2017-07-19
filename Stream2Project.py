@@ -19,11 +19,25 @@ COLLECTION_NAME = 'projects'
 @app.route("/")
 def index():
     """
-    A Flask view to serve the main dashboard page.
+    A Flask view to serve the welome page.
     """
     return render_template("index.html")
  
+@app.route("/data")
+def data():
+    """
+    A Flask view to serve the main dashboard page.
+    """
+    return render_template("data.html")
+
+@app.route("/about")
+def about():
+    """
+    A Flask view to serve the about page.
+    """
+    return render_template("about.html")
  
+
 @app.route("/footy/projectdata")
 def stream2_projects():
     """

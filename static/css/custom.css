@@ -28,6 +28,11 @@
     	background-attachment: fixed;
   	}
 
+	/* This is to move the bootstrap menu in from the extreme right hand side */
+	.my-collapsing-list-rm{
+		margin-right: 20px;
+	}
+
 
 	/* 
 		Needs to be set in the parent child format to ensure specificty/cascade rules enure it over-rides the
@@ -67,13 +72,13 @@
 
 	/* Expands Total Transfer Spend container to
 	   be same height as other graph containers */
-	.extraHeight{
+	.extra-height{
 		height: 220px;
 	}
 
 	/* Pushes Total Transfer Spend text down
 	   into middle of container */
-	.pushTextDown{
+	.push-text-down{
 		margin-top: 35px;
 	}
 
@@ -116,7 +121,7 @@
 	}
 
 
-	.headingCont{
+	.heading-container{
 		background: rgba(107, 107, 107, 0.7);		
 		color: white;
 		font-size: 2.5em;
@@ -126,13 +131,23 @@
 		text-align: center;
 	}
 
-	.headingContInline{
+
+	.general-text-cont{
+		background: rgba(107, 107, 107, 0.9);		
+		color: white;
+		border-radius: 5px;
+		margin: 0px 5px 25px 5px;		
+		padding: 5px;
+	}
+
+
+	.heading-container-inline{
 		display: inline-block;
 	}
 
 
 	/* Specific identifier so that general P tag not impacted */
-	p.sectionTitles{
+	p.section-titles{
    	/* Hack to enable reset image to align nicely */
    	display: inline-block;
 	}
@@ -149,10 +164,10 @@
 		font-size: 15px;
 	}
 
-	.navMenuList{
+	.nav-menu-list{
 		font-size: 15px;		
 	}
-	#premBadge{
+	#prem-badge{
  		height: 90px;
  		width: 90px;
  		padding-bottom: 5px;
@@ -160,7 +175,7 @@
 
 	}
 
-	#champBadge{
+	#champ-badge{
  		height: 80px;
  		width: 80px;
  		padding: 5px;
@@ -168,13 +183,13 @@
 	}
 
 
-	.sectionResetAllImg{
+	.section-reset-all-img{
  		height: 30px;
  		width: 30px;
  		margin: 0px 0px 10px 0px;
 	}
    
-	.mainResetAllImg{
+	.main-reset-all-img{
 	 	height: 40px;
  		width: 40px;
  		margin: 5px 5px 5px 20px;
@@ -187,7 +202,7 @@
 /*********************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 
-	.headingCont{
+	.heading-container{
 		margin: 20px 5px 25px 5px;
 		line-height: 100px;	
 	}
@@ -202,17 +217,17 @@
 		font-size: 18px;
 	}
 
-	.navMenuList{
+	.nav-menu-list{
 		font-size: 18px;		
 	}
 
-	#premBadge{
+	#prem-badge{
  		height: 120px;
  		width: 120px;
  		padding-bottom: 10px; 		
 	}
 
-	#champBadge{
+	#champ-badge{
  		height: 110px;
  		width: 110px;
  		padding: 10px;
@@ -227,7 +242,7 @@
 /******************************************************/
 @media (min-width: 992px) { 
 
-	.headingCont{
+	.heading-container{
 		margin: 25px 5px 30px 5px;
 		line-height: 125px;	
 	}
@@ -243,17 +258,17 @@
 		font-size: 20px;
 	}
 
-	.navMenuList{
+	.nav-menu-list{
 		font-size: 20px;		
 	}
 
-	#premBadge{
+	#prem-badge{
  		height: 125px;
  		width: 125px;
  		padding-bottom: 10px; 		
 	}
 
-	#champBadge{
+	#champ-badge{
  		height: 115px;
  		width: 115px;
  		padding: 10px;
@@ -265,7 +280,7 @@
 /*                    col-lg-*                     */
 @media screen and (min-width: 1200px) {
 
-	.headingCont{
+	.heading-container{
 		margin: 30px 5px 35px 5px;
 		line-height: 135px;	
 	}
@@ -281,17 +296,17 @@
 		font-size: 20px;
 	}
 
-	.navMenuList{
+	.nav-menu-list{
 		font-size: 18px;		
 	}
 
-	#premBadge{
+	#prem-badge{
  		height: 125px;
  		width: 125px;
  		padding-bottom: 10px;
 	}
 
-	#champBadge{
+	#champ-badge{
  		height: 115px;
  		width: 115px;
  		padding: 10px;

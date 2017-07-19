@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transfer Data Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+    <!-- Remove this -->
+    <style type="text/css">
+    #myTest {
+        color: white;
+    }
+    </style>
+</head>
+<body class="application">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Transfer Data Dashboard</a>
+            <a class="pull-right hidden-sm hidden-md hidden-lg reset-all" href=""><img class="main-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-collapsing-list">
+                <span></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <a class="pull-right hidden-xs reset-all" href=""><img class="main-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" alt="reset button image"></a>
+        <ul id="my-collapsing-list" class="nav navbar-nav navbar-right collapse navbar-collapse">
+            <li><a class="nav-menu-list" href="/">Home</a></li>
+            <li><a class="nav-menu-list" href="/data">Data</a></li>
+            <li><a class="nav-menu-list" href="/about">About</a></li>
+        </ul>
+    </nav>
+    <main class="container-fluid">
+        <header class="row">
+            <div class="heading-container">
+                <div class="heading-container-inline">
+                    <img id="prem-badge" src="{{ url_for('static', filename='img/premierLeague.png')}}" alt="premier league badge">
+                </div>
+                <div class="heading-container-inline">
+                    <h1 id="inline">Premier League and Championship <br> Transfer Dashboard</h1>
+                </div>
+                <div class="heading-container-inline">
+                    <img id="champ-badge" src="{{ url_for('static', filename='img/championship.png')}}" alt="English Football League Championship badge">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="row">
+                <!-- Transfer Spending Chart-->
+                <div class="col-lg-7">
+                    <div class="chart-wrapper leftchart">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">Transfer Spending</p>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div id="bar-chart-overall-transfer-spend"></div>
+                        </div>
+                    </div>
+                </div>
+                <p id="myTest">YoooHoooo</p>
+                <!-- Seasonal Total Fees Chart -->
+                <div class="col-lg-5">
+                    <div class="chart-wrapper rightchart">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">Value of Seasonal Transfers</p>
+                            <a id="reset-season" href=""><img class="section-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div id="rowchart-seasonal-total-fees">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Transfer Window Chart -->
+                <div class="col-xs-4 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3 col-lg-2">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">Window</p>
+                            <a id="reset-window" href=""><img class="section-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div id="piechart-window"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2  col-xs-offset-2 hidden-sm  hidden-md  hidden-lg">
+                    <!-- Total Transfer Spend-->                
+                    <div class="chart-wrapper extra-height">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">Total Transfer Spend</p>
+                        </div>
+                        <div class="chart-stage push-text-down">
+                            <!-- This is the anchor point for the chart in the page-->
+                            <div class="total-transfer-spend" id="total-transfer-spend">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-4">
+                    <!-- League Moving To Chart -->                
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">League Sold To</p>
+                            <a id="reset-moveTo" href=""><img class="section-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div id="rowchart-leagueMovTo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12  col-sm-8 col-md-9 col-lg-4">
+                    <!-- League Moving From Chart -->                
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">League Sold From</p>
+                            <a id="reset-moveFrom" href=""><img class="section-reset-all-img" src="{{ url_for('static', filename='img/reset_button.png')}}" align="right" alt="reset button image"></a>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page-->
+                            <div id="rowchart-leagueMovFrom"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4  col-lg-2 hidden-xs  col-sm-4 col-md-3">
+                    <!-- Total Transfer Spend -->                
+                    <div class="chart-wrapper extra-height">
+                        <div class="chart-title">
+                            <img class="footballImg" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="section-titles">Total Transfer Spend</p>
+                        </div>
+                        <div class="chart-stage push-text-down">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div class="total-transfer-spend" id="total-transfer-spend-xs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Top 25/50 Table -->                
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <img class="footballImg" class="middle-it" src="{{ url_for('static', filename='img/football.png')}}" alt="football image" height="25" width="25">
+                            <p class="hidden-xs hidden-sm section-titles">The 50 Most Expensive Transfers</p>
+                            <p class="hidden-md hidden-lg section-titles">The 25 Most Expensive Transfers</p>
+                        </div>
+                        <div class="chart-stage">
+                            <!-- This is the anchor point for the chart in the page -->
+                            <div style='clear:both;'>
+                                <table id="dc-data-table" class="table table-responsive">
+                                    <thead>
+                                        <tr class="header">
+                                            <th>Date</th>
+                                            <th>Player</th>
+                                            <th>Fee</th>
+                                            <th>Selling Club</th>
+                                            <th class="hidden-xs hidden-sm">Selling League</th>
+                                            <th>Buying Club</th>
+                                            <th class="hidden-xs hidden-sm">Buying League</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+    <!-- Needs to be above footyJS as sets variables for it to use based on screen size -->
+    <script src="{{ url_for ('static', filename='js/customJS.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/footyJS.js')}}"></script>
+</body>
+<footer>
+    <p class="small text-muted"> Data visualization brought to you by 'The Cheesemonster' &#129472; &#128126;</p>
+</footer>
+
+</html>
