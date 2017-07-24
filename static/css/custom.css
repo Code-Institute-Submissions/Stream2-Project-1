@@ -10,8 +10,9 @@
 /* unless ones are subsequently set for a bigger screen size.                                                                */
 /*****************************************************************************************************************************/
 
+
 /*********************************************/
-/* Extra small devices (phones, up to 480px) */
+/* Extra small devices (phones, up to 767px) */
 /*                 col-xs-*                  */
 /*********************************************/
 
@@ -168,16 +169,16 @@
 		font-size: 15px;		
 	}
 	#prem-badge{
- 		height: 90px;
- 		width: 90px;
+ 		height: 80px;
+ 		width: 80px;
  		padding-bottom: 5px;
 		vertical-align: middle;
 
 	}
 
 	#champ-badge{
- 		height: 80px;
- 		width: 80px;
+ 		height: 70px;
+ 		width: 70px;
  		padding: 5px;
 		vertical-align: middle; 		
 	}
@@ -194,6 +195,32 @@
  		width: 40px;
  		margin: 5px 5px 5px 20px;
 	}
+
+
+/********************************************/
+/* Very Small devices (phones in portrait)  */
+/* not to have the badages */
+/*********************************************/
+@media (max-width: 450px) {
+
+	#prem-badge{
+		display: none;
+ 	}
+
+	#champ-badge{
+		display: none;
+	}
+
+	.heading-container{
+		line-height: 10px;	
+	}
+
+	#hideVSPortrait{
+		display: none;
+	}
+
+
+}
 
 
 /********************************************/

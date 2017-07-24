@@ -37,7 +37,6 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 	device_size = "Large";
     console.log("Large Device");
-    document.getElementById("myTest").innerHTML = "Large Device";
 
     barChartWidth = 725;
     barChartHeight = 235;
@@ -63,7 +62,6 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 
     device_size = "Medium";
     console.log("Medium Device");
-    document.getElementById("myTest").innerHTML = "Medium Device";
 
     barChartWidth = 985;
     barChartHeight = 230;
@@ -89,7 +87,6 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
     device_size = "Small";
     console.log("Small Device");
-    document.getElementById("myTest").innerHTML = "Small Device";
 
     barChartWidth = 750;
     barChartHeight = 200;
@@ -108,14 +105,13 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
 
 /***********************************************/
-/* very Small devices (phones, 768px to 991px) */
+/* very Small devices (phones less than 768px) */
 /*                 col-xs-*                    */
 /***********************************************/
 else if (window.matchMedia("(max-width: 767px)").matches) {
 
     device_size = "Very Small";
     console.log("VERY Small Device");
-    document.getElementById("myTest").innerHTML = "Very Small Device";
 
     barChartWidth = 650;
     barChartHeight = 170;
@@ -130,6 +126,17 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 
     SoldFromWidth = 600;
     SoldFromHeight = 150;
+
+
+    //Alert to tell users for best orientation
+    if(window.innerHeight > window.innerWidth){ 
+
+      alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts have been removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
+
+
+    }
+
+
 }
 
 
@@ -142,6 +149,12 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 	Only want to target specific instances where it has shown to be an issue (rather than reload on devices it isn't required) to avoid impact on user.
 ********************************************************************************************************************************************************/
 $(window).on("orientationchange", function() {
+
+    //if an iPhone is turned from portrait to landscape
+    if (device_size == "Very Small"){
+        //always want it to reload
+        location.reload();
+    }
     //if an iPad is turned from portrait to landscape
     if (device_size == "Small" && screen.width > 991) {
         location.reload();
