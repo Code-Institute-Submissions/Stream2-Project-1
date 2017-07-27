@@ -3,6 +3,8 @@
 ## Overview
 This code is for a site that is required for the Code Institute end of Stream 2 (Back end) project. It is to demonstrate an ability to code and deploy a database driven website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
+The project is looks to simplify data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
+Transfer league is a static website with a detailed view, the need this site fullfills is to present a broader, higher level, view of the Premier League and Championship transfer data and provide an interactive interface where uses could drill down into the data, in essence I wanted to use the some of the data but present a different and interactive perspective.
 
 ## Key Functionality of the project
 - DC.js functonality, enabling response graphs, charts and values to be displayed. 
