@@ -36,18 +36,17 @@ var device_size;
 if (window.matchMedia("(min-width: 1200px)").matches) {
 
 	device_size = "Large";
-    console.log("Large Device");
 
-    barChartWidth = 725;
+    barChartWidth = 790;
     barChartHeight = 235;
 
-    seasonalFeesWidth = 500;
+    seasonalFeesWidth = 540;
     seasonalFeesHeight = 235;
 
-    SoldToWidth = 400;
+    SoldToWidth = 430;
     SoldToHeight = 150;
 
-    SoldFromWidth = 400;
+    SoldFromWidth = 430;
     SoldFromHeight = 150;
 
     datatableSize = "Big";
@@ -61,9 +60,8 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 else if (window.matchMedia("(min-width: 992px)").matches) {
 
     device_size = "Medium";
-    console.log("Medium Device");
 
-    barChartWidth = 985;
+    barChartWidth = 1000;
     barChartHeight = 230;
 
     datatableSize = "Big";
@@ -86,7 +84,6 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 else if (window.matchMedia("(min-width: 768px)").matches) {
 
     device_size = "Small";
-    console.log("Small Device");
 
     barChartWidth = 750;
     barChartHeight = 200;
@@ -111,7 +108,6 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 else if (window.matchMedia("(max-width: 767px)").matches) {
 
     device_size = "Very Small";
-    console.log("VERY Small Device");
 
     barChartWidth = 565;
     barChartHeight = 170;
