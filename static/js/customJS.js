@@ -26,16 +26,11 @@ var SoldFromWidth;
 //25 rows xs/sm, 50 rows md/lg
 var datatableSize;
 
-//To track the device size (for orientiation checking)
-var device_size;
-
 /***************************************************/
 /* Large devices (large desktops 1200px and above) */
 /*                    col-lg-*                     */
 /***************************************************/
 if (window.matchMedia("(min-width: 1200px)").matches) {
-
-	device_size = "Large";
 
     barChartWidth = 790;
     barChartHeight = 235;
@@ -59,8 +54,6 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 /******************************************************/
 else if (window.matchMedia("(min-width: 992px)").matches) {
 
-    device_size = "Medium";
-
     barChartWidth = 1000;
     barChartHeight = 230;
 
@@ -82,8 +75,6 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 /*                 col-sm-*                */
 /*********************************************/
 else if (window.matchMedia("(min-width: 768px)").matches) {
-
-    device_size = "Small";
 
     barChartWidth = 750;
     barChartHeight = 200;
@@ -107,8 +98,6 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 /***********************************************/
 else if (window.matchMedia("(max-width: 767px)").matches) {
 
-    device_size = "Very Small";
-
     barChartWidth = 565;
     barChartHeight = 170;
 
@@ -123,16 +112,10 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
     SoldFromWidth = 545;
     SoldFromHeight = 150;
 
-
     //Alert to tell users for best orientation
     if(window.innerHeight > window.innerWidth){ 
-
-      alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts have been removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
-
-
+      alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts will be removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
     }
-
-
 }
 
 
@@ -140,31 +123,7 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
 /******************************************************************************************************************************************************* 	
 	Design decision was to make output as responsive as possible (inc graph resizing for different devices) but the pay-off is that a reload is required.
   	As reload only takes around 5 seconds and users are unlikly to repeatedly switch device orientation it was deemed the better approach.
-
-	To track the device size for orientiation checking, if size changes on orientation change then need to reload page to reformat the layout.
-	Only want to target specific instances where it has shown to be an issue (rather than reload on devices it isn't required) to avoid impact on user.
 ********************************************************************************************************************************************************/
 $(window).on("orientationchange", function() {
-
-    //if an iPhone is turned from portrait to landscape
-    if (device_size == "Very Small"){
-        //always want it to reload
-        location.reload();
-    }
-    //if an iPad is turned from portrait to landscape
-    if (device_size == "Small" && screen.width > 991) {
-        location.reload();
-    }
-    //if an iPad is turned from landscape to portrait
-    if (device_size == "Medium" && screen.width < 992) {
-        location.reload();
-    }
-    //if an iPadPro is turned from portrait to landscape
-    if (device_size == "Medium" && screen.width > 1199) {
-        location.reload();
-    }
-    //if an iPadPro is turned from landscape to portrait
-    if (device_size == "Large" && screen.width < 1200) {
-        location.reload();
-    }
+       location.reload();
 });
