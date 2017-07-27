@@ -113,18 +113,18 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
     device_size = "Very Small";
     console.log("VERY Small Device");
 
-    barChartWidth = 650;
+    barChartWidth = 565;
     barChartHeight = 170;
 
     datatableSize = "Small";
 
-    seasonalFeesWidth = 600;
+    seasonalFeesWidth = 545;
     seasonalFeesHeight = 210;
 
-    SoldToWidth = 600;
+    SoldToWidth = 545;
     SoldToHeight = 150;
 
-    SoldFromWidth = 600;
+    SoldFromWidth = 545;
     SoldFromHeight = 150;
 
 

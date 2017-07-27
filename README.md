@@ -4,7 +4,7 @@
 This code is for a site that is required for the Code Institute end of Stream 2 (Back end) project. It is to demonstrate an ability to code and deploy a database driven website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
 The project is looks to simplify data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
-Transfer league is a static website with a detailed view, the need this site fullfills is to present a broader, higher level, view of the Premier League and Championship transfer data and provide an interactive interface where uses could drill down into the data, in essence I wanted to use the some of the data but present a different and interactive perspective.
+Transfer League is a static website which provides a detailed granular view of the data. The need this site fullfills is the need to present a broader, higher level view of the Premier League and Championship transfer data and provide an interactive interface where uses could drill down into the data. In essence I wanted to use the some of the data but present a different and interactive perspective.
 
 ## Key Functionality of the project
 - DC.js functonality, enabling response graphs, charts and values to be displayed. 
@@ -40,7 +40,7 @@ The project has been managed locally and deployed to GitHub (to host code) and H
 ## How was the project tested
 
 ### Testing code quality
-I validated the HTML used through https://validator.w3.org but an aspect of the framwork syntax did conforming to HTML standards: href="{{ url_for ('static', filename='abc')}}" and on the data page a warning was given regarding a section not having a heading, but the decision not to have one was a design choice not an oversight.
+I validated the HTML used through https://validator.w3.org but their were two exceptions. The first was one aspect of the flask framwork syntax didn't conform to HTML standards: href="{{ url_for ('static', filename='abc')}}" which showed as an error. The second was the data page recieved a warning due to an HTML section not having a heading, but the decision not to have one was a design choice not an oversight.
 
 ### Testing Responsive Design:
 I have tested the website, across different devices, different browsers and different Operating Systems, to ensure that the site adapts cleanly/neatly to the different device criteria, summary of what I tested is below (limited to what I had available):
