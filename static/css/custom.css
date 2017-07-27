@@ -197,6 +197,19 @@
 	}
 
 
+	.footballImg{
+		height: 25px;
+ 		width: 25px;
+	}
+
+	.footballImgLG{
+		height: 25px;
+ 		width: 25px;
+ 		margin-right: 5px;
+ 		vertical-align: middle;
+	}
+
+
 /********************************************/
 /* Very Small devices (phones in portrait)  */
 /* not to have the badages */
