@@ -1,4 +1,4 @@
-
+g
 //Queuing data so it all loads before 'makeGraph' is invoked 
 queue()
     .defer(d3.json, "/footy/projectdata")
