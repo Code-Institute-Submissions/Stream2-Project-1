@@ -206,9 +206,8 @@ function makeGraphs(error, footballData) {
 
 
     /*********************************************************************************
-	  	Table - 'The 25/50 Most Expensive Transfers'
+	  	Table - 'The 10/15/25/50 Most Expensive Transfers' device depending on device size
   		Shows the most expensive transfers in the table for the given filters applied
-  		Will show 50 results on large medium devices and 25 on small/x-small
 	**********************************************************************************/
 
     /*****************************************
@@ -239,7 +238,7 @@ function makeGraphs(error, footballData) {
 	/*******************************************************************************************
 	   This is set in customJS to enable a different table to be shown depending on screen size
 	********************************************************************************************/
-    if (datatableSize == "Big") {
+    if (datatableSize == 50) {
         datatableBig = dc.dataTable("#dc-data-table");
         datatableBig
             //.dimension(feeDateDimFilter2)
@@ -273,12 +272,74 @@ function makeGraphs(error, footballData) {
                 }
             ])
             .order(d3.descending);
-    } else {
+    } else if (datatableSize == 25) {
         datatableSmall = dc.dataTable("#dc-data-table");
         datatableSmall
             .dimension(feeDim)
             .group(function(d) { return ''; }) // an empty string
             .sortBy(function(d) { return d.fee; })
+            //size of the data table in rows, this needs to be automatic...
+            .size(25)            
+            .columns([
+                function(d) {
+                    return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
+                },
+                function(d) {
+                    return d.player_name;
+                },
+                function(d) {
+                    return "£" + formatInCommas(+d.fee);
+                },
+                function(d) {
+                    return d.club_moving_from;
+                },
+                function(d) {
+                    return d.league_moving_from;
+                },
+                function(d) {
+                    return d.club_moving_to;
+                },
+                function(d) {
+                    return d.league_moving_to;
+                }
+            ])
+            .order(d3.descending);
+    }
+	else if (datatableSize == 15) {
+        datatableSmall = dc.dataTable("#dc-data-table");
+        datatableSmall
+            .dimension(feeDim)
+            .group(function(d) { return ''; }) // an empty string
+            .sortBy(function(d) { return d.fee; })
+            //size of the data table in rows, this needs to be automatic...
+            .size(15)            
+            .columns([
+                function(d) {
+                    return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
+                },
+                function(d) {
+                    return d.player_name;
+                },
+                function(d) {
+                    return "£" + formatInCommas(+d.fee);
+                },
+                function(d) {
+                    return d.club_moving_from;
+                },
+                function(d) {
+                    return d.club_moving_to;
+                },
+            ])
+            .order(d3.descending);
+    }
+	else if (datatableSize == 10) {
+        datatableSmall = dc.dataTable("#dc-data-table");
+        datatableSmall
+            .dimension(feeDim)
+            .group(function(d) { return ''; }) // an empty string
+            .sortBy(function(d) { return d.fee; })
+            //size of the data table in rows, this needs to be automatic...
+            .size(10)            
             .columns([
                 function(d) {
                     return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();

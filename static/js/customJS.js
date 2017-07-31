@@ -23,7 +23,6 @@ var SoldFromHeight;
 var SoldFromWidth;
 
 //To specify size (length) of table
-//25 rows xs/sm, 50 rows md/lg
 var datatableSize;
 
 /***************************************************/
@@ -44,7 +43,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     SoldFromWidth = 430;
     SoldFromHeight = 150;
 
-    datatableSize = "Big";
+    datatableSize = 50;
 }
 
 
@@ -67,6 +66,8 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 
     SoldFromWidth = 730;
     SoldFromHeight = 150;
+
+    datatableSize = 25;
 }
 
 
@@ -89,6 +90,8 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
 
     SoldFromWidth = 475;
     SoldFromHeight = 150;
+
+    datatableSize = 15;
 }
 
 
@@ -106,11 +109,13 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
     seasonalFeesWidth = 545;
     seasonalFeesHeight = 210;
 
-    SoldToWidth = 545;
+    SoldToWidth = 540;
     SoldToHeight = 150;
 
-    SoldFromWidth = 545;
+    SoldFromWidth = 540;
     SoldFromHeight = 150;
+
+    datatableSize = 10;
 
     //Alert to tell users for best orientation
     if(window.innerHeight > window.innerWidth){ 

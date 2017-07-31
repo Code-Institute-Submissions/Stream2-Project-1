@@ -13,8 +13,12 @@ Transfer League is a static website which provides a detailed granular view of t
 	- HTML layout and Graphs are responsive to different devices (unlike default DC.js graphs).
 	- Page reload on mobile device oritentiation change to allow layout/graphs to be updated to the appropriate device size without a manual refresh.
 	- A prompt for users that try to view the charts in portrait on very small mobile devices that they need to view in landscape.
-	- The data chart sets the amount of rows depending on device type (25 for very small or small, 50 for medium or large).
+	- The data chart sets the amount of rows depending on device type.
 	- The data chart is sorted by fee, with the highest fee being at the top.
+
+- Custom functionality for appearance:
+	- Default graph colour scheme overwritten to give a consistent shades of blue in graphs (rather than going from Blue to Orange as per default)
+
 
 ## Project Coding
 #### Technologies used
