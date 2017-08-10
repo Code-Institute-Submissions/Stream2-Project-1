@@ -25,11 +25,11 @@ var SoldFromWidth;
 //To specify size (length) of table
 var datatableSize;
 
-/***************************************************/
-/* Large devices (large desktops 1200px and above) */
-/*                    col-lg-*                     */
-/***************************************************/
-if (window.matchMedia("(min-width: 1200px)").matches) {
+/********************************************************/
+/* Very Large devices (large desktops 1400px and above) */
+/*                    col-lg-*                          */
+/********************************************************/
+if (window.matchMedia("(min-width: 1400px)").matches) {
 
     barChartWidth = 790;
     barChartHeight = 235;
@@ -45,6 +45,29 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
     datatableSize = 50;
 }
+
+
+/***************************************************/
+/* Large devices (large desktops 1200px and above) */
+/*                    col-lg-*                     */
+/***************************************************/
+if (window.matchMedia("(min-width: 1200px)").matches) {
+
+    barChartWidth = 700;
+    barChartHeight = 235;
+
+    seasonalFeesWidth = 500;
+    seasonalFeesHeight = 235;
+
+    SoldToWidth = 395;
+    SoldToHeight = 150;
+
+    SoldFromWidth = 395;
+    SoldFromHeight = 150;
+
+    datatableSize = 50;
+}
+
 
 
 /******************************************************/
