@@ -15,12 +15,12 @@ var seasonalFeesHeight;
 var seasonalFeesWidth;
 
 //Row Chart 'League Sold To'
-var SoldToHeight;
-var SoldToWidth;
+var soldToHeight;
+var soldToWidth;
 
 //Row Chart 'League Sold From'
-var SoldFromHeight;
-var SoldFromWidth;
+var soldFromHeight;
+var soldFromWidth;
 
 //To specify size (length) of table
 var datatableSize;
@@ -37,11 +37,11 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
     seasonalFeesWidth = 540;
     seasonalFeesHeight = 235;
 
-    SoldToWidth = 430;
-    SoldToHeight = 150;
+    soldToWidth = 430;
+    soldToHeight = 150;
 
-    SoldFromWidth = 430;
-    SoldFromHeight = 150;
+    soldFromWidth = 430;
+    soldFromHeight = 150;
 
     datatableSize = 50;
     //window.alert("Min screen size of 1400");
@@ -60,11 +60,11 @@ else if ((window.matchMedia("(min-width: 1200px)").matches)  && (window.matchMed
     seasonalFeesWidth = 510;
     seasonalFeesHeight = 235;
 
-    SoldToWidth = 400;
-    SoldToHeight = 150;
+    soldToWidth = 400;
+    soldToHeight = 150;
 
-    SoldFromWidth = 400;
-    SoldFromHeight = 150;
+    soldFromWidth = 400;
+    soldFromHeight = 150;
 
     datatableSize = 50;
     //window.alert("Min screen size of 1200, Max 1399");    
@@ -86,11 +86,11 @@ else if ((window.matchMedia("(min-width: 992px)").matches)  && (window.matchMedi
     seasonalFeesWidth = 985;
     seasonalFeesHeight = 250;
 
-    SoldToWidth = 730;
-    SoldToHeight = 150;
+    soldToWidth = 730;
+    soldToHeight = 150;
 
-    SoldFromWidth = 730;
-    SoldFromHeight = 150;
+    soldFromWidth = 730;
+    soldFromHeight = 150;
 
     datatableSize = 25;
     //window.alert("Min screen size of 992, Max 1199");    
@@ -110,11 +110,11 @@ else if ((window.matchMedia("(min-width: 768px)").matches)  && (window.matchMedi
     seasonalFeesWidth = 720;
     seasonalFeesHeight = 200;
 
-    SoldToWidth = 475;
-    SoldToHeight = 150;
+    soldToWidth = 475;
+    soldToHeight = 150;
 
-    SoldFromWidth = 475;
-    SoldFromHeight = 150;
+    soldFromWidth = 475;
+    soldFromHeight = 150;
 
     datatableSize = 15;
     //window.alert("Min screen size of 768, Max 991");    
@@ -135,11 +135,11 @@ else if ((window.matchMedia("(min-width: 581px)").matches)  && (window.matchMedi
     seasonalFeesWidth = 630;
     seasonalFeesHeight = 210;
 
-    SoldToWidth = 630;
-    SoldToHeight = 150;
+    soldToWidth = 630;
+    soldToHeight = 150;
 
-    SoldFromWidth = 630;
-    SoldFromHeight = 150;
+    soldFromWidth = 630;
+    soldFromHeight = 150;
 
     datatableSize = 10;
 
@@ -168,11 +168,11 @@ else if (window.matchMedia("(max-width: 580px)").matches) {
     seasonalFeesWidth = 545;
     seasonalFeesHeight = 210;
 
-    SoldToWidth = 540;
-    SoldToHeight = 150;
+    soldToWidth = 540;
+    soldToHeight = 150;
 
-    SoldFromWidth = 540;
-    SoldFromHeight = 150;
+    soldFromWidth = 540;
+    soldFromHeight = 150;
 
     datatableSize = 10;
 

@@ -175,8 +175,8 @@ function makeGraphs(error, footballData) {
     var leagueSoldToGroup = leagueSoldToDim.group().reduceCount(function(d) { return d.fee; });
     var leagueSoldToRowChart = dc.rowChart("#rowchart-leagueSoldTo");
     leagueSoldToRowChart
-        .width(SoldToWidth)
-        .height(SoldToHeight)
+        .width(soldToWidth)
+        .height(soldToHeight)
         .margins({ top: 10, left: 15, right: 15, bottom: 40 })
         .ordinalColors(['#80aaff', '#1a66ff', '#003cb3'])
         .dimension(leagueSoldToDim)
@@ -195,8 +195,8 @@ function makeGraphs(error, footballData) {
     var leagueSoldFromRowChart = dc.rowChart("#rowchart-leagueSoldFrom");
     //criteria for pie chart
     leagueSoldFromRowChart
-        .width(SoldFromWidth)
-        .height(SoldFromHeight)
+        .width(soldFromWidth)
+        .height(soldFromHeight)
         .margins({ top: 10, left: 15, right: 15, bottom: 40 })
         .ordinalColors(['#80aaff', '#1a66ff', '#003cb3'])
         .dimension(leagueSoldFromDim)
@@ -238,7 +238,7 @@ function makeGraphs(error, footballData) {
 	/*******************************************************************************************
 	   This is set in customJS to enable a different table to be shown depending on screen size
 	********************************************************************************************/
-    if (datatableSize == 50) {
+    if ((datatableSize == 50) || datatableSize == 25) {
         datatableBig = dc.dataTable("#dc-data-table");
         datatableBig
             //.dimension(feeDateDimFilter2)
@@ -246,7 +246,7 @@ function makeGraphs(error, footballData) {
             .group(function(d) { return ''; }) // an empty string
             .sortBy(function(d) { return d.fee; })
             //size of the data table in rows, this needs to be automatic...
-            .size(50)
+            .size(datatableSize)
             // create the columns dynamically
             .columns([
                 function(d) {
@@ -272,74 +272,14 @@ function makeGraphs(error, footballData) {
                 }
             ])
             .order(d3.descending);
-    } else if (datatableSize == 25) {
+    } else if ((datatableSize == 15) || datatableSize == 10) {
         datatableSmall = dc.dataTable("#dc-data-table");
         datatableSmall
             .dimension(feeDim)
             .group(function(d) { return ''; }) // an empty string
             .sortBy(function(d) { return d.fee; })
             //size of the data table in rows, this needs to be automatic...
-            .size(25)            
-            .columns([
-                function(d) {
-                    return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
-                },
-                function(d) {
-                    return d.player_name;
-                },
-                function(d) {
-                    return "£" + formatInCommas(+d.fee);
-                },
-                function(d) {
-                    return d.club_moving_from;
-                },
-                function(d) {
-                    return d.league_moving_from;
-                },
-                function(d) {
-                    return d.club_moving_to;
-                },
-                function(d) {
-                    return d.league_moving_to;
-                }
-            ])
-            .order(d3.descending);
-    }
-	else if (datatableSize == 15) {
-        datatableSmall = dc.dataTable("#dc-data-table");
-        datatableSmall
-            .dimension(feeDim)
-            .group(function(d) { return ''; }) // an empty string
-            .sortBy(function(d) { return d.fee; })
-            //size of the data table in rows, this needs to be automatic...
-            .size(15)            
-            .columns([
-                function(d) {
-                    return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
-                },
-                function(d) {
-                    return d.player_name;
-                },
-                function(d) {
-                    return "£" + formatInCommas(+d.fee);
-                },
-                function(d) {
-                    return d.club_moving_from;
-                },
-                function(d) {
-                    return d.club_moving_to;
-                },
-            ])
-            .order(d3.descending);
-    }
-	else if (datatableSize == 10) {
-        datatableSmall = dc.dataTable("#dc-data-table");
-        datatableSmall
-            .dimension(feeDim)
-            .group(function(d) { return ''; }) // an empty string
-            .sortBy(function(d) { return d.fee; })
-            //size of the data table in rows, this needs to be automatic...
-            .size(10)            
+            .size(datatableSize)            
             .columns([
                 function(d) {
                     return zeroFillDay(d.date.getDate()) + "/" + zeroFillMonth((d.date.getMonth() + 1)) + "/" + d.date.getFullYear();
