@@ -17725,7 +17725,7 @@
   {
     "season": "2014-2015",
     "transfer_window": "Winter",
-    "player_name": "Morocco Oussama Assaidi",
+    "player_name": "Oussama Assaidi",
     "league_moving_from": "Premier",
     "club_moving_from": "Liverpool",
     "league_moving_to": "Premier",
@@ -17736,7 +17736,7 @@
   {
     "season": "2014-2015",
     "transfer_window": "Winter",
-    "player_name": "Spain Carles Gil",
+    "player_name": "Carles Gil",
     "league_moving_from": "Other",
     "club_moving_from": "Spain Valencia",
     "league_moving_to": "Other",
@@ -19750,9 +19750,9 @@
     "season": "2014-2015",
     "transfer_window": "Summer",
     "player_name": "Jordon Mutch",
-    "league_moving_from": "Other",
+    "league_moving_from": "Championship",
     "club_moving_from": "Cardiff City",
-    "league_moving_to": "Other",
+    "league_moving_to": "Premier",
     "club_moving_to": "QPR",
     "fee": 6000000,
     "date": "05/08/2014"
