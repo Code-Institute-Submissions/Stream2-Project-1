@@ -44,6 +44,7 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
     SoldFromHeight = 150;
 
     datatableSize = 50;
+    //window.alert("Min screen size of 1400");
 }
 
 
@@ -51,22 +52,24 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 /* Large devices (large desktops 1200px and above) */
 /*                    col-lg-*                     */
 /***************************************************/
-if (window.matchMedia("(min-width: 1200px)").matches) {
+else if ((window.matchMedia("(min-width: 1200px)").matches)  && (window.matchMedia("(max-width: 1399px)").matches)) {
 
-    barChartWidth = 700;
+    barChartWidth = 730;
     barChartHeight = 235;
 
-    seasonalFeesWidth = 500;
+    seasonalFeesWidth = 510;
     seasonalFeesHeight = 235;
 
-    SoldToWidth = 395;
+    SoldToWidth = 400;
     SoldToHeight = 150;
 
-    SoldFromWidth = 395;
+    SoldFromWidth = 400;
     SoldFromHeight = 150;
 
     datatableSize = 50;
+    //window.alert("Min screen size of 1200, Max 1399");    
 }
+
 
 
 
@@ -74,8 +77,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 /* Medium devices (tablets/desktops, 992px to 1199px) */
 /*                        col-md-*                    */
 /******************************************************/
-else if (window.matchMedia("(min-width: 992px)").matches) {
-
+else if ((window.matchMedia("(min-width: 992px)").matches)  && (window.matchMedia("(max-width: 1199px)").matches)) {
     barChartWidth = 1000;
     barChartHeight = 230;
 
@@ -91,6 +93,7 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
     SoldFromHeight = 150;
 
     datatableSize = 25;
+    //window.alert("Min screen size of 992, Max 1199");    
 }
 
 
@@ -98,8 +101,7 @@ else if (window.matchMedia("(min-width: 992px)").matches) {
 /* Small devices (tablets, 768px to 991px) */
 /*                 col-sm-*                */
 /*********************************************/
-else if (window.matchMedia("(min-width: 768px)").matches) {
-
+else if ((window.matchMedia("(min-width: 768px)").matches)  && (window.matchMedia("(max-width: 991px)").matches)) {
     barChartWidth = 750;
     barChartHeight = 200;
 
@@ -115,14 +117,48 @@ else if (window.matchMedia("(min-width: 768px)").matches) {
     SoldFromHeight = 150;
 
     datatableSize = 15;
+    //window.alert("Min screen size of 768, Max 991");    
+}
+
+
+/*******************************************************************/
+/* very Small devices (phones less than 768px but larger than 580) */
+/*                 col-xs-*                    */
+/*******************************************************************/
+else if ((window.matchMedia("(min-width: 581px)").matches)  && (window.matchMedia("(max-width: 767px)").matches)) {
+
+    barChartWidth = 630;
+    barChartHeight = 170;
+
+    datatableSize = "Small";
+
+    seasonalFeesWidth = 630;
+    seasonalFeesHeight = 210;
+
+    SoldToWidth = 630;
+    SoldToHeight = 150;
+
+    SoldFromWidth = 630;
+    SoldFromHeight = 150;
+
+    datatableSize = 10;
+
+    //window.alert("Min screen size of 581, Max 767");    
+
+    //Alert to tell users for best orientation
+    if(window.innerHeight > window.innerWidth){ 
+      alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts will be removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
+    }
 }
 
 
 /***********************************************/
-/* very Small devices (phones less than 768px) */
+/* very Small devices (phones less than 580px) */
 /*                 col-xs-*                    */
 /***********************************************/
-else if (window.matchMedia("(max-width: 767px)").matches) {
+else if (window.matchMedia("(max-width: 580px)").matches) {
+
+    //window.alert("Max screen size of 580");    
 
     barChartWidth = 565;
     barChartHeight = 170;
@@ -145,7 +181,6 @@ else if (window.matchMedia("(max-width: 767px)").matches) {
       alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts will be removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
     }
 }
-
 
 
 /******************************************************************************************************************************************************* 	
