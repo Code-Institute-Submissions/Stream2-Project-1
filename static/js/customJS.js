@@ -67,7 +67,6 @@ else if ((window.matchMedia("(min-width: 1200px)").matches)  && (window.matchMed
     soldFromHeight = 150;
 
     datatableSize = 50;
-    //window.alert("Min screen size of 1200, Max 1399");    
 }
 
 
@@ -93,7 +92,6 @@ else if ((window.matchMedia("(min-width: 992px)").matches)  && (window.matchMedi
     soldFromHeight = 150;
 
     datatableSize = 25;
-    //window.alert("Min screen size of 992, Max 1199");    
 }
 
 
@@ -117,7 +115,6 @@ else if ((window.matchMedia("(min-width: 768px)").matches)  && (window.matchMedi
     soldFromHeight = 150;
 
     datatableSize = 15;
-    //window.alert("Min screen size of 768, Max 991");    
 }
 
 
@@ -143,8 +140,6 @@ else if ((window.matchMedia("(min-width: 581px)").matches)  && (window.matchMedi
 
     datatableSize = 10;
 
-    //window.alert("Min screen size of 581, Max 767");    
-
     //Alert to tell users for best orientation
     if(window.innerHeight > window.innerWidth){ 
       alert("To be presented correctly on small mobile devices the charts need to viewed in landscape. Due to this the charts will be removed from your current portrait view. When you change your device orientation to landscape, the charts will automatically reload."); 
@@ -157,8 +152,6 @@ else if ((window.matchMedia("(min-width: 581px)").matches)  && (window.matchMedi
 /*                 col-xs-*                    */
 /***********************************************/
 else if (window.matchMedia("(max-width: 580px)").matches) {
-
-    //window.alert("Max screen size of 580");    
 
     barChartWidth = 565;
     barChartHeight = 170;
