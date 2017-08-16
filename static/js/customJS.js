@@ -191,8 +191,3 @@ $(window).on("orientationchange", function() {
        location.reload();
 });
 
-
-
-window.alert("Window Width detected" +$(window).width());
-
-
