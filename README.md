@@ -1,7 +1,7 @@
 # Code Institute Stream 2 Project
 
 ## Overview
-This code is for a site that is required for the Code Institute end of Stream 2 (Back end) project. It is to demonstrate an ability to code and deploy a database driven website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
+This code is for a site which is required for the Code Institute end of Stream 2 (Back end) project. It is to demonstrate an ability to code and deploy a database driven website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
 The project is looks to simplify data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
 Transfer League is a static website which provides a detailed granular view of the data. The need this site fullfills is the need to present a broader, higher level view of the Premier League and Championship transfer data and provide an interactive interface where uses could drill down into the data. In essence I wanted to use the some of the data but present a different and interactive perspective.
