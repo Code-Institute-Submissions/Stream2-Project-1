@@ -10,9 +10,11 @@ app = Flask(__name__)
 #Local Connection
 #MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
 #DBS_NAME = os.getenv('MONGO_DB_NAME', 'Stream2Project-LOCAL-DB')
+
 #Remote Connection
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://Stream2Bod:Stream2Project123@ds129442.mlab.com:29442/heroku_2z1cv575')
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'heroku_2z1cv575')
+
 COLLECTION_NAME = 'projects'
 
  
