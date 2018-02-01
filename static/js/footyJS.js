@@ -302,7 +302,8 @@ function makeGraphs(error, footballData) {
 
     //Draw all the graphs that have been 
     dc.renderAll();
-
+    //fading in the graphs once the data has been loaded
+    $("#loader-frame").fadeOut(2500);
 
 
 

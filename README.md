@@ -18,6 +18,7 @@ Transfer League is a static website which provides a detailed granular view of t
 
 - Custom functionality for appearance:
 	- Default graph colour scheme overwritten to give a consistent shades of blue in graphs (rather than going from Blue to Orange as per default)
+	- Page loader (holding screen) implemented to improve user experience so that data fully loaded and graphs/table fully populated before being presented to user.
 
 
 ## Project Coding
@@ -37,6 +38,7 @@ Transfer League is a static website which provides a detailed granular view of t
 
 #### 3rd party code used:
 - I used a general bootstrap layout and responsive menu but where applicable I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
+- The  a loader based on https://www.w3schools.com/howto/howto_css_loader.asp, but I developed mine to hide the full page and gracefully fade out when the D3 data has loaded.
 
 ## How was the project deployed
 The project has been managed locally and deployed to GitHub (to host code) and Heroku (to run code) on a regular basis, with the current site able to be viewed on Heroku at https://infinite-lake-67936.herokuapp.com/.

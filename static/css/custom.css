@@ -10,16 +10,71 @@
 /* unless ones are subsequently set for a bigger screen size.                                                                */
 /*****************************************************************************************************************************/
 
-
 /*********************************************/
 /* Extra small devices (phones, up to 767px) */
 /*                 col-xs-*                  */
 /*********************************************/
 
-/* Declaring root elements size in an absolute/fixed value, so by using rem there is a consistent 
-   reference point from which size changes take place across devices/pages */
+/* Page loader to hold page before data loaded and transition in nicely for user when data load complete*/
+/* Frame for loader, enables whole loadable page to be covered/hidden */
+#loader-frame {
+    z-index: 1;
+    background-color: #cacaca;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+/* Frame for spinner */
+#spinner-frame {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 20%;
+}
+
+/* Active spinning element */
+#spinner {
+	border-top: 0px solid #80aaff;
+	border-right: 20px solid #4d88ff;
+	border-bottom: 0px solid #004de6;
+	border-left: 20px solid #002b80;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
+}
 
 
+#spinner-text {
+    color: #000;
+	text-align: center;
+	font-size: 2em;
+	margin-top: 1em;
+	font-style: italic;
+}
+
+
+
+/* Keyframe to produce animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Class for d3 to invoke (to hide loader) once data has loaded */
+/*
+.hidden#loader-frame {
+    //display: none;
+    $('loader-frame').fadeOut();
+}
+*/
 	/* needs to be this specific for changes to be applied based on loading presedence as keen.js has them set up this way */
 	body.application {
 		font-family: 'Cabin', sans-serif;	
