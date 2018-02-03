@@ -19,7 +19,7 @@
 /* Frame for loader, enables whole loadable page to be covered/hidden */
 #loader-frame {
     z-index: 1;
-    background-color: #cacaca;
+    background: linear-gradient(#b3b3b3, #4d79ff);
     position:fixed;
     padding:0;
     margin:0;
@@ -28,7 +28,12 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
 }
+
+
 
 /* Frame for spinner */
 #spinner-frame {
@@ -53,7 +58,8 @@
 
 
 #spinner-text {
-    color: #000;
+	font-family: 'VT323', monospace;
+    color: #fff;
 	text-align: center;
 	font-size: 2em;
 	margin-top: 1em;
