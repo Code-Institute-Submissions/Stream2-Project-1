@@ -1,10 +1,10 @@
 # Code Institute Stream 2 Project
 
 ## Overview
-This site is my Code Institute end of Stream 2 (Back end) project. It is to demonstrate an ability to code and deploy a database driven website that follows good practice. The website can be viewed at https://infinite-lake-67936.herokuapp.com/ and has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
+This site is my Code Institute end of Stream 2 (Back end) project. It aims to demonstrate an ability to code and deploy a database driven website that follows good practice. The website can be viewed at https://infinite-lake-67936.herokuapp.com/ and has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
-The project is looks to simplify data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
-Transfer League is a static website which provides a detailed granular view of the data. The need this site full fills is the need to present a broader, higher level view of the Premier League and Championship transfer data and provide an interactive interface where uses could drill down into the data. In essence I wanted to use the some of the data but present a different and interactive perspective.
+The project looks to simplify the data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
+Transfer League is a static website which provides a detailed granular view of the data. The need this site fulfils is the need to present a broader, higher level view of the Premier League and Championship transfer data and provide an interactive interface where uses can drill down into the data. In essence I wanted to use the some of the data but present a different and interactive perspective.
 
 ## Key Functionality of the project
 - DC.js functionality, enabling response graphs, charts and values to be displayed. 
@@ -38,10 +38,10 @@ Transfer League is a static website which provides a detailed granular view of t
 
 #### 3rd party code used:
 - I used a general bootstrap layout and responsive menu but where applicable I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
-- The  a loader based on https://www.w3schools.com/howto/howto_css_loader.asp, but I developed mine to hide the full page and gracefully fade out when the D3 data has loaded.
+- The a loader is based on https://www.w3schools.com/howto/howto_css_loader.asp, but I developed mine to hide the full page and gracefully fade out when the D3 data has loaded.
 
 ## How was the project deployed
-The project has been managed locally and deployed to GitHub (to host code) and Heroku (to run code) on a regular basis, with the current site able to be viewed on Heroku at https://infinite-lake-67936.herokuapp.com/.
+The project has been managed locally and deployed to GitHub (to host code) and Heroku (to run code) on a regular basis, with the current site viewable on Heroku at https://infinite-lake-67936.herokuapp.com/.
 
 ## How was the project tested
 
