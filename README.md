@@ -39,6 +39,7 @@ Transfer League is a static website which provides a detailed granular view of t
 #### 3rd party code used:
 - I used a general bootstrap layout and responsive menu but where applicable I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
 - The a loader is based on https://www.w3schools.com/howto/howto_css_loader.asp, but I developed mine to hide the full page and gracefully fade out when the D3 data has loaded.
+ - Code supplied by Timmy O'Mahony (my mentor) to get the overal value shown for 'Total Transfer Spend to show 'B' for Billions rather than 'G' for Gig.
 
 ## How was the project deployed
 The project has been managed locally and deployed to GitHub (to host code) and Heroku (to run code) on a regular basis, with the current site viewable on Heroku at https://infinite-lake-67936.herokuapp.com/.
