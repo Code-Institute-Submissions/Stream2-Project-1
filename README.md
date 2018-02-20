@@ -3,21 +3,20 @@
 ## Overview
 This site is my Code Institute end of Stream 2 (Back end) project. It aims to demonstrate an ability to code and deploy a database driven website that follows good practice. The website can be viewed at https://infinite-lake-67936.herokuapp.com/ and has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
-The project looks to simplify the data based around data on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. 
-Transfer League is a static website which provides a detailed granular view of the data. The need this site fulfils is the need to present a broader, higher level view of the Premier League and Championship transfer data and provide an interactive interface where users can drill down into the data. 
+The project looks to simplify the data based on the website  <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a>. Transfer League is a static website which provides a granular view of the data. The need this site fulfils is the need to present a broader, higher level, view of the Premier League and Championship transfer data and to provide an interactive interface where users can drill down into the data. 
 
 ## Key Functionality of the project
-- DC.js functionality, enabling response graphs, charts and values to be displayed. 
+- DC.js functionality, enabling responsive graphs, charts and values to be displayed. 
 
 - Custom functionality for responsiveness:
 	- HTML layout and Graphs are responsive to different devices (unlike default DC.js graphs).
-	- Page reload on mobile device orientation change to allow layout/graphs to be updated to the appropriate device size without a manual refresh.
+	- Automatic page reload on mobile device orientation change to allow layout/graphs to be updated to the appropriate device size without a manual refresh.
 	- A prompt for users that try to view the charts in portrait on very small mobile devices that they need to view in landscape.
-	- The data chart sets the amount of rows depending on device type.
-	- The data chart is sorted by fee, with the highest fee being at the top.
+	- The data table 'Most Expensive Transfers' sets the amount of rows depending on device type.
+	- The data table 'Most Expensive Transfers' is sorted by fee, with the highest fee being at the top.
 
 - Custom functionality for appearance:
-	- Default graph colour scheme overwritten to give a consistent shades of blue in graphs (rather than going from Blue to Orange as per default)
+	- Default graph colour scheme overwritten to give a consistent theme of blue in graphs (rather than going from Blue to Orange as per default)
 	- Page loader (holding screen) implemented to improve user experience so that the data is fully loaded and graphs/table fully populated before being presented to user.
 
 
